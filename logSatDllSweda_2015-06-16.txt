@@ -1,0 +1,101 @@
+[DEBUG]	2015-06-16 07:58:54: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-06-16 07:58:54: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-06-16 08:03:01: file src\SATDLL.cpp, function ConsultarSAT, line 1717: Chmando SendAndReceiveRetry
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 47 ms
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 32 ms
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:03:01: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:03:58: file src\SATDLL.cpp, function ConsultarStatusOperacional, line 2004: Chmando SendAndReceive
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 32 ms
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 32 ms
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:03:58: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:04:06: file src\SATDLL.cpp, function ConsultarSAT, line 1717: Chmando SendAndReceiveRetry
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 16 ms
+[DEBUG]	2015-06-16 08:04:06: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:04:07: file src\SATDLL.cpp, function ExtrairLogs, line 2426: Chmando SendAndReceive
+[DEBUG]	2015-06-16 08:04:07: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:04:07: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:04:07: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:04:07: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:04:07: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 16 ms
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:04:08: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:05:30: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-06-16 08:05:30: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-06-16 08:05:34: file src\SATDLL.cpp, function ConsultarSAT, line 1717: Chmando SendAndReceiveRetry
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 31 ms
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 16 ms
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[ERROR]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 218: Could not connect
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 16 ms
+[DEBUG]	2015-06-16 08:05:34: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-06-16 08:05:43: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-06-16 08:05:43: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================

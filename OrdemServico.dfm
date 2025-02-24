@@ -1,0 +1,822 @@
+object formClientesOficina: TformClientesOficina
+  Left = 41
+  Top = 11
+  BorderStyle = bsDialog
+  Caption = 'Ficha de Ordem de Serviços'
+  ClientHeight = 485
+  ClientWidth = 609
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object TLabel
+    Left = 240
+    Top = 168
+    Width = 3
+    Height = 13
+  end
+  object btnProximo: TSpeedButton
+    Left = 160
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Posiciona no próximo registro da tabela de clientes oficina.'
+    Caption = 'Próximo'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333333333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333FF3333333333333003333
+      3333333333773FF3333333333309003333333333337F773FF333333333099900
+      33333FFFFF7F33773FF30000000999990033777777733333773F099999999999
+      99007FFFFFFF33333F7700000009999900337777777F333F7733333333099900
+      33333333337F3F77333333333309003333333333337F77333333333333003333
+      3333333333773333333333333333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnProximoClick
+  end
+  object btnPrimeiro: TSpeedButton
+    Left = 64
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Posiciona no primeiro registro da tabela de clientes oficina.'
+    Caption = 'Primeiro'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+      00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+      70E337F33333333337F3E0F33333333370E337F3333F3FF337F3E0F333030033
+      70E337F3337F77F337F3E0F33003003370E337F3377F77F337F3E0F300030033
+      70E337F3777F77F337F3E0F33003003370E337F3377F77F337F3E0F333030033
+      70E337F33373773337F3E0F33333333370E337F33333333337F3E0F333333333
+      70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+      00E33777777777777733EEEEEEEEEEEEEEE33333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnPrimeiroClick
+  end
+  object btnAnterior: TSpeedButton
+    Left = 112
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Posiciona no registro anterior da tabela de clientes oficina.'
+    Caption = 'Anterior'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333333333333333333333333333333333333333333333
+      3333333333333FF3333333333333003333333333333F77F33333333333009033
+      333333333F7737F333333333009990333333333F773337FFFFFF330099999000
+      00003F773333377777770099999999999990773FF33333FFFFF7330099999000
+      000033773FF33777777733330099903333333333773FF7F33333333333009033
+      33333333337737F3333333333333003333333333333377333333333333333333
+      3333333333333333333333333333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnAnteriorClick
+  end
+  object btnUltimo: TSpeedButton
+    Left = 208
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Posiciona no último registro da tabela de clientes oficina.'
+    Caption = 'Último'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+      00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+      70E337F33333333337F3E0F33333333370E337F333FF3F3337F3E0F330030333
+      70E337F3377F7FF337F3E0F33003003370E337F3377F77FF37F3E0F330030003
+      70E337F3377F777337F3E0F33003003370E337F3377F773337F3E0F330030333
+      70E337F33773733337F3E0F33333333370E337F33333333337F3E0F333333333
+      70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+      00E33777777777777733EEEEEEEEEEEEEEE33333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnUltimoClick
+  end
+  object btnGravar: TSpeedButton
+    Left = 256
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Grava as alterações efetuadas.'
+    Caption = 'Gravar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333330070
+      7700333333337777777733333333008088003333333377F73377333333330088
+      88003333333377FFFF7733333333000000003FFFFFFF77777777000000000000
+      000077777777777777770FFFFFFF0FFFFFF07F3333337F3333370FFFFFFF0FFF
+      FFF07F3FF3FF7FFFFFF70F00F0080CCC9CC07F773773777777770FFFFFFFF039
+      99337F3FFFF3F7F777F30F0000F0F09999937F7777373777777F0FFFFFFFF999
+      99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+      99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+      93337FFFF7737777733300000033333333337777773333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnGravarClick
+  end
+  object btnLocalizar: TSpeedButton
+    Left = 304
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Localiza um registro na tabela de clientes oficina.'
+    Caption = 'Localizar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      333333333333333333FF33333333333330003FF3FFFFF3333777003000003333
+      300077F777773F333777E00BFBFB033333337773333F7F33333FE0BFBF000333
+      330077F3337773F33377E0FBFBFBF033330077F3333FF7FFF377E0BFBF000000
+      333377F3337777773F3FE0FBFBFBFBFB039977F33FFFFFFF7377E0BF00000000
+      339977FF777777773377000BFB03333333337773FF733333333F333000333333
+      3300333777333333337733333333333333003333333333333377333333333333
+      333333333333333333FF33333333333330003333333333333777333333333333
+      3000333333333333377733333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnLocalizarClick
+  end
+  object btnExcluir: TSpeedButton
+    Left = 352
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Excluir um registro da tabela de clientes oficina.'
+    Caption = 'Excluir'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333000000000
+      3333333777777777F3333330F777777033333337F3F3F3F7F3333330F0808070
+      33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+      33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+      333333F7F7F7F7F7F3F33030F080707030333737F7F7F7F7F7333300F0808070
+      03333377F7F7F7F773333330F080707033333337F7F7F7F7F333333070707070
+      33333337F7F7F7F7FF3333000000000003333377777777777F33330F88877777
+      0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
+      3333333337FFF7F3333333333000003333333333377777333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnExcluirClick
+  end
+  object btnAdicionar: TSpeedButton
+    Left = 400
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Adicionar um novo registro à tabela de clientes oficina.'
+    Caption = 'Adicionar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33333333FF33333333FF333993333333300033377F3333333777333993333333
+      300033F77FFF3333377739999993333333333777777F3333333F399999933333
+      33003777777333333377333993333333330033377F3333333377333993333333
+      3333333773333333333F333333333333330033333333F33333773333333C3333
+      330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+      993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+      333333333337733333FF3333333C333330003333333733333777333333333333
+      3000333333333333377733333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnAdicionarClick
+  end
+  object btnImprimir: TSpeedButton
+    Left = 448
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Imprime Ordem de Serviço.'
+    Caption = 'Imprimir'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      0003377777777777777308888888888888807F33333333333337088888888888
+      88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+      8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+      8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+      03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+      03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+      33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+      33333337FFFF7733333333300000033333333337777773333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnImprimirClick
+  end
+  object btnRetornar: TSpeedButton
+    Left = 496
+    Top = 432
+    Width = 46
+    Height = 41
+    Hint = '|Retorna ao menu principal.'
+    Caption = 'Retornar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+      03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+      0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+      0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+      0333337F777FFFFF7F3333000000000003333377777777777333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnRetornarClick
+  end
+  object pgFichaServicos: TPageControl
+    Left = 8
+    Top = 16
+    Width = 593
+    Height = 409
+    ActivePage = tabPecasUtilizadas
+    TabOrder = 0
+    object tabClientesOficina: TTabSheet
+      Caption = 'Clientes Oficina'
+      object lblPlacaVeiculo: TLabel
+        Left = 8
+        Top = 8
+        Width = 83
+        Height = 13
+        Caption = 'Placa do Veiculo:'
+      end
+      object lblNomeCliente: TLabel
+        Left = 152
+        Top = 48
+        Width = 66
+        Height = 13
+        Caption = 'Nome Cliente:'
+      end
+      object lblEndereco: TLabel
+        Left = 8
+        Top = 80
+        Width = 49
+        Height = 13
+        Caption = 'Endereço:'
+      end
+      object lblBairro: TLabel
+        Left = 8
+        Top = 120
+        Width = 30
+        Height = 13
+        Caption = 'Bairro:'
+      end
+      object lblCidade: TLabel
+        Left = 360
+        Top = 120
+        Width = 36
+        Height = 13
+        Caption = 'Cidade:'
+      end
+      object lblCEP: TLabel
+        Left = 8
+        Top = 160
+        Width = 24
+        Height = 13
+        Caption = 'CEP:'
+      end
+      object lblTelefone: TLabel
+        Left = 144
+        Top = 160
+        Width = 45
+        Height = 13
+        Caption = 'Telefone:'
+      end
+      object lblCarro: TLabel
+        Left = 216
+        Top = 8
+        Width = 28
+        Height = 13
+        Caption = 'Carro:'
+      end
+      object Label1: TLabel
+        Left = 8
+        Top = 48
+        Width = 62
+        Height = 13
+        Caption = 'Ano/Modelo:'
+      end
+      object lblMesAniversario: TLabel
+        Left = 360
+        Top = 160
+        Width = 93
+        Height = 13
+        Caption = 'Mes do Aniversário:'
+      end
+      object fldNomeCliente: TDBEdit
+        Left = 232
+        Top = 48
+        Width = 321
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'Cliente'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 3
+        OnExit = fldNomeClienteExit
+      end
+      object fldEndereco: TDBEdit
+        Left = 64
+        Top = 80
+        Width = 409
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'Endereco'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 4
+      end
+      object fldBairro: TDBEdit
+        Left = 48
+        Top = 120
+        Width = 273
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'Bairro'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 5
+      end
+      object fldCEP: TDBEdit
+        Left = 40
+        Top = 160
+        Width = 65
+        Height = 21
+        DataField = 'CEP'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 7
+      end
+      object fldCidade: TDBComboBox
+        Left = 416
+        Top = 120
+        Width = 153
+        Height = 21
+        DataField = 'Cidade'
+        DataSource = dmBaseDados.dsClientesOficina
+        ItemHeight = 13
+        Items.Strings = (
+          'SP - SÃO PAULO'
+          'RJ - RIO DE JANEIRO'
+          'GO - GOIAS'
+          'DF - BRASILIA'
+          'PR - PARANÁ'
+          'SC - SANTA CATARINA'
+          'RS - RIO GRANDE DO SUL'
+          'RN - RIO GRANDE DO NORTE'
+          'MT - MATO GROSSO'
+          'MS - MATO GROSSO DO SUL'
+          'PA - PARÁ'
+          'BA - BAHIA'
+          'MA - MARANHÃO'
+          'PI - PIAUÍ'
+          'PE - PERNAMBUCO'
+          'ES - ESPIRITO SANTO')
+        TabOrder = 6
+      end
+      object fldTelefone: TDBEdit
+        Left = 200
+        Top = 160
+        Width = 121
+        Height = 21
+        DataField = 'Fone'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 8
+      end
+      object fldPlaca: TDBEdit
+        Left = 96
+        Top = 8
+        Width = 89
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'Placa'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 0
+        OnExit = fldPlacaExit
+      end
+      object fldCarro: TDBEdit
+        Left = 256
+        Top = 8
+        Width = 257
+        Height = 21
+        CharCase = ecUpperCase
+        DataField = 'Carro'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 1
+      end
+      object fldAnoModelo: TDBEdit
+        Left = 80
+        Top = 48
+        Width = 41
+        Height = 21
+        DataField = 'Ano/Modelo'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 2
+      end
+      object fldMesAniversario: TDBEdit
+        Left = 456
+        Top = 160
+        Width = 25
+        Height = 21
+        DataField = 'MesAniversario'
+        DataSource = dmBaseDados.dsClientesOficina
+        TabOrder = 9
+      end
+    end
+    object tabServicosExecultados: TTabSheet
+      Caption = 'Serviços Executados'
+      ImageIndex = 1
+      object grdFichaServicos: TDBGrid
+        Left = 8
+        Top = 8
+        Width = 473
+        Height = 369
+        DataSource = dmBaseDados.dsFichaServico
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'Data'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NumeroOS'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Servico'
+            Width = 240
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Garantia'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ValorTotal'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'FormaPagamento'
+            Width = 110
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Km'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Mecanico'
+            Visible = True
+          end
+          item
+            Color = clSilver
+            Expanded = False
+            FieldName = 'PrevRevisao'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'DtRevisao'
+            Visible = True
+          end>
+      end
+      object pnlBotoes: TPanel
+        Left = 488
+        Top = 8
+        Width = 97
+        Height = 177
+        TabOrder = 1
+        object btnPrimeiroServico: TSpeedButton
+          Left = 8
+          Top = 8
+          Width = 81
+          Height = 30
+          Hint = 
+            '|Posiciona no primeiro registro da tabela de serviços execultado' +
+            's.'
+          Caption = 'Primeiro'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000333
+            3333333333777F33333333333309033333333333337F7F333333333333090333
+            33333333337F7F33333333333309033333333333337F7F333333333333090333
+            33333333337F7F33333333333309033333333333FF7F7FFFF333333000090000
+            3333333777737777F333333099999990333333373F3333373333333309999903
+            333333337F33337F33333333099999033333333373F333733333333330999033
+            3333333337F337F3333333333099903333333333373F37333333333333090333
+            33333333337F7F33333333333309033333333333337373333333333333303333
+            333333333337F333333333333330333333333333333733333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnPrimeiroServicoClick
+        end
+        object btnUltimoServico: TSpeedButton
+          Left = 8
+          Top = 40
+          Width = 81
+          Height = 30
+          Hint = '|Posiciona no último registro da tabela de serviços execultados.'
+          Caption = 'Último'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333303333
+            333333333337F33333333333333033333333333333373F333333333333090333
+            33333333337F7F33333333333309033333333333337373F33333333330999033
+            3333333337F337F33333333330999033333333333733373F3333333309999903
+            333333337F33337F33333333099999033333333373333373F333333099999990
+            33333337FFFF3FF7F33333300009000033333337777F77773333333333090333
+            33333333337F7F33333333333309033333333333337F7F333333333333090333
+            33333333337F7F33333333333309033333333333337F7F333333333333090333
+            33333333337F7F33333333333300033333333333337773333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnUltimoServicoClick
+        end
+        object btnAdicionarServico: TSpeedButton
+          Left = 8
+          Top = 72
+          Width = 81
+          Height = 30
+          Hint = '|Adiciona um novo registro à tabela de serviços execultados.'
+          Caption = 'Adicionar'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000130B0000130B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            33333333FF33333333FF333993333333300033377F3333333777333993333333
+            300033F77FFF3333377739999993333333333777777F3333333F399999933333
+            33003777777333333377333993333333330033377F3333333377333993333333
+            3333333773333333333F333333333333330033333333F33333773333333C3333
+            330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+            993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+            333333333337733333FF3333333C333330003333333733333777333333333333
+            3000333333333333377733333333333333333333333333333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnAdicionarServicoClick
+        end
+        object btnGravarServico: TSpeedButton
+          Left = 8
+          Top = 104
+          Width = 81
+          Height = 30
+          Hint = 
+            '|Grava as alterações efetuadas na tabela de serviços execultados' +
+            '.'
+          Caption = 'Gravar'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+            00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+            00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+            00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+            0003737FFFFFFFFF7F7330099999999900333777777777777733}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnGravarServicoClick
+        end
+        object btnExcluirServico: TSpeedButton
+          Left = 8
+          Top = 136
+          Width = 81
+          Height = 30
+          Hint = '|Exclui o registro atual da tabela de serviços execultados.'
+          Caption = 'Excluir'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333000000000
+            3333333777777777F3333330F777777033333337F3F3F3F7F3333330F0808070
+            33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+            33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+            333333F7F7F7F7F7F3F33030F080707030333737F7F7F7F7F7333300F0808070
+            03333377F7F7F7F773333330F080707033333337F7F7F7F7F333333070707070
+            33333337F7F7F7F7FF3333000000000003333377777777777F33330F88877777
+            0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
+            3333333337FFF7F3333333333000003333333333377777333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnExcluirServicoClick
+        end
+      end
+    end
+    object tabPecasUtilizadas: TTabSheet
+      Caption = 'Peças Utilizadas'
+      ImageIndex = 2
+      object grdPecas: TDBGrid
+        Left = 0
+        Top = 16
+        Width = 481
+        Height = 345
+        DataSource = dmBaseDados.dsPecasServicos
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'Peca'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PrecoCusto'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PrecoVenda'
+            Visible = True
+          end>
+      end
+      object pnlPecas: TPanel
+        Left = 488
+        Top = 16
+        Width = 97
+        Height = 113
+        TabOrder = 1
+        object btnAdicionar2: TSpeedButton
+          Left = 8
+          Top = 8
+          Width = 81
+          Height = 30
+          Hint = '|Adiciona um novo registro à tabela de serviços execultados.'
+          Caption = 'Adicionar'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000130B0000130B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            33333333FF33333333FF333993333333300033377F3333333777333993333333
+            300033F77FFF3333377739999993333333333777777F3333333F399999933333
+            33003777777333333377333993333333330033377F3333333377333993333333
+            3333333773333333333F333333333333330033333333F33333773333333C3333
+            330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+            993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+            333333333337733333FF3333333C333330003333333733333777333333333333
+            3000333333333333377733333333333333333333333333333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnAdicionar2Click
+        end
+        object btnGravar2: TSpeedButton
+          Left = 8
+          Top = 72
+          Width = 81
+          Height = 30
+          Hint = 
+            '|Grava as alterações efetuadas na tabela de serviços execultados' +
+            '.'
+          Caption = 'Gravar'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+            00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+            00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+            00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+            0003737FFFFFFFFF7F7330099999999900333777777777777733}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnGravar2Click
+        end
+        object btnExcluir2: TSpeedButton
+          Left = 8
+          Top = 40
+          Width = 81
+          Height = 30
+          Hint = '|Exclui o registro atual da tabela de serviços execultados.'
+          Caption = 'Excluir'
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333000000000
+            3333333777777777F3333330F777777033333337F3F3F3F7F3333330F0808070
+            33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+            33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+            333333F7F7F7F7F7F3F33030F080707030333737F7F7F7F7F7333300F0808070
+            03333377F7F7F7F773333330F080707033333337F7F7F7F7F333333070707070
+            33333337F7F7F7F7FF3333000000000003333377777777777F33330F88877777
+            0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
+            3333333337FFF7F3333333333000003333333333377777333333}
+          NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnExcluir2Click
+        end
+      end
+    end
+  end
+end

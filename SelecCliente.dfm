@@ -1,0 +1,225 @@
+object formSelecCliente: TformSelecCliente
+  Left = 338
+  Top = 102
+  Width = 433
+  Height = 476
+  Caption = 'Consulta Cliente'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object TIGradient1: TTIGradient
+    Left = 0
+    Top = 29
+    Width = 417
+    Height = 409
+    Align = alClient
+    ShowHint = False
+    ParentShowHint = False
+    Style = grPyramid
+    StartColor = clWhite
+    EndColor = clGradientInactiveCaption
+    Steps = 38
+  end
+  object DBText1: TDBText
+    Left = 9
+    Top = 63
+    Width = 399
+    Height = 17
+    DataField = 'NomeFantasia'
+    DataSource = dmBaseDados.dsClientes
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -15
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object DBGrid1: TDBGrid
+    Left = 4
+    Top = 88
+    Width = 405
+    Height = 294
+    DataSource = dmBaseDados.dsClientes
+    FixedColor = clInactiveCaptionText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Arial'
+    TitleFont.Style = [fsBold]
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'NomeCliente'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Title.Caption = 'Cliente'
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Arial'
+        Title.Font.Style = [fsBold]
+        Width = 311
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CodigoCliente'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Title.Caption = 'C'#243'digo'
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Arial'
+        Title.Font.Style = [fsBold]
+        Width = 45
+        Visible = True
+      end>
+  end
+  object edtPesquisa: TEdit
+    Left = 22
+    Top = 32
+    Width = 369
+    Height = 24
+    CharCase = ecUpperCase
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnChange = edtPesquisaChange
+  end
+  object bbtVisualizar: TTISButton
+    Left = 165
+    Top = 386
+    Width = 83
+    Height = 50
+    HotFont.Font.Charset = ANSI_CHARSET
+    HotFont.Font.Color = clWindowText
+    HotFont.Font.Height = -12
+    HotFont.Font.Name = 'Arial'
+    HotFont.Font.Style = [fsBold]
+    SkinLayOut = WINXP
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    Caption = '   &Ok'
+    AutoSize = False
+    ParentFont = False
+    Default = True
+    TabOrder = 2
+    Transparent = False
+    ModalResult = 0
+    Glyph.Data = {
+      76060000424D7606000000000000360400002800000018000000180000000100
+      0800000000004002000000000000000000000001000000010000FF00FF00004F
+      010000510100015503000257040001590400025D06000361060005620900056A
+      0B00076A0E00086A0F000372080003790900047A0A00047D0A0007790E00096D
+      12000A7413000C7417000A7D13000A7B14000D7618000D7818000F7E1C00058D
+      0D0006900D000F831B000E841B00108B1D000790100009931300089612000A96
+      15000C9717000D991B000E9A1C000F9D1F00109F1F001282210016892700178C
+      2A0013982300119F2200169229001695280018952C001A9F2F001C9832001C99
+      34001F9C370012A0220013A3270014A4260015A6290018AA2D001BA531001AAA
+      31001CAD33001CAF35001FA139001FB43A0021A13B0022A03C0022B63E0023AA
+      400027AF450028AC460027B1440028B0470025BB430025BD440027BC48002DBF
+      4F002FBD54002CC14E002CC54F002DC4520035CA5F0035CC5F0035D05E0038D3
+      64003BD168003CD76A003CD86A0041DC720042E2760000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000003000000000000000000000000000000000000
+      0000000003030000000000000000000000000000000000000000000003030000
+      0000000000000000000000000000000000000000030903000000000000000000
+      0000000000000000000000000417030000000000000000000000000000000000
+      00000000032F0800000000000000000301000000000000000000000004451703
+      0000000000000003080300000000000000000000034A3C030000000000000003
+      0D080100000000000000000003434E1603000000000000033F0D080300000000
+      000000000328564208030000000000012F1E0D08030000000000000000115252
+      4411070303030101321F190D090100000000000000032F5551492E1215151B2D
+      0D1F19190D120100000000000000034354504D48403B373426221E19190D2903
+      00000000000000033F4E504C463D3B3434221F19191A0D030000000000000000
+      032742494C46403726261F1F192703000000000000000000000303172D2F2F3B
+      3734221F17030000000000000000000000000003030303032236340901000000
+      000000000000000000000000000000041D370303000000000000000000000000
+      00000000000000041B0403000000000000000000000000000000000000000004
+      0403000000000000000000000000000000000000000000030300000000000000
+      0000000000000000000000000000000000000000000000000000}
+    Layout = blGlyphTop
+    Spacing = 0
+    ResHandle = 0
+    MouseContinuouslyDownInterval = 100
+    OnClick = bbtVisualizarClick
+  end
+  object TIGradientCaption1: TTIGradientCaption
+    Left = 0
+    Top = 0
+    Width = 417
+    Height = 29
+    GradientStartColor = clBackground
+    GradientEndColor = clSkyBlue
+    GradientStyle = grHorizontal
+    LabelTop = 5
+    LabelCaption = 'Digite o nome do Cliente :'
+    LabelFont.Charset = ANSI_CHARSET
+    LabelFont.Color = clWhite
+    LabelFont.Height = -16
+    LabelFont.Name = 'Arial'
+    LabelFont.Style = [fsBold]
+    LabelAlignment = taCenter
+    Align = alTop
+    DoubleBuffered = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    TabOrder = 3
+  end
+end

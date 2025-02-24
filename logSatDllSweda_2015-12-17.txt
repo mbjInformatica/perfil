@@ -1,0 +1,9 @@
+[DEBUG]	2015-12-17 18:53:20: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-12-17 18:53:20: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-12-17 18:54:38: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-12-17 18:54:38: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-12-17 18:54:38: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[DEBUG]	2015-12-17 18:54:38: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 15 ms
+[DEBUG]	2015-12-17 18:54:38: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-12-17 18:55:27: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-12-17 18:55:28: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================

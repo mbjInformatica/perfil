@@ -1,0 +1,4357 @@
+ - 13:48:35:562 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 13:48:43:656 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 13:48:51:421 - EACBrSATErro - Arquivo não encontrado: C:\SAT\SAT.DLL
+ - 13:49:13:625 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 09:02:50:906 - ACBrSAT.Inicializado
+ - 09:03:19:984 - -- 09:03:19:984 - numeroSessao: 61362 - Comando: AtivarSAT( 1, , 35 )
+ - 09:03:20:203 - NumeroSessao: 61362 - Resposta:061362|04099|Erro desconhecido na ativação||Existem atualizações pendentes para o SAT.
+ - 13:52:33:265 - EACBrSATErro - Nenhum CFe carregado na memória
+ - 13:52:42:140 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 13:52:51:921 - ACBrSAT.Inicializado
+ - 13:52:55:828 - -- 13:52:55:828 - numeroSessao: 191107 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>11111111111111</CNPJ>
+         <signAC>9d4c4eef8c515e2c1269c2e4fff0719d526c5096422bf1defa20df50ba06469a28adb25ba0447befbced7c0f805a5cc58496b7b23497af9a04f69c77f17c0ce68161f8e4ca7e3a94c827b6c563ca6f47aea05fa90a8ce3e4327853bb2d664ba226728fff1e2c6275ecc9b20129e1c1d2671a837aa1d265b36809501b519dbc08129e1c1d2671a837aa1d265b36809501b519dbc08129e1c1d2671a837aa1d265b36809501b519dbc08129e1c</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <IE/>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>03</CST>
+               </PISSN>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSSN>
+                  <CST>03</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>1</Orig>
+                  <CSOSN>102</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>04</CST>
+               </PISSN>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSSN>
+                  <CST>06</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 13:52:56:140 - NumeroSessao: 191107 - Resposta:191107|06001|0000|Código de ativação inválido.||
+ - 13:53:18:515 - -- 13:53:18:515 - numeroSessao: 170144 - Comando: AtivarSAT( 1, , 35 )
+ - 13:58:44:796 - ACBrSAT.Inicializado
+ - 13:59:01:828 - -- 13:59:01:828 - numeroSessao: 260036 - Comando: AtivarSAT( 1, , 35 )
+ - 13:59:13:906 - NumeroSessao: 260036 - Resposta:260036|04099|Erro desconhecido na ativação||
+ - 13:51:45:531 - ACBrSAT.Inicializado
+ - 13:53:41:375 - -- 13:53:41:375 - numeroSessao: 216070 - Comando: AtivarSAT( 1, 11.111.111/1111-11, 35 )
+ - 13:53:47:765 - NumeroSessao: 216070 - Resposta:216070|04099|Erro desconhecido na ativação||
+ - 13:55:20:156 - -- 13:55:20:156 - numeroSessao: 713424 - Comando: AtivarSAT( 1, 22.222.222/2222-22, 35 )
+ - 13:55:22:796 - NumeroSessao: 713424 - Resposta:713424|04099|Erro desconhecido na ativação||
+ - 13:56:22:953 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 13:56:41:984 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 13:57:22:750 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 13:57:36:625 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 13:59:03:234 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 13:59:10:000 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 14:38:06:031 - EACBrSATErro - Modelo de SAT não definido
+ - 14:40:01:296 - ACBrSAT.Inicializado
+ - 14:40:11:328 - -- 14:40:11:328 - numeroSessao: 567940 - Comando: AtivarSAT( 1, 11.111.111/1111-11, 35 )
+ - 14:40:14:484 - NumeroSessao: 567940 - Resposta:567940|04099|Erro desconhecido na ativação||
+ - 14:40:39:625 - -- 14:40:39:625 - numeroSessao: 341543 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE/>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>03</CST>
+               </PISSN>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSSN>
+                  <CST>03</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>1</Orig>
+                  <CSOSN>102</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>04</CST>
+               </PISSN>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSSN>
+                  <CST>06</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:40:39:968 - NumeroSessao: 341543 - Resposta:341543|06010|1230|Rejeição: IE do emitente diferente da IE do contribuinte autorizado para uso do SAT||
+ - 14:42:58:343 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 14:43:05:312 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 14:54:34:640 - ACBrSAT.DesInicializado
+ - 14:54:36:046 - ACBrSAT.Inicializado
+ - 14:54:40:453 - -- 14:54:40:453 - numeroSessao: 504225 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>03</CST>
+               </PISSN>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSSN>
+                  <CST>03</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>1</Orig>
+                  <CSOSN>102</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>04</CST>
+               </PISSN>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSSN>
+                  <CST>06</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:54:40:640 - NumeroSessao: 504225 - Resposta:504225|06010|1999|Rejeição: Erro não identificado||
+ - 15:15:44:203 - -- 15:15:44:203 - numeroSessao: 965938 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:15:44:734 - NumeroSessao: 965938 - Resposta:965938|06000|0000|Emitido com sucesso + conteúdo notas|||PENGZT48aW5mQ0ZlIElkPSJDRmUzNTE1MDYxMTExMTExMTExMTExMTU5MTIzNDU2Nzg5MDAwMDAx
+MjQxMzEwMCIgdmVyc2FvPSIwLjAzIiB2ZXJzYW9EYWRvc0VudD0iMC4wNSIgdmVyc2FvU0I9IjAw
+MDAwMyI+PGlkZT48Y1VGPjM1PC9jVUY+PGNORj4yNDEzMTA8L2NORj48bW9kPjU5PC9tb2Q+PG5z
+ZXJpZVNBVD4xMjM0NTY3ODk8L25zZXJpZVNBVD48bkNGZT4wMDAwMDE8L25DRmU+PGRFbWk+MjAx
+NTA2MDI8L2RFbWk+PGhFbWk+MTUxNTQ0PC9oRW1pPjxjRFY+MDwvY0RWPjx0cEFtYj4yPC90cEFt
+Yj48Q05QSj4yMjIyMjIyMjIyMjIyMjwvQ05QSj48c2lnbkFDPjExMTExMTExMTExMTEyMjIyMjIy
+MjIyMjIyMjExMTExMTExMTExMTExMjIyMjIyMjIyMjIyMjIxMTExMTExMTExMTExMTIyMjIyMjIy
+MjIyMjIyMTExMTExMTExMTExMTEyMjIyMjIyMjIyMjIyMjExMTExMTExMTExMTExMjIyMjIyMjIy
+MjIyMjIxMTExMTExMTExMTExMTIyMjIyMjIyMjIyMjIyMTExMTExMTExMTExMTEyMjIyMjIyMjIy
+MjIyMjExMTExMTExMTExMTExMjIyMjIyMjIyMjIyMjIxMTExMTExMTExMTExMTIyMjIyMjIyMjIy
+MjIyMTExMTExMTExMTExMTEyMjIyMjIyMjIyMjIyMjExMTExMTExMTExMTExMjIyMjIyMjIyMjIy
+MjIxMTExMTExMTExMTExMTIyMjIyMjIyMjIyMjIyMTExMTExMTExPC9zaWduQUM+PGFzc2luYXR1
+cmFRUkNPREU+Q2grSzAvOHJpUnl0cXZBVGVnVXQvVmFpQXA4QTFGbllJYm1zbzQxS3NUSnowbEJ0
+UlJlS25CVHd3Z3l4VnFrLzNhek1Cb3FpR0I3aHlGZDlYRXNHQU8rUHUxdnpaM21yRjB2YVQxd0dz
+SmxreXdlWnBVNkdkdTgwM2NCdGRtUDl4L0QxNldmVVhvKzR2OXpiaEQrdHI2WGh5eG1HWWpUNDdO
+dXluV1lScTZCVlFnZGZGcWRLUkk0Q0xtYXZQOUdnV2lVZWZnWFQzYlRjMitGbUp5WkUwMHg5MndT
+bDAvbEdIOVpYMGdhVEVQdEFPd2d2dkRhcW00Um9sY2dpblkwUGZOcVpTRDVNQlFtY09hV0lyRVcr
+OFZyalJUVS85Y0lmbllrcStzVGg1U0FtYXg4NXVLcjljSWdBaDdCUFVqOVhNT2p3UXo5ZGRMb3hh
+L0czTzYybU1BPT1oeWdsand1b2htbW9ld2FyZm5taWdobHh6a2U3azJiamx0bzRzYjJ2bHRvcmdt
+MjZraGhhbmdrbm5mdnB6eWR0NXRlcnVkeXc1dnV2dHpsaGxxczNxcnp2cGxmbmx2dz09PC9hc3Np
+bmF0dXJhUVJDT0RFPjxudW1lcm9DYWl4YT4wMDE8L251bWVyb0NhaXhhPjwvaWRlPjxlbWl0PjxD
+TlBKPjExMTExMTExMTExMTExPC9DTlBKPjx4Tm9tZT5Fc3RhYmVsZWNpbWVudG8gZGUgVGVzdGUg
+MjwveE5vbWU+PHhGYW50PkVzdGFiZWxlY2ltZW50byBGYW50YXNpYSAyPC94RmFudD48ZW5kZXJF
+bWl0Pjx4TGdyPnJ1YSBkYXMgZmxvcmVzPC94TGdyPjxucm8+MTAwNTwvbnJvPjx4Q3BsPmZyZW50
+ZTwveENwbD48eEJhaXJybz5jZW50cm88L3hCYWlycm8+PHhNdW4+U2FvIFBhdWxvPC94TXVuPjxD
+RVA+MDAwMDAwMDA8L0NFUD48L2VuZGVyRW1pdD48SUU+MTExMTExMTExMTExPC9JRT48Y1JlZ1Ry
+aWI+MzwvY1JlZ1RyaWI+PGluZFJhdElTU1FOPlM8L2luZFJhdElTU1FOPjwvZW1pdD48ZGVzdD48
+Q05QSj4wNTQ4MTMzNjAwMDEzNzwvQ05QSj48eE5vbWU+RC5KLiBTWVNURU08L3hOb21lPjwvZGVz
+dD48ZW50cmVnYT48eExncj5sb2dyYWRvdXJvPC94TGdyPjxucm8+MTEyMjMzPC9ucm8+PHhDcGw+
+Y29tcGxlbWVudG88L3hDcGw+PHhCYWlycm8+YmFpcnJvPC94QmFpcnJvPjx4TXVuPm11bmljaXBp
+bzwveE11bj48VUY+Uko8L1VGPjwvZW50cmVnYT48ZGV0IG5JdGVtPSIxIj48cHJvZD48Y1Byb2Q+
+QUNCUjAwMTwvY1Byb2Q+PGNFQU4+NjI5MTA0MTUwMDIxMzwvY0VBTj48eFByb2Q+QXNzaW5hdHVy
+YSBTQUM8L3hQcm9kPjxOQ00+OTk8L05DTT48Q0ZPUD41MTIwPC9DRk9QPjx1Q29tPlVOPC91Q29t
+PjxxQ29tPjEuMDAwMDwvcUNvbT48dlVuQ29tPjEyMC4wMDwvdlVuQ29tPjx2UHJvZD4xMjAuMDA8
+L3ZQcm9kPjxpbmRSZWdyYT5BPC9pbmRSZWdyYT48dkRlc2M+MS4wMDwvdkRlc2M+PHZJdGVtPjEx
+NC4xOTwvdkl0ZW0+PHZSYXREZXNjPjQuODE8L3ZSYXREZXNjPjxvYnNGaXNjb0RldCB4Q2FtcG9E
+ZXQ9ImNhbXBvIj48eFRleHRvRGV0PnRleHRvPC94VGV4dG9EZXQ+PC9vYnNGaXNjb0RldD48L3By
+b2Q+PGltcG9zdG8+PHZJdGVtMTI3NDE+MTQuNDA8L3ZJdGVtMTI3NDE+PElDTVM+PElDTVMwMD48
+T3JpZz4wPC9PcmlnPjxDU1Q+MDA8L0NTVD48cElDTVM+MTguMDA8L3BJQ01TPjx2SUNNUz4yMC41
+NTwvdklDTVM+PC9JQ01TMDA+PC9JQ01TPjxQSVM+PFBJU0FsaXE+PENTVD4wMTwvQ1NUPjx2QkM+
+MTIwLjAwPC92QkM+PHBQSVM+MC4wMDY1PC9wUElTPjx2UElTPjAuNzg8L3ZQSVM+PC9QSVNBbGlx
+PjwvUElTPjxDT0ZJTlM+PENPRklOU0FsaXE+PENTVD4wMTwvQ1NUPjx2QkM+MTIwLjAwPC92QkM+
+PHBDT0ZJTlM+MC4wMDY1PC9wQ09GSU5TPjx2Q09GSU5TPjAuNzg8L3ZDT0ZJTlM+PC9DT0ZJTlNB
+bGlxPjwvQ09GSU5TPjwvaW1wb3N0bz48aW5mQWRQcm9kPkluZm9ybWFjb2VzIGFkaWNpb25haXM8
+L2luZkFkUHJvZD48L2RldD48ZGV0IG5JdGVtPSIyIj48cHJvZD48Y1Byb2Q+NjI5MTA0MTUwMDIx
+MzwvY1Byb2Q+PGNFQU4+NjI5MTA0MTUwMDIxMzwvY0VBTj48eFByb2Q+T3V0cm8gcHJvZHV0byBR
+dWFscXVlciwgY29tIGEgRGVzY3JpY2FvIEdyYW5kZTwveFByb2Q+PENGT1A+NTUyOTwvQ0ZPUD48
+dUNvbT51bjwvdUNvbT48cUNvbT4xLjEyMDU8L3FDb20+PHZVbkNvbT4xLjIxPC92VW5Db20+PHZQ
+cm9kPjEuMzY8L3ZQcm9kPjxpbmRSZWdyYT5BPC9pbmRSZWdyYT48dk91dHJvPjIuMDA8L3ZPdXRy
+bz48dkl0ZW0+My4yMjwvdkl0ZW0+PHZSYXREZXNjPjAuMTQ8L3ZSYXREZXNjPjwvcHJvZD48aW1w
+b3N0bz48dkl0ZW0xMjc0MT4wLjQxPC92SXRlbTEyNzQxPjxJQ01TPjxJQ01TNDA+PE9yaWc+MDwv
+T3JpZz48Q1NUPjQwPC9DU1Q+PC9JQ01TNDA+PC9JQ01TPjxQSVM+PFBJU1F0ZGU+PENTVD4wMzwv
+Q1NUPjxxQkNQcm9kPjEuMzU1ODwvcUJDUHJvZD48dkFsaXFQcm9kPjEuMDIyMzwvdkFsaXFQcm9k
+Pjx2UElTPjEuMzk8L3ZQSVM+PC9QSVNRdGRlPjwvUElTPjxQSVNTVD48cUJDUHJvZD4xLjM1NTg8
+L3FCQ1Byb2Q+PHZBbGlxUHJvZD4xLjAyMjM8L3ZBbGlxUHJvZD48dlBJUz4xLjM5PC92UElTPjwv
+UElTU1Q+PENPRklOUz48Q09GSU5TUXRkZT48Q1NUPjAzPC9DU1Q+PHFCQ1Byb2Q+MS4zNTU4PC9x
+QkNQcm9kPjx2QWxpcVByb2Q+MS4wMjIzPC92QWxpcVByb2Q+PHZDT0ZJTlM+MS4zOTwvdkNPRklO
+Uz48L0NPRklOU1F0ZGU+PC9DT0ZJTlM+PC9pbXBvc3RvPjwvZGV0PjxkZXQgbkl0ZW09IjMiPjxw
+cm9kPjxjUHJvZD5hYmMxMjM8L2NQcm9kPjxjRUFOPjYyOTEwNDE1MDAyMTM8L2NFQU4+PHhQcm9k
+PkFDQnJTQVQgcnVsZXM8L3hQcm9kPjxOQ00+OTk8L05DTT48Q0ZPUD41ODQ0PC9DRk9QPjx1Q29t
+PnVuPC91Q29tPjxxQ29tPjEuMTIwNTwvcUNvbT48dlVuQ29tPjEuMjE8L3ZVbkNvbT48dlByb2Q+
+MS4zNjwvdlByb2Q+PGluZFJlZ3JhPkE8L2luZFJlZ3JhPjx2SXRlbT4xLjMxPC92SXRlbT48dlJh
+dERlc2M+MC4wNTwvdlJhdERlc2M+PC9wcm9kPjxpbXBvc3RvPjxJQ01TPjxJQ01TMDA+PE9yaWc+
+MTwvT3JpZz48Q1NUPjAwPC9DU1Q+PHBJQ01TPjAuMDA8L3BJQ01TPjx2SUNNUz4wLjAwPC92SUNN
+Uz48L0lDTVMwMD48L0lDTVM+PFBJUz48UElTTlQ+PENTVD4wNDwvQ1NUPjwvUElTTlQ+PC9QSVM+
+PFBJU1NUPjxxQkNQcm9kPjEuMzU1ODwvcUJDUHJvZD48dkFsaXFQcm9kPjEuMTgyNjwvdkFsaXFQ
+cm9kPjx2UElTPjEuNjA8L3ZQSVM+PC9QSVNTVD48Q09GSU5TPjxDT0ZJTlNOVD48Q1NUPjA2PC9D
+U1Q+PC9DT0ZJTlNOVD48L0NPRklOUz48L2ltcG9zdG8+PGluZkFkUHJvZD5JbmZvcm1hY29lcyBh
+ZGljaW9uYWlzPC9pbmZBZFByb2Q+PC9kZXQ+PHRvdGFsPjxJQ01TVG90Pjx2SUNNUz4yMC41NTwv
+dklDTVM+PHZQcm9kPjEyMi43MjwvdlByb2Q+PHZEZXNjPjEuMDA8L3ZEZXNjPjx2UElTPjIuMTc8
+L3ZQSVM+PHZDT0ZJTlM+Mi4xNzwvdkNPRklOUz48dlBJU1NUPjIuOTk8L3ZQSVNTVD48dkNPRklO
+U1NUPjAuMDA8L3ZDT0ZJTlNTVD48dk91dHJvPjIuMDA8L3ZPdXRybz48L0lDTVNUb3Q+PHZDRmU+
+MTE4LjcyPC92Q0ZlPjxEZXNjQWNyRW50cj48dkRlc2NTdWJ0b3Q+NS4wMDwvdkRlc2NTdWJ0b3Q+
+PC9EZXNjQWNyRW50cj48dkNGZUxlaTEyNzQxPjEuMjM8L3ZDRmVMZWkxMjc0MT48L3RvdGFsPjxw
+Z3RvPjxNUD48Y01QPjAxPC9jTVA+PHZNUD41MC4wMDwvdk1QPjwvTVA+PE1QPjxjTVA+MDM8L2NN
+UD48dk1QPjEwMC4wMDwvdk1QPjwvTVA+PHZUcm9jbz4zMS4yODwvdlRyb2NvPjwvcGd0bz48aW5m
+QWRpYz48aW5mQ3BsPkFjZXNzZSB3d3cucHJvamV0b2FjYnIuY29tLmJyIHBhcmEgb2J0ZXIgbWFp
+cztpbmZvcm1hY29lcyBzb2JyZSBvIGNvbXBvbmVudGUgQUNCclNBVDtQcmVjaXNhIGRlIHVtIFBB
+Ri1FQ0YgaG9tb2xvZ2Fkbz87Q29uaGVjYSBvIERKUERWIC0gd3d3LmRqcGR2LmNvbS5icjwvaW5m
+Q3BsPjwvaW5mQWRpYz48L2luZkNGZT48U2lnbmF0dXJlIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y
+Zy8yMDAwLzA5L3htbGRzaWcjIj48U2lnbmVkSW5mbz48Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBB
+bGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnL1RSLzIwMDEvUkVDLXhtbC1jMTRuLTIwMDEwMzE1
+Ii8+PFNpZ25hdHVyZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQv
+eG1sZHNpZy1tb3JlI3JzYS1zaGEyNTYiLz48UmVmZXJlbmNlIFVSST0iI0NGZTM1MTUwNjExMTEx
+MTExMTExMTExNTkxMjM0NTY3ODkwMDAwMDEyNDEzMTAwIj48VHJhbnNmb3Jtcz48VHJhbnNmb3Jt
+IEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1z
+aWduYXR1cmUiLz48VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAw
+MS9SRUMteG1sLWMxNG4tMjAwMTAzMTUiLz48L1RyYW5zZm9ybXM+PERpZ2VzdE1ldGhvZCBBbGdv
+cml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jI3NoYTI1NiIvPjxEaWdlc3RW
+YWx1ZT5nWkhwenR3bWFDbVArbVJoRlhXeUhLemNKVFlBRDlvL21SZEgvUXhLeFlnPTwvRGlnZXN0
+VmFsdWU+PC9SZWZlcmVuY2U+PC9TaWduZWRJbmZvPjxTaWduYXR1cmVWYWx1ZT5jTS9zYjNPWFls
+TVR6a21IaktMM0lCcWFrU3VxZDlKdlArNGlTSEt0akZ0NlZyWVl0UGlSMDNvd1hudGh3SWNOZE5H
+R0RGdTlFYkNQSHdJc25tR205NVF4NWF6cXFEL1VGYnJzcXdnbjRnQVNqQXk4enI3YlBEM2xwNTFt
+dzJYYml0NnFrOVlqa1pzYkVwcTVVc2JWaXdyVFhBRzJXWXQrNVgxazN1Z1VUU3FwSEY5T1lTUUhk
+RitWVFQ0cjMwanNGVXRrdUpaUnRHdDdpc2FiVXNGVHgwWDBwa0l2ZVhOVk00ejljRFFtaFBpTlky
+SWFkVE9wZXNZVUJLNGZMbTA3QlFhaG44MkxkUUVJS0s2dTlXTjErdmE4WmRHaDhQWVhDdUh5Wjla
+S2UwRHgyVktyUVAzVDRaWmdmQU1QMi91SlQ3c0pJNmpxTDdIblVqZTlHZFprVUE9PTwvU2lnbmF0
+dXJlVmFsdWU+PEtleUluZm8+PFg1MDlEYXRhPjxYNTA5Q2VydGlmaWNhdGU+TUlJQ3lUQ0NBYkdn
+QXdJQkFnSUlVQnppZVhkT0Z1NHdEUVlKS29aSWh2Y05BUUVMQlFBd0RqRU1NQW9HQTFVRUJoTURV
+MEZVTUI0WERURTFNRFl3TVRFNE5UWTFNRm9YRFRFM01EVXlNVEU0TlRZMU1Gb3dEakVNTUFvR0Ex
+VUVDd3dEVTBGVU1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBaFdh
+ZEpxRDRNSHN5VEIyQTczZ1JkUTFhZm9pbWhTZFFUTzlkZWJuQmVISndQOGpJc1JmNHBlTStSaXh6
+OFdXRlhpd1hzYzd6ckZPclJic1YySG1NVy90RHRvQTh0VU9VVGwzUVE2d3pKNmlnZlVLOXd0NzVX
+OG1rMUhkSVY0T1JQbHlRVjVoc0kxREtqWlNnVTU3OTVnNURST1dJZVRhZTdvbWN3RmZXVFJhaU8z
+VkVRSUlyR0lUNUlFd2dNajB0VEF5RGZIVWw0aXpDdks0aTBXamVZT1RxallUNG0vZ3VhcHJaS25U
+Yy9jZy9vTmc0dmpUTEZKUUVXdGpIa2JRSENtdXZPeHJ2OG9QSE1ub0RyZXc5UURjdG9RRXZuWklh
+TytaM0lnOWZnMHJTZEdyMndjeWUvSU1PbjNncElGQlR3WWs3ejl2WmRYSDVuZXhJRGJNMDNRSURB
+UUFCb3lzd0tUQW5CZ05WSFJFRUlEQWVvQndHQ0NzR0FRVUZCd2dGb0JBTURuZDNkeTV6WVhRdVky
+OXRMbUp5TUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFCRHVNS0tWMEJ4OExabmpoUDY3L0RWalBt
+WnBvNUpqaXY5aUlMM3FDckZad2IyempDMGJxREpta21yRWZhQ0lXK1BZd0E3dXdMOThGVTJZY3Ri
+YlR5VWNKai9TcHBkcWVtNjM0ZHNudkpwK1BuQVFDd2E3Qi9CS0ZOcmtqa01ZU2piZUhtMWNIQ0dV
+eFM2Ry85SjVZYTJiREZLcmkxSzdNWnpLVGRUcFk2dDFQSldLYWFwak5mUU1oSHE1dFNSMTl5OVJM
+OHVRRlVVUVF4YjZLd1hBbHlkbDFvVys0M1N1RlhFSjV6TDA4ZEVTT3RiZEFJYTRwTy96S1JVMnVr
+MFhLVjVqZmZtdS9saVFTeEgwaVNFK0FXV0RjOG9xUkJyNkRENDFaNWxjcTc5bGl3S2NIRm5SYXND
+UVYxcjc0b3lWNCtFaFBkYkhGY1AzL3YxZEhja2lDTWo8L1g1MDlDZXJ0aWZpY2F0ZT48L1g1MDlE
+YXRhPjwvS2V5SW5mbz48L1NpZ25hdHVyZT48L0NGZT4=|20150602151544|CFe35150611111111111111591234567890000012413100|118.72|05481336000137|Ch+K0/8riRytqvATegUt/VaiAp8A1FnYIbmso41KsTJz0lBtRReKnBTwwgyxVqk/3azMBoqiGB7hyFd9XEsGAO+Pu1vzZ3mrF0vaT1wGsJlkyweZpU6Gdu803cBtdmP9x/D16WfUXo+4v9zbhD+tr6XhyxmGYjT47NuynWYRq6BVQgdfFqdKRI4CLmavP9GgWiUefgXT3bTc2+FmJyZE00x92wSl0/lGH9ZX0gaTEPtAOwgvvDaqm4RolcginY0PfNqZSD5MBQmcOaWIrEW+8VrjRTU/9cIfnYkq+sTh5SAmax85uKr9cIgAh7BPUj9XMOjwQz9ddLoxa/G3O62mMA==hygljwuohmmoewarfnmighlxzke7k2bjlto4sb2vltorgm26khhangknnfvpzydt5terudyw5vuvtzlhlqs3qrzvplfnlvw==
+ - 15:47:46:156 - ESynaSerError - Communication error 9997: Timeout during operation
+ - 14:38:30:312 - ACBrSAT.Inicializado
+ - 14:38:56:140 - -- 14:38:56:140 - numeroSessao: 139778 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:40:43:062 - ACBrSAT.Inicializado
+ - 15:09:20:765 - ACBrSAT.Inicializado
+ - 15:23:24:687 - ACBrSAT.Inicializado
+ - 15:23:33:109 - -- 15:23:33:109 - numeroSessao: 917227 - Comando: AtivarSAT( 1, 11.111.111/1111-11, 35 )
+ - 15:24:46:640 - ACBrSAT.Inicializado
+ - 15:24:51:671 - -- 15:24:51:671 - numeroSessao: 858353 - Comando: AtivarSAT( 1, 11.111.111/1111-11, 35 )
+ - 15:26:33:000 - ACBrSAT.Inicializado
+ - 15:26:37:218 - -- 15:26:37:218 - numeroSessao: 349793 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:27:56:718 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 15:28:08:562 - ACBrSAT.Inicializado
+ - 16:04:41:546 - ACBrSAT.Inicializado
+ - 16:04:59:953 - -- 16:04:59:953 - numeroSessao: 536500 - Comando: ConsultarStatusOperacional
+ - 16:46:46:546 - ACBrSAT.Inicializado
+ - 16:47:28:500 - -- 16:47:28:500 - numeroSessao: 307037 - Comando: AtivarSAT( 1, 11.111.111/1111-11, 35 )
+ - 16:48:07:375 - ACBrSAT.Inicializado
+ - 16:50:00:765 - -- 16:50:00:765 - numeroSessao: 680869 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 17:10:09:562 - ACBrSAT.Inicializado
+ - 17:10:21:140 - -- 17:10:21:125 - numeroSessao: 853826 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 09:25:49:937 - ACBrSAT.Inicializado
+ - 09:26:09:625 - -- 09:26:09:625 - numeroSessao: 679024 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 09:31:09:984 - ACBrSAT.Inicializado
+ - 09:33:55:234 - ACBrSAT.DesInicializado
+ - 09:34:05:156 - ACBrSAT.Inicializado
+ - 09:46:22:687 - ACBrSAT.Inicializado
+ - 09:51:27:984 - ACBrSAT.Inicializado
+ - 09:53:22:812 - ACBrSAT.Inicializado
+ - 09:53:29:562 - ACBrSAT.DesInicializado
+ - 09:54:17:046 - ACBrSAT.Inicializado
+ - 09:55:43:046 - ACBrSAT.DesInicializado
+ - 09:56:14:843 - ACBrSAT.Inicializado
+ - 10:04:41:390 - ACBrSAT.Inicializado
+ - 10:04:56:312 - ACBrSAT.DesInicializado
+ - 10:55:43:546 - ACBrSAT.Inicializado
+ - 10:56:33:718 - -- 10:56:22:093 - numeroSessao: 292325 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 11:00:32:343 - ACBrSAT.Inicializado
+ - 11:02:18:093 - ACBrSAT.Inicializado
+ - 11:46:48:500 - ACBrSAT.Inicializado
+ - 11:47:23:609 - -- 11:47:23:593 - numeroSessao: 168295 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <CNPJ>05481336000137</CNPJ>
+         <xNome>D.J. SYSTEM</xNome>
+      </dest>
+      <entrega>
+         <xLgr>logradouro</xLgr>
+         <nro>112233</nro>
+         <xCpl>complemento</xCpl>
+         <xBairro>bairro</xBairro>
+         <xMun>municipio</xMun>
+         <UF>RJ</UF>
+      </entrega>
+      <det nItem="1">
+         <prod>
+            <cProd>ACBR001</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Assinatura SAC</xProd>
+            <NCM>99</NCM>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>120.00</vUnCom>
+            <indRegra>A</indRegra>
+            <vDesc>1.00</vDesc>
+            <obsFiscoDet xCampoDet="campo">
+               <xTextoDet>texto</xTextoDet>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>14.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pPIS>0.0065</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>120.00</vBC>
+                  <pCOFINS>0.0065</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6291041500213</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>Outro produto Qualquer, com a Descricao Grande</xProd>
+            <CFOP>5529</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+            <vOutro>2.00</vOutro>
+         </prod>
+         <imposto>
+            <vItem12741>0.41</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>40</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </PISQtde>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.0223</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSQtde>
+                  <CST>03</CST>
+                  <qBCProd>1.3558</qBCProd>
+                  <vAliqProd>1.0223</vAliqProd>
+               </COFINSQtde>
+            </COFINS>
+         </imposto>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>abc123</cProd>
+            <cEAN>6291041500213</cEAN>
+            <xProd>ACBrSAT rules</xProd>
+            <NCM>99</NCM>
+            <CFOP>5844</CFOP>
+            <uCom>un</uCom>
+            <qCom>1.1205</qCom>
+            <vUnCom>1.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMS00>
+                  <Orig>1</Orig>
+                  <CST>00</CST>
+                  <pICMS>0.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISNT>
+                  <CST>04</CST>
+               </PISNT>
+            </PIS>
+            <PISST>
+               <qBCProd>1.3558</qBCProd>
+               <vAliqProd>1.1826</vAliqProd>
+            </PISST>
+            <COFINS>
+               <COFINSNT>
+                  <CST>06</CST>
+               </COFINSNT>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>50.00</vMP>
+         </MP>
+         <MP>
+            <cMP>03</cMP>
+            <vMP>100.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Acesse www.projetoacbr.com.br para obter mais;informacoes sobre o componente ACBrSAT;Precisa de um PAF-ECF homologado?;Conheca o DJPDV - www.djpdv.com.br</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 11:51:35:062 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 11:51:41:328 - ACBrSAT.Inicializado
+ - 11:51:58:812 - -- 11:51:58:812 - numeroSessao: 974475 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+            <obsFiscoDet xCampoDet="">
+               <xTextoDet/>
+            </obsFiscoDet>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>2.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 11:53:52:062 - ACBrSAT.Inicializado
+ - 11:54:06:078 - EDatabaseError - tblSaida: Cannot perform this operation on a closed dataset
+ - 11:55:38:421 - -- 11:55:38:421 - numeroSessao: 804628 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>2.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 13:33:15:187 - ACBrSAT.Inicializado
+ - 13:34:23:593 - -- 13:34:23:578 - numeroSessao: 997451 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>7898311763034</cProd>
+            <xProd>SORVETE ESTIQUELLO MORANGO</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>4.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:04:55:843 - ACBrSAT.Inicializado
+ - 14:05:25:296 - -- 14:05:25:265 - numeroSessao: 494138 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>7898311763034</cProd>
+            <xProd>SORVETE ESTIQUELLO MORANGO</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>7898311762242</cProd>
+            <xProd>SORVETE FRUKIS MARACUJA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>1.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.12</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>5.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:06:26:984 - ACBrSAT.Inicializado
+ - 14:06:32:031 - EACBrSATErro - Nenhum CFe carregado na memória
+ - 14:14:46:531 - ACBrSAT.Inicializado
+ - 14:14:50:625 - -- 14:14:50:625 - numeroSessao: 572618 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>21321</cProd>
+            <xProd>SORVETE ESTIQUELLO LEITE CONDENSADO</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>1.50</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.18</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6454987</cProd>
+            <xProd>SORVETE ESTIQUELLO FLOCOS</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>1.50</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.18</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>430</cProd>
+            <xProd>CHEETOS SABOR QUEIJO PARMESAO 170G</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.90</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.35</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>5.90</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 16:00:05:875 - ACBrSAT.Inicializado
+ - 16:00:15:421 - -- 16:00:15:421 - numeroSessao: 195870 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>2.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 08:03:23:171 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 08:03:46:593 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 08:03:53:703 - ACBrSAT.Inicializado
+ - 08:04:03:281 - -- 08:04:03:281 - numeroSessao: 358561 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>7896002365055</cProd>
+            <xProd>FOFUCHO PULLMAN</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>3.79</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.45</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>7892840228040</cProd>
+            <xProd>CEBOLITOS ELMA CIPS 130G</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.90</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.35</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>8.69</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 08:25:58:109 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 08:26:03:546 - ACBrSAT.Inicializado
+ - 08:26:11:109 - -- 08:26:11:109 - numeroSessao: 332195 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>7898311763041</cProd>
+            <xProd>SORVETE ESTIQUELLO CHOCOLATE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>7898311762334</cProd>
+            <xProd>SORVETE FRUKIS GOIABA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>1.20</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.14</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="3">
+         <prod>
+            <cProd>78918238</cProd>
+            <xProd>SONHO DE VALSA BRANCO</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.80</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.10</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>4.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 09:43:04:453 - ACBrSAT.Inicializado
+ - 09:43:04:484 - -- 09:43:04:484 - numeroSessao: 197310 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>123</cProd>
+            <xProd>SORVETE CROKANLLITO DA FRUTIQUELLO</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>2.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 09:57:49:218 - ACBrSAT.Inicializado
+ - 09:57:52:218 - EACBrSATErro - Nenhum CFe carregado na memória
+ - 14:50:29:265 - ACBrSAT.Inicializado
+ - 14:50:29:296 - -- 14:50:29:296 - numeroSessao: 758797 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>1234</cProd>
+            <xProd>TRIDENT HORTELA MENTA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>1.20</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.14</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>60</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>1.20</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:10:33:125 - ACBrSAT.Inicializado
+ - 14:10:33:156 - -- 14:10:33:156 - numeroSessao: 657855 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>11111111111111</CNPJ>
+         <signAC>9d4c4eef8c515e2c1269c2e4fff0719d526c5096422bf1defa20df50ba06469a28adb25ba0447befbced7c0f805a5cc58496b7b23497af9a04f69c77f17c0ce68161f8e4ca7e3a94c827b6c563ca6f47aea05fa90a8ce3e4327853bb2d664ba226728fff1e2c6275ecc9b20129e1c1d2671a837aa1d265b36809501b519dbc08129e1c1d2671a837aa1d265b36809501b519dbc08129e1c1d2671a837aa1d265b36809501b519dbc08129e1c</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <IE/>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>6510010008-6</cProd>
+            <cEAN>RE0320</cEAN>
+            <xProd>REDE ELASTICA PIRAVAL</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>5.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.60</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6570010002-8</cProd>
+            <cEAN>504</cEAN>
+            <xProd>ALONGADOR TR HONDA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>9.30</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>1.12</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>14.30</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:18:18:953 - ACBrSAT.Inicializado
+ - 14:18:18:968 - -- 14:18:18:968 - numeroSessao: 673469 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>6510010008-6</cProd>
+            <cEAN>RE0320</cEAN>
+            <xProd>REDE ELASTICA PIRAVAL</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>5.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.60</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6570010002-8</cProd>
+            <cEAN>504</cEAN>
+            <xProd>ALONGADOR TR HONDA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>9.30</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>1.12</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>14.30</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:00:42:671 - ACBrSAT.Inicializado
+ - 15:00:42:687 - -- 15:00:42:687 - numeroSessao: 456631 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>4460010007-7</cProd>
+            <xProd>RABETA TR AZUL 07 HONDA COMPLETA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>53.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>6.36</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>6050010003-2</cProd>
+            <xProd>PAS FREIO TR HONDA FISCHER</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>41.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>4.92</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>94.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:27:00:406 - ACBrSAT.Inicializado
+ - 15:27:00:437 - -- 15:27:00:437 - numeroSessao: 113756 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>3170010003-7</cProd>
+            <xProd>TENSOR CORR COMANDO HONDA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>17.21</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>2.07</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>3880010118-3</cProd>
+            <xProd>ADESIVO TANQUE</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>10.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>1.20</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>27.21</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:47:04:765 - ACBrSAT.Inicializado
+ - 15:47:25:296 - -- 15:47:25:296 - numeroSessao: 259658 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>6160010001-9</cProd>
+            <xProd>LAMP LANTERNA ORIGINAL</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.24</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>0210010001-1</cProd>
+            <xProd>TAMPA TANQUE HONDA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>13.18</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>1.58</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>15.18</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:52:03:062 - ACBrSAT.Inicializado
+ - 15:52:26:609 - -- 15:52:26:578 - numeroSessao: 403696 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>2070010106-9</cProd>
+            <xProd>REP ENTRADA AR KIT CAPACETE MIXS</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>7.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.84</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>2070010107-8</cProd>
+            <xProd>REP VISEIRA ORELHA MIXS</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>8.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.96</vItem12741>
+            <ICMS>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>15.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 15:54:31:328 - ACBrSAT.Inicializado
+ - 15:54:39:781 - -- 15:54:39:781 - numeroSessao: 173516 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>22222222222222</CNPJ>
+         <signAC>11111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111111112222222222222211111111111111222222222222221111111111111122222222222222111111111</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>11111111111111</CNPJ>
+         <IE>111111111111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>0190010006-7</cProd>
+            <xProd>OLEO 2T ESSENCIAL 200ML</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>2.50</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.30</vItem12741>
+            <ICMS>
+               <ICMS40>
+                  <Orig>0</Orig>
+                  <CST>60</CST>
+               </ICMS40>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <det nItem="2">
+         <prod>
+            <cProd>3880010127-2</cProd>
+            <xProd>ESTICADOR COR CHAPA HONDA</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>3.35</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.40</vItem12741>
+            <ICMS>
+               <ICMS00>
+                  <Orig>0</Orig>
+                  <CST>00</CST>
+                  <pICMS>18.00</pICMS>
+               </ICMS00>
+            </ICMS>
+            <PIS>
+               <PISAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pPIS>0.0000</pPIS>
+               </PISAliq>
+            </PIS>
+            <COFINS>
+               <COFINSAliq>
+                  <CST>01</CST>
+                  <vBC>0.00</vBC>
+                  <pCOFINS>0.0000</pCOFINS>
+               </COFINSAliq>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>5.85</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 10:17:04:890 - ACBrSAT.Inicializado
+ - 10:20:44:546 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 10:05:04:812 - ACBrSAT.Inicializado
+ - 10:09:33:000 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 10:09:40:609 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 10:09:53:796 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 10:14:23:171 - ACBrSAT.Inicializado
+ - 10:14:54:953 - EConvertError - '' is not a valid floating point value
+ - 10:22:43:953 - ACBrSAT.Inicializado
+ - 10:23:20:312 - EACBrSATErro - Nenhum CFe carregado na memória
+ - 10:23:25:781 - -- 10:23:25:781 - numeroSessao: 112851 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>pF8DR2SPni/51hAGjwFtJOqogQe6pJZapbhWzNSx4hSJm5+WLzKoW/WlxASvXQr7lBV8mAchyR62affwxupRBIWLGJpjEyIoR4oFQ6NlRm+r0CzfHzCQgP8ecqoZlXFblBEV3YmU/LkDR7dRXEI3jR1J2gcaS8P0ulsdzBqRz851hVA89SeKcahJDUsh7rEBt7j1alsnYeU2i0piKpNctQnaPUh2odX8nAcnRd1guOM45+l6Tnu0JUg8rU/FkAXM41Qvqp4DjrM5Pxt7ah7EEdUA1CckQUF8B4xjdE+sCNY2TKFJ1sBg6kDDA8WQOJFvva6F4fKA0nkmJtEJcixvGw==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>N</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>teste</cProd>
+            <xProd>teste</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.01</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.00</vItem12741>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>0.01</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 10:29:45:093 - EACBrSATErro - ACBrSAT não foi inicializado corretamente
+ - 10:29:52:640 - ACBrSAT.Inicializado
+ - 10:29:57:375 - -- 10:29:57:375 - numeroSessao: 830555 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>pF8DR2SPni/51hAGjwFtJOqogQe6pJZapbhWzNSx4hSJm5+WLzKoW/WlxASvXQr7lBV8mAchyR62affwxupRBIWLGJpjEyIoR4oFQ6NlRm+r0CzfHzCQgP8ecqoZlXFblBEV3YmU/LkDR7dRXEI3jR1J2gcaS8P0ulsdzBqRz851hVA89SeKcahJDUsh7rEBt7j1alsnYeU2i0piKpNctQnaPUh2odX8nAcnRd1guOM45+l6Tnu0JUg8rU/FkAXM41Qvqp4DjrM5Pxt7ah7EEdUA1CckQUF8B4xjdE+sCNY2TKFJ1sBg6kDDA8WQOJFvva6F4fKA0nkmJtEJcixvGw==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>N</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>teste</cProd>
+            <xProd>teste</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.01</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.00</vItem12741>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>0.01</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 10:36:08:640 - ACBrSAT.Inicializado
+ - 10:38:01:203 - -- 10:38:01:187 - numeroSessao: 739780 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>pF8DR2SPni/51hAGjwFtJOqogQe6pJZapbhWzNSx4hSJm5+WLzKoW/WlxASvXQr7lBV8mAchyR62affwxupRBIWLGJpjEyIoR4oFQ6NlRm+r0CzfHzCQgP8ecqoZlXFblBEV3YmU/LkDR7dRXEI3jR1J2gcaS8P0ulsdzBqRz851hVA89SeKcahJDUsh7rEBt7j1alsnYeU2i0piKpNctQnaPUh2odX8nAcnRd1guOM45+l6Tnu0JUg8rU/FkAXM41Qvqp4DjrM5Pxt7ah7EEdUA1CckQUF8B4xjdE+sCNY2TKFJ1sBg6kDDA8WQOJFvva6F4fKA0nkmJtEJcixvGw==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>N</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>teste</cProd>
+            <xProd>teste</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.01</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.00</vItem12741>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <DescAcrEntr>
+            <vDescSubtot>5.00</vDescSubtot>
+         </DescAcrEntr>
+         <vCFeLei12741>1.23</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>0.01</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 10:42:24:015 - ACBrSAT.Inicializado
+ - 10:43:14:109 - -- 10:43:14:109 - numeroSessao: 36075 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>pF8DR2SPni/51hAGjwFtJOqogQe6pJZapbhWzNSx4hSJm5+WLzKoW/WlxASvXQr7lBV8mAchyR62affwxupRBIWLGJpjEyIoR4oFQ6NlRm+r0CzfHzCQgP8ecqoZlXFblBEV3YmU/LkDR7dRXEI3jR1J2gcaS8P0ulsdzBqRz851hVA89SeKcahJDUsh7rEBt7j1alsnYeU2i0piKpNctQnaPUh2odX8nAcnRd1guOM45+l6Tnu0JUg8rU/FkAXM41Qvqp4DjrM5Pxt7ah7EEdUA1CckQUF8B4xjdE+sCNY2TKFJ1sBg6kDDA8WQOJFvva6F4fKA0nkmJtEJcixvGw==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>N</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>0011170003-7</cProd>
+            <xProd>teste</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.01</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.00</vItem12741>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>01</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>01</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <vCFeLei12741>0.00</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>0.01</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 10:59:13:000 - ACBrSAT.Inicializado
+ - 11:12:22:062 - ACBrSAT.DesInicializado
+ - 11:12:23:890 - ACBrSAT.Inicializado
+ - 11:12:29:875 - -- 11:12:29:875 - numeroSessao: 536465 - Comando: ConsultarStatusOperacional
+ - 11:39:06:296 - ACBrSAT.Inicializado
+ - 11:57:49:343 - ACBrSAT.Inicializado
+ - 12:13:31:093 - ACBrSAT.Inicializado
+ - 13:45:44:812 - -- 13:45:44:812 - numeroSessao: 626326 - Comando: EnviarDadosVenda( <CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>pF8DR2SPni/51hAGjwFtJOqogQe6pJZapbhWzNSx4hSJm5+WLzKoW/WlxASvXQr7lBV8mAchyR62affwxupRBIWLGJpjEyIoR4oFQ6NlRm+r0CzfHzCQgP8ecqoZlXFblBEV3YmU/LkDR7dRXEI3jR1J2gcaS8P0ulsdzBqRz851hVA89SeKcahJDUsh7rEBt7j1alsnYeU2i0piKpNctQnaPUh2odX8nAcnRd1guOM45+l6Tnu0JUg8rU/FkAXM41Qvqp4DjrM5Pxt7ah7EEdUA1CckQUF8B4xjdE+sCNY2TKFJ1sBg6kDDA8WQOJFvva6F4fKA0nkmJtEJcixvGw==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>N</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>0011170003-7</cProd>
+            <xProd>teste</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.01</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.00</vItem12741>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>49</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>49</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <vCFeLei12741>0.00</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>0.01</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 13:54:45:984 - ACBrSAT.Inicializado
+ - 13:54:55:421 - -- 13:54:55:421 - numeroSessao: 177453 - Comando: ConsultarStatusOperacional
+ - 13:55:32:078 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 13:58:10:453 - -- 13:58:10:453 - numeroSessao: 683772 - Comando: ConsultarSAT
+ - 13:58:13:625 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:13:19:359 - -- 14:13:19:359 - numeroSessao: 795804 - Comando: ConsultarSAT
+ - 14:13:26:750 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:15:39:390 - -- 14:15:39:390 - numeroSessao: 976164 - Comando: ConsultarStatusOperacional
+ - 14:15:41:921 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:20:27:421 - -- 14:20:27:421 - numeroSessao: 819039 - Comando: ConsultarStatusOperacional
+ - 14:20:32:015 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:20:40:421 - ACBrSAT.DesInicializado
+ - 14:20:41:453 - ACBrSAT.Inicializado
+ - 14:20:49:796 - -- 14:20:49:796 - numeroSessao: 66692 - Comando: ConsultarStatusOperacional
+ - 14:20:52:687 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:21:13:281 - -- 14:21:13:281 - numeroSessao: 612007 - Comando: TesteFimAFim(<CFe>
+   <infCFe versaoDadosEnt="0.05">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>pF8DR2SPni/51hAGjwFtJOqogQe6pJZapbhWzNSx4hSJm5+WLzKoW/WlxASvXQr7lBV8mAchyR62affwxupRBIWLGJpjEyIoR4oFQ6NlRm+r0CzfHzCQgP8ecqoZlXFblBEV3YmU/LkDR7dRXEI3jR1J2gcaS8P0ulsdzBqRz851hVA89SeKcahJDUsh7rEBt7j1alsnYeU2i0piKpNctQnaPUh2odX8nAcnRd1guOM45+l6Tnu0JUg8rU/FkAXM41Qvqp4DjrM5Pxt7ah7EEdUA1CckQUF8B4xjdE+sCNY2TKFJ1sBg6kDDA8WQOJFvva6F4fKA0nkmJtEJcixvGw==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>N</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>001</cProd>
+            <xProd>teste</xProd>
+            <CFOP>5120</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>0.01</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <vItem12741>0.00</vItem12741>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>49</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>49</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+         <infAdProd>Informacoes adicionais</infAdProd>
+      </det>
+      <total>
+         <vCFeLei12741>0.00</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>0.01</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>informacoes</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe>
+ )
+ - 14:21:18:046 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:35:08:453 - ACBrSAT.Inicializado
+ - 14:35:12:093 - -- 14:35:12:093 - numeroSessao: 791734 - Comando: ConsultarStatusOperacional
+ - 14:35:14:875 - EAccessViolation - Access violation at address 77C20AC4 in module 'msvcrt.dll'. Read of address 0000000C
+ - 14:35:33:375 - EACBrSATErro - Nenhum CFe carregado na memória
+ - 11:47:21:906 - ACBrSAT.Inicializado
+ - 11:47:38:250 - EAccessViolation - Access violation at address 1000AA90 in module 'sat.dll'. Read of address 00000000
+ - 11:49:12:859 - ACBrSAT.Inicializado
+ - 11:49:12:875 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 11:51:18:015 - ACBrSAT.Inicializado
+ - 11:51:50:109 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 11:51:53:109 - ACBrSAT.DesInicializado
+ - 11:52:05:781 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 11:52:55:562 - ACBrSAT.Inicializado
+ - 11:53:06:421 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 11:53:09:671 - ACBrSAT.DesInicializado
+ - 11:53:12:343 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 11:57:42:656 - ACBrSAT.Inicializado
+ - 11:58:33:109 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 12:00:13:718 - ACBrSAT.Inicializado
+ - 12:00:23:265 - EAccessViolation - Access violation at address 1000AA90 in module 'sat.dll'. Read of address 00000000
+ - 12:09:48:078 - ACBrSAT.Inicializado
+ - 12:10:02:375 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 12:11:49:703 - ACBrSAT.Inicializado
+ - 12:11:54:609 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 14:02:08:765 - ACBrSAT.Inicializado
+ - 14:02:14:046 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 14:02:44:562 - ACBrSAT.DesInicializado
+ - 14:02:51:015 - EAccessViolation - Access violation at address 00B1AA90 in module 'sat1.dll'. Read of address 00000000
+ - 14:16:06:921 - ACBrSAT.Inicializado
+ - 14:16:18:625 - EAccessViolation - Access violation at address 00B1AA90 in module 'sat.dll'. Read of address 00000000
+ - 14:20:58:078 - ACBrSAT.Inicializado
+ - 14:21:01:640 - EAccessViolation - Access violation at address 005FE885 in module 'SGE.exe'. Read of address 00000000
+ - 14:22:11:984 - ACBrSAT.Inicializado
+ - 14:22:18:515 - EAccessViolation - Access violation at address 00B1AA90 in module 'sat.dll'. Read of address 00000000
+ - 14:38:03:437 - ACBrSAT.Inicializado
+ - 14:42:46:875 - ACBrSAT.Inicializado
+ - 14:43:09:812 - EACBrSATErro - Não é possível mudar o Modelo com o SAT Inicializado
+ - 14:49:09:171 - ACBrSAT.Inicializado
+ - 10:21:39:906 - ACBrSAT.Inicializado
+ - 10:31:37:250 - ACBrSAT.Inicializado
+ - 10:55:22:546 - ACBrSAT.Inicializado
+ - 08:44:41:359 - ACBrSAT.Inicializado
+ - 13:59:56:703 - ACBrSAT.Inicializado
+ - 14:28:09:265 - ACBrSAT.Inicializado
+ - 14:28:24:875 - EAccessViolation - Access violation at address 10009D90 in module 'sat.dll'. Read of address 00000000
+ - 14:28:38:562 - EAccessViolation - Access violation at address 10009D90 in module 'sat.dll'. Read of address 00000000
+ - 14:28:46:390 - ACBrSAT.DesInicializado
+ - 14:28:56:640 - EAccessViolation - Access violation at address 10009D90 in module 'sat.dll'. Read of address 00000000
+ - 14:29:21:453 - ACBrSAT.Inicializado
+ - 14:29:30:953 - EAccessViolation - Access violation at address 10009D90 in module 'sat.dll'. Read of address 00000000
+ - 14:29:47:968 - ACBrSAT.DesInicializado
+ - 14:39:17:765 - ACBrSAT.Inicializado
+ - 14:39:25:796 - EAccessViolation - Access violation at address 00B19D90 in module 'sat.dll'. Read of address 00000000
+ - 14:39:31:546 - EAccessViolation - Access violation at address 00B19D90 in module 'sat.dll'. Read of address 00000000
+ - 14:39:53:703 - ACBrSAT.DesInicializado
+ - 14:39:59:796 - EAccessViolation - Access violation at address 00B19D90 in module 'sat.dll'. Read of address 00000000
+ - 14:40:19:015 - ACBrSAT.Inicializado
+ - 16:23:14:000 - ACBrSAT.Inicializado
+ - 08:54:49:968 - ACBrSAT.Inicializado
+ - 08:54:58:953 - ACBrSAT.DesInicializado
+ - 09:35:38:593 - ACBrSAT.Inicializado
+ - 09:35:44:593 - ACBrSAT.DesInicializado
+ - 15:04:15:937 - ACBrSAT.Inicializado
+ - 15:19:14:484 - ACBrSAT.Inicializado
+ - 16:56:44:328 - ACBrSAT.Inicializado
+ - 08:49:35:703 - ACBrSAT.Inicializado
+ - 08:49:40:015 - ACBrSAT.DesInicializado
+ - 10:02:50:656 - ACBrSAT.Inicializado
+ - 10:53:25:703 - ACBrSAT.Inicializado
+ - 13:45:13:609 - ACBrSAT.Inicializado
+ - 13:45:22:937 - EStackOverflow - Stack overflow
+ - 16:17:50:312 - ACBrSAT.Inicializado
+ - 16:22:24:234 - ACBrSAT.Inicializado
+ - 16:22:42:718 - EAccessViolation - Access violation at address 005FD495 in module 'SGE.exe'. Read of address 00000000
+ - 17:32:20:859 - ACBrSAT.Inicializado
+ - 17:48:05:984 - ACBrSAT.Inicializado
+ - 17:48:25:781 - EAccessViolation - Access violation at address 005FD495 in module 'SGE.exe'. Read of address 00000000
+ - 17:50:46:390 - ACBrSAT.Inicializado
+ - 17:51:34:437 - ACBrSAT.DesInicializado
+ - 10:41:31:062 - ACBrSAT.Inicializado
+ - 11:06:09:562 - ACBrSAT.Inicializado
+ - 14:22:24:546 - ACBrSAT.Inicializado
+ - 14:22:42:515 - ACBrSAT.DesInicializado
+ - 14:27:01:187 - ACBrSAT.Inicializado
+ - 14:30:13:984 - ACBrSAT.Inicializado
+ - 14:38:36:437 - ACBrSAT.Inicializado
+ - 14:42:44:281 - ACBrSAT.Inicializado
+ - 14:54:31:281 - ACBrSAT.Inicializado
+ - 14:58:39:734 - ACBrSAT.Inicializado
+ - 15:06:05:921 - ACBrSAT.Inicializado
+ - 15:10:50:625 - ACBrSAT.Inicializado
+ - 15:10:59:375 - ACBrSAT.DesInicializado
+ - 15:20:58:390 - ACBrSAT.Inicializado
+ - 15:36:21:062 - ACBrSAT.Inicializado
+ - 15:38:04:406 - ACBrSAT.Inicializado
+ - 15:42:04:859 - ACBrSAT.Inicializado
+ - 15:48:20:500 - ACBrSAT.Inicializado
+ - 15:48:29:390 - ACBrSAT.DesInicializado
+ - 15:51:31:062 - ACBrSAT.Inicializado
+ - 15:53:28:734 - ACBrSAT.Inicializado
+ - 16:11:04:546 - ACBrSAT.Inicializado
+ - 16:24:59:593 - ACBrSAT.Inicializado
+ - 16:26:54:562 - ACBrSAT.Inicializado
+ - 16:32:33:156 - ACBrSAT.Inicializado
+ - 16:40:11:515 - ACBrSAT.Inicializado
+ - 16:40:29:187 - ACBrSAT.DesInicializado
+ - 16:43:20:140 - ACBrSAT.Inicializado
+ - 16:44:03:906 - ACBrSAT.DesInicializado
+ - 16:58:52:281 - ACBrSAT.Inicializado
+ - 17:27:33:781 - ACBrSAT.Inicializado
+ - 17:33:12:843 - ACBrSAT.Inicializado
+ - 17:43:41:328 - ACBrSAT.Inicializado
+ - 09:36:24:937 - ACBrSAT.Inicializado
+ - 09:36:36:796 - ACBrSAT.DesInicializado
+ - 09:44:51:921 - ACBrSAT.Inicializado
+ - 10:03:15:156 - ACBrSAT.Inicializado
+ - 10:07:04:015 - ACBrSAT.Inicializado
+ - 10:09:56:234 - ACBrSAT.Inicializado
+ - 10:10:11:906 - ACBrSAT.DesInicializado
+ - 10:28:11:953 - ACBrSAT.Inicializado
+ - 10:45:17:750 - ACBrSAT.Inicializado
+ - 10:56:01:234 - ACBrSAT.Inicializado
+ - 10:56:04:171 - ACBrSAT.DesInicializado
+ - 10:56:19:265 - EACBrSATErro - Procedure: LoadDLLFunctions 
+ não implementada para o SAT: Não Definido
+
+Ajude no desenvolvimento do ACBrSAT. 
+Acesse nosso Forum em: http://projetoacbr.com.br/
+ - 10:56:21:875 - EACBrSATErro - Procedure: LoadDLLFunctions 
+ não implementada para o SAT: Não Definido
+
+Ajude no desenvolvimento do ACBrSAT. 
+Acesse nosso Forum em: http://projetoacbr.com.br/
+ - 10:56:30:281 - EACBrSATErro - Procedure: LoadDLLFunctions 
+ não implementada para o SAT: Não Definido
+
+Ajude no desenvolvimento do ACBrSAT. 
+Acesse nosso Forum em: http://projetoacbr.com.br/
+ - 10:56:39:562 - EInvalidOperation - Cannot focus a disabled or invisible window
+ - 11:02:33:843 - ACBrSAT.Inicializado
+ - 11:02:38:390 - ACBrSAT.DesInicializado
+ - 11:02:45:156 - ACBrSAT.Inicializado
+ - 11:16:10:296 - ACBrSAT.Inicializado
+ - 11:22:18:000 - ACBrSAT.Inicializado
+ - 11:25:46:609 - ACBrSAT.Inicializado
+ - 11:36:13:796 - ACBrSAT.Inicializado
+ - 11:36:28:828 - ACBrSAT.DesInicializado
+ - 11:36:35:781 - EDatabaseError - tblSaida: Cannot perform this operation on a closed dataset
+ - 11:36:37:468 - ACBrSAT.Inicializado
+ - 11:36:47:156 - EDatabaseError - tblSaida: Cannot perform this operation on a closed dataset
+ - 11:43:26:859 - ACBrSAT.Inicializado
+ - 15:06:32:640 - ACBrSAT.Inicializado
+ - 16:23:48:687 - ACBrSAT.Inicializado
+ - 16:24:01:171 - ACBrSAT.DesInicializado
+ - 16:24:13:437 - ACBrSAT.Inicializado
+ - 08:45:35:343 - ACBrSAT.Inicializado
+ - 08:45:53:171 - ACBrSAT.DesInicializado
+ - 09:18:25:000 - ACBrSAT.Inicializado
+ - 10:25:32:953 - ACBrSAT.Inicializado
+ - 14:57:27:093 - ACBrSAT.Inicializado
+ - 15:03:30:296 - ACBrSAT.Inicializado
+ - 10:52:30:890 - ACBrSAT.Inicializado
+ - 09:25:59:000 - ACBrSAT.Inicializado
+ - 18:54:15:656 - ACBrSAT.Inicializado
+09/01/19 11:45:39:609 - ACBrSAT.Inicializado
+09/01/19 11:45:49:093 - ACBrSAT.DesInicializado
+09/01/19 11:45:51:234 - ACBrSAT.Inicializado
+16/01/19 09:26:55:078 - ACBrSAT.Inicializado
+16/01/19 09:27:09:343 - ACBrSAT.DesInicializado
+15/01/21 13:10:44:351 - ACBrSAT.Inicializado
+15/01/21 13:10:44:399 - NumeroSessao: 138557 - Comando: EnviarDadosVenda( <?xml version="1.0" encoding="UTF-8"?><CFe>
+   <infCFe versaoDadosEnt="0.07">
+      <ide>
+         <CNPJ>16716114000172</CNPJ>
+         <signAC>SGR-SAT SISTEMA DE GESTAO E RETAGUARDA DO SAT</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>08238299000129</CNPJ>
+         <IE>149392863111</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>3360010052-0</cProd>
+            <xProd>4PK 815 K040321</xProd>
+            <CFOP>5405</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>15.75</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>49</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>49</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+      </det>
+      <total>
+         <vCFeLei12741>3.50</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>15.75</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Valor Aprox. Tributos:  (Federal: R$ 0,66 Estadual: R$ 2,83 Municipal: R$ 0,00) - FONTE: IBPT</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe> )
+15/01/21 13:10:44:400 -   Gravando XML Venda enviado: C:\CFe\XMLRetorno\CFe20210115131044-138557-env.xml
+15/01/21 13:10:45:188 - NumeroSessao: 138557 - Resposta:138557|06000|0000|Emitido com sucesso + conteÃºdo notas.|||PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPENGZT48aW5mQ0ZlIHZlcnNhb0RhZG9zRW50PSIwLjA3IiBJZD0iQ0ZlMzUyMTAxMDgyMzgyOTkwMDAxMjk1OTkwMDAxOTY3MDAwMDAwNTIwMzA5NjgiIHZlcnNhbz0iMC4wNyIgdmVyc2FvU0I9IjAxMDIwMCI+PGlkZT48Y1VGPjM1PC9jVUY+PGNORj4yMDMwOTY8L2NORj48bW9kPjU5PC9tb2Q+PG5zZXJpZVNBVD45MDAwMTk2NzA8L25zZXJpZVNBVD48bkNGZT4wMDAwMDU8L25DRmU+PGRFbWk+MjAyMTAxMTU8L2RFbWk+PGhFbWk+MTMxMDA4PC9oRW1pPjxjRFY+ODwvY0RWPjx0cEFtYj4yPC90cEFtYj48Q05QSj4xNjcxNjExNDAwMDE3MjwvQ05QSj48c2lnbkFDPlNHUi1TQVQgU0lTVEVNQSBERSBHRVNUQU8gRSBSRVRBR1VBUkRBIERPIFNBVDwvc2lnbkFDPjxhc3NpbmF0dXJhUVJDT0RFPlR5NkZ2eFlXQUhiQVhjb1hlK294TUxFRHJ6SVp5aHZObVl5WXd5R0ZYaUZkZG5pajlKWGFQTE9Mckc5ODlXSVFpVzg1R3JrL3gzdWMzb28rYlViNFZQWnZWMWkyMVVvQXBEVmlwNG5ZZTVwZzVEdlVlajVNdzgxZ3gvNjRnK0U0WTdSMzM0RUlhTkFyZnFObnZVRU9DZ2VEQ0pmTTU1MHg2YWtkd3pyWC9SVFN0R214SFdVcktZWEtTREZQL0NEYi9ibTBvZkFVaTI1cGFPRTA2SlNnNVZoYnM0aEFqNHpYM0ZZOXZNVlJhcGVZdnpmcGZGZUl2cFIxS0pVaWs0bnJsUmdZNTZnQ1YwMWNjS0wvbHdUeS8rdDN5V1JGbmVIK281S3dNbHU4RHFKK1lPRzJnK0VtUzgxQjl0UjFEV2dkRTEwS1g5eHdHWSt3ckF2ZDVlYlVGZz09PC9hc3NpbmF0dXJhUVJDT0RFPjxudW1lcm9DYWl4YT4wMDE8L251bWVyb0NhaXhhPjwvaWRlPjxlbWl0PjxDTlBKPjA4MjM4Mjk5MDAwMTI5PC9DTlBKPjx4Tm9tZT5DT05UUk9MSUQgSU5EVVNUUklBLCBDT01FUkNJTyBERSBIQVJEV0FSRSBFIFNFUlZJPC94Tm9tZT48eEZhbnQ+Q09OVFJPTCBJRDwveEZhbnQ+PGVuZGVyRW1pdD48eExncj5SVUEgSFVOR1JJQSA4ODg8L3hMZ3I+PG5ybz44ODg8L25ybz48eENwbD5DT05KIDgxIDgyIDkxIEUgOTI8L3hDcGw+PHhCYWlycm8+SkFSRElNIEVVUk9QQTwveEJhaXJybz48eE11bj5TQU8gUEFVTE88L3hNdW4+PENFUD4wMTQ1NTkwNTwvQ0VQPjwvZW5kZXJFbWl0PjxJRT4xNDkzOTI4NjMxMTE8L0lFPjxjUmVnVHJpYj4zPC9jUmVnVHJpYj48aW5kUmF0SVNTUU4+UzwvaW5kUmF0SVNTUU4+PC9lbWl0PjxkZXN0PgogICAgICA8L2Rlc3Q+PGRldCBuSXRlbT0iMSI+PHByb2Q+PGNQcm9kPjMzNjAwMTAwNTItMDwvY1Byb2Q+PHhQcm9kPjRQSyA4MTUgSzA0MDMyMTwveFByb2Q+PENGT1A+NTQwNTwvQ0ZPUD48dUNvbT5VTjwvdUNvbT48cUNvbT4xLjAwMDA8L3FDb20+PHZVbkNvbT4xNS43NTwvdlVuQ29tPjx2UHJvZD4xNS43NTwvdlByb2Q+PGluZFJlZ3JhPkE8L2luZFJlZ3JhPjx2SXRlbT4xNS43NTwvdkl0ZW0+PC9wcm9kPjxpbXBvc3RvPjxJQ01TPjxJQ01TU04xMDI+PE9yaWc+MDwvT3JpZz48Q1NPU04+NTAwPC9DU09TTj48L0lDTVNTTjEwMj48L0lDTVM+PFBJUz48UElTU04+PENTVD40OTwvQ1NUPjwvUElTU04+PC9QSVM+PENPRklOUz48Q09GSU5TU04+PENTVD40OTwvQ1NUPjwvQ09GSU5TU04+PC9DT0ZJTlM+PC9pbXBvc3RvPjwvZGV0Pjx0b3RhbD48SUNNU1RvdD48dklDTVM+MC4wMDwvdklDTVM+PHZQcm9kPjE1Ljc1PC92UHJvZD48dkRlc2M+MC4wMDwvdkRlc2M+PHZQSVM+MC4wMDwvdlBJUz48dkNPRklOUz4wLjAwPC92Q09GSU5TPjx2UElTU1Q+MC4wMDwvdlBJU1NUPjx2Q09GSU5TU1Q+MC4wMDwvdkNPRklOU1NUPjx2T3V0cm8+MC4wMDwvdk91dHJvPjwvSUNNU1RvdD48dkNGZT4xNS43NTwvdkNGZT48dkNGZUxlaTEyNzQxPjMuNTA8L3ZDRmVMZWkxMjc0MT48L3RvdGFsPjxwZ3RvPjxNUD48Y01QPjAxPC9jTVA+PHZNUD4xNS43NTwvdk1QPjwvTVA+PHZUcm9jbz4wLjAwPC92VHJvY28+PC9wZ3RvPjxpbmZBZGljPjxpbmZDcGw+VmFsb3IgQXByb3guIFRyaWJ1dG9zOiAgKEZlZGVyYWw6IFIkIDAsNjYgRXN0YWR1YWw6IFIkIDIsODMgTXVuaWNpcGFsOiBSJCAwLDAwKSAtIEZPTlRFOiBJQlBUPC9pbmZDcGw+PG9ic0Zpc2NvIHhDYW1wbz0iMDQuMDQuMDUuMDQiPjx4VGV4dG8+Q29tZXRlIGNyaW1lIHF1ZW0gc29uZWdhPC94VGV4dG8+PC9vYnNGaXNjbz48L2luZkFkaWM+PC9pbmZDRmU+PFNpZ25hdHVyZSB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxTaWduZWRJbmZvPgo8Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnL1RSLzIwMDEvUkVDLXhtbC1jMTRuLTIwMDEwMzE1IiAvPgo8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxkc2lnLW1vcmUjcnNhLXNoYTI1NiIgLz4KPFJlZmVyZW5jZSBVUkk9IiNDRmUzNTIxMDEwODIzODI5OTAwMDEyOTU5OTAwMDE5NjcwMDAwMDA1MjAzMDk2OCI+CjxUcmFuc2Zvcm1zPgo8VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiIC8+CjxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy14bWwtYzE0bi0yMDAxMDMxNSIgLz4KPC9UcmFuc2Zvcm1zPgo8RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxlbmMjc2hhMjU2IiAvPgo8RGlnZXN0VmFsdWU+U1NMYlRiTzhpVm5aNWdUb2llSlFMZWFYeW1NNkl4TlpXbjlKVzh3QWJLRT08L0RpZ2VzdFZhbHVlPgo8L1JlZmVyZW5jZT4KPC9TaWduZWRJbmZvPgo8U2lnbmF0dXJlVmFsdWU+UVUrVzhyN3FNMEF4U3BFWml3eDdQc0pEcVRYZVp3RnAwbTUzbEQ3aTh1OHhUZCtwWHRRSlFJZGlNVFFnczJOTHFwNzQzdzZwWFFXOUF1SEhHS1U1bUt6OGkrRHNvYUdIN0dGQUxGajZKalh3UThzcU9nSEVuR1RnMkNVK1JYc2FCOVp6UFJ5RnltbUd4VGd3TUhpNWJxaFdaRXFSTytZdWlZOE9STitHbnZON0JNWHRmRFlXQVhaTGpYK28zU3M2eVJ3Vmh1ZkowRmFPN09SREFNZDBNL1F0bTZGRnBuT1JKNU4wMUwzcXJWaUZmZW1KQk5IVEVPYlVuR25uNGw2RGNWNFU1UG5Zc2NmcElFMXVQMGQwUnFWZzgrcWFzRGs0SGpBRG9qdXpFK2FMRGUzVmtLUXNKNyt0d2c0ZWQ1SUt0ZGlwSnRIV21kSGFwKzB1eElzM3NRPT08L1NpZ25hdHVyZVZhbHVlPgo8S2V5SW5mbz4KPFg1MDlEYXRhPgo8WDUwOUNlcnRpZmljYXRlPk1JSUd5RENDQkxDZ0F3SUJBZ0lKQVJ3dHI3RkpHQlJnTUEwR0NTcUdTSWIzRFFFQkN3VUFNR2N4Q3pBSkJnTlZCQVlUQWtKU01UVXdNd1lEVlFRS0V5eFRaV055WlhSaGNtbGhJR1JoSUVaaGVtVnVaR0VnWkc4Z1JYTjBZV1J2SUdSbElGTmhieUJRWVhWc2J6RWhNQjhHQTFVRUF4TVlRVU1nVTBGVUlHUmxJRlJsYzNSbElGTkZSa0ZhSUZOUU1CNFhEVEl3TVRFeE1ERTVORFF3TUZvWERUSTFNVEV4TURFNU5EUXdNRm93Z2MweEVqQVFCZ05WQkFVVENUa3dNREF4T1RZM01ERUxNQWtHQTFVRUJoTUNRbEl4RWpBUUJnTlZCQWdUQ1hOaGJ5QndZWFZzYnpFUk1BOEdBMVVFQ2hNSVUwVkdRVm90VTFBeER6QU5CZ05WQkFzVEJrRkRMVk5CVkRFb01DWUdBMVVFQ3hNZlFYVjBaVzUwYVdOaFpHOGdjRzl5SUVGU0lGTkZSa0ZhSUZOUUlGTkJWREZJTUVZR0ExVUVBeE0vUTA5T1ZGSlBURWxFSUVsT1JGVlRWRkpKUVNCRFQwMUZVa05KVHlCRVJTQklRVkpFVjBGU1JTQkZJRk5GVWxaSk9qQTRNak00TWprNU1EQXdNVEk1TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUEzSEYzeGFVS2VmRDBDL0ttZjZCWkIxZDdCS2xqZjJmcDZrNFNxa041bDBSQXoxMWVtOU9pb3BRZEpwbVVPNDJVSWM5ZG9ieXNXaThMR3Axb1h0UDZIYVE0TmlUVmlyQUJwOGVQblpPZUI1aVR5RExtMjhIRExlaURsemZPbm5rbGNsMS9tclNhaWxzd0xOb2hKZitWYTNIeDB3VG5kSS9OL1ZLVVp5ZHF5MXMrUGJBUEpKUzRyU1Y2V2ZEQmxBU3g3N25pQlNiZkRMVityTFhTRUZ1U2VKUVFId25JNVYzd25mMWwxMmVka3llR2YwTDl0VDdObnhoa29pakIrVUQwMDhFZm1hQk50d1ZaTWw0T1NjVXlMWHJWNThWWmpwQmdUSTd4MFRGYjk0NVRWWHd2UVBBTnh5NEJJUExidjBMTzByb0xrcE54ZGZPM3EvMnlXR3lnSndJREFRQUJvNElDRGpDQ0Fnb3dEZ1lEVlIwUEFRSC9CQVFEQWdYZ01Ic0dBMVVkSUFSME1ISXdjQVlKS3dZQkJBR0I3QzBETUdNd1lRWUlLd1lCQlFVSEFnRVdWV2gwZEhBNkx5OWhZM05oZEM1cGJYQnlaVzV6WVc5bWFXTnBZV3d1WTI5dExtSnlMM0psY0c5emFYUnZjbWx2TDJSd1l5OWhZM05oZEhObFptRjZjM0F2WkhCalgyRmpjMkYwYzJWbVlYcHpjQzV3WkdZd2F3WURWUjBmQkdRd1lqQmdvRjZnWElaYWFIUjBjRG92TDJGamMyRjBMWFJsYzNSbExtbHRjSEpsYm5OaGIyWnBZMmxoYkM1amIyMHVZbkl2Y21Wd2IzTnBkRzl5YVc4dmJHTnlMMkZqYzJGMGMyVm1ZWHB6Y0M5aFkzTmhkSE5sWm1GNmMzQmpjbXd1WTNKc01JR21CZ2dyQmdFRkJRY0JBUVNCbVRDQmxqQTBCZ2dyQmdFRkJRY3dBWVlvYUhSMGNEb3ZMMjlqYzNBdGNHbHNiM1F1YVcxd2NtVnVjMkZ2Wm1samFXRnNMbU52YlM1aWNqQmVCZ2dyQmdFRkJRY3dBb1pTYUhSMGNEb3ZMMkZqYzJGMExYUmxjM1JsTG1sdGNISmxibk5oYjJacFkybGhiQzVqYjIwdVluSXZjbVZ3YjNOcGRHOXlhVzh2WTJWeWRHbG1hV05oWkc5ekwyRmpjMkYwTFhSbGMzUmxMbkEzWXpBVEJnTlZIU1VFRERBS0JnZ3JCZ0VGQlFjREFqQUpCZ05WSFJNRUFqQUFNQ1FHQTFVZEVRUWRNQnVnR1FZRllFd0JBd09nRUFRT01EZ3lNemd5T1Rrd01EQXhNamt3SHdZRFZSMGpCQmd3Rm9BVWpqbEJBRnp5dUFYYXFHMll1UUZHYlc1ajN3SXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnSUJBTVVPNE9XblhBa0xYRElBZ0FBVGxBNDQvSy9COGRud2FnMXYrcTVkckttUFY3eVl5TzlmUzc4WFFWaCs1eExXb2JJbHU5R1haVGhITDJqZ0w5c05wVUJaTW5Id2QyRjZJeWZialhFUWxlUWNzUFU4bmQxUmtMMStaeWxGSUdjSFZwMWp1OU10d3AyRmdMTmp3Y2J4MjVYQjNIejdyQjFQNTd5SmNjL29aeW9vUlZRLzhGd2V3dHZTemtLUzF3ZUVsY1lOeXdJZEh4eXkwcFBBNFNDQmpoUmtJaWh4dkF4akxlTWVocmxPRTFkdzlYVUF4eHJLUzZJUkk2cXhISUozNDdTbG5iQzNKdkhPL1JuRDlZcUlNS0RacEM2MEowU21vcE5hWnA5OTlsVzFISG1aQ2lWYmQxbXllcWVnYjF0ZkJ6czg2b3loaDRWbTVJeEpDYjhMMmVLckNNcmNKQjZyMkpsTzZUaHRPOGtwcmVFOGZibzRubzYwVVI3YTJyMU92ZTdKMXpkOGdycUlrNGE0OWorWng1WExVQ3dnMGpxTEZFQkhyUVRXNmh4a2xLYU1PbVA0RjRMb3R0allkTXZEYmRxSHJxa0g5Y3Y1RFQ2VmFhWUg5MEttUXNjREZvdCttM2NycDVhM01zNWJnVU1OS2F4WmlsMW5JSGw5RVVpaUE4QUpkYWZkclR3WmpPU281dUVwYkVJTDBFNVkyNjBNSmVwdnQxNkk4WXg2WWJRMXA3MzhpUU5LdkJNRFdhaFA2aVdySVd1TGVqWDhJSkk4cDQySlFUaE5ob1VvS3BjK0FRVzJOQVlObUJZc1pqQ2ZGaTRQejZjOUIxSWhxcVJCMWF4TjR4YzZiSFcvNmFvTnVqUmYrWjcyb2VYQWJRbFMxVXVtU2lCb0FaVko8L1g1MDlDZXJ0aWZpY2F0ZT4KPC9YNTA5RGF0YT4KPC9LZXlJbmZvPgo8L1NpZ25hdHVyZT48L0NGZT4=|20210115131008|CFe35210108238299000129599000196700000052030968|15.75||Ty6FvxYWAHbAXcoXe+oxMLEDrzIZyhvNmYyYwyGFXiFddnij9JXaPLOLrG989WIQiW85Grk/x3uc3oo+bUb4VPZvV1i21UoApDVip4nYe5pg5DvUej5Mw81gx/64g+E4Y7R334EIaNArfqNnvUEOCgeDCJfM550x6akdwzrX/RTStGmxHWUrKYXKSDFP/CDb/bm0ofAUi25paOE06JSg5Vhbs4hAj4zX3FY9vMVRapeYvzfpfFeIvpR1KJUik4nrlRgY56gCV01ccKL/lwTy/+t3yWRFneH+o5KwMlu8DqJ+YOG2g+EmS81B9tR1DWgdE10KX9xwGY+wrAvd5ebUFg==
+15/01/21 13:10:45:190 -   Gravando XML Venda recebido: C:\CFe\Autorizados\CFe35210108238299000129599000196700000052030968.xml
+27/01/21 23:42:06:225 - ACBrSAT.Inicializado
+27/01/21 23:42:13:046 - NumeroSessao: 411494 - Comando: EnviarDadosVenda( <?xml version="1.0" encoding="UTF-8"?><CFe>
+   <infCFe versaoDadosEnt="0.07">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>HVmqf8G6akwdUpEDshamtsSiVdMST7ufEVDfxeoC0+kb1BRla7AFgjiCkUgmYyuM+0jw94EhoOYwgdjJ3MLpiQt1LtgMQNODKZP4cq7x+c6PJDgtWAj05HUay+ku3ModZBcQ3sm2VIxZ+xRU7gj7bhC3aIdTIz8l5piV3jMJheae+26eD2SU6KaP8kFxedmyjmGVdpSUxHECCe7nAcvwn0Xd3H5CRoWeDYhMItWwmHUTE978svkeaks0MFP+WDu3obTrBth80vXgZlia66Sd8ykRdWPLF2rGBrKbE8qMRJFQsFu87BEnzbgCuihf+5wqZUoovL+18HjjOaelsHc7YA==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>3360010082-4</cProd>
+            <xProd>10X 690</xProd>
+            <CFOP>5405</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>12.60</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>49</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>49</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+      </det>
+      <total>
+         <vCFeLei12741>2.80</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>12.60</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Valor Aprox. Tributos:  (Federal: R$ 0,53 Estadual: R$ 2,27 Municipal: R$ 0,00) - FONTE: IBPT</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe> )
+27/01/21 23:42:13:052 -   Gravando XML Venda enviado: F:\CFe\XMLRetorno\CFe20210127234213-411494-env.xml
+27/01/21 23:42:13:973 - NumeroSessao: 411494 - Resposta:411494|06000|0000|Emitido com sucesso + conteÃºdo notas.|||PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPENGZT48aW5mQ0ZlIHZlcnNhb0RhZG9zRW50PSIwLjA3IiBJZD0iQ0ZlMzUyMTAxNjE0Mjk3OTEwMDAxNjQ1OTAwMDk3OTM2NTAwMDAwOTQ5MDg3OTIiIHZlcnNhbz0iMC4wNyIgdmVyc2FvU0I9IjAxMDIwMCI+PGlkZT48Y1VGPjM1PC9jVUY+PGNORj40OTA4Nzk8L2NORj48bW9kPjU5PC9tb2Q+PG5zZXJpZVNBVD4wMDA5NzkzNjU8L25zZXJpZVNBVD48bkNGZT4wMDAwMDk8L25DRmU+PGRFbWk+MjAyMTAxMjc8L2RFbWk+PGhFbWk+MjM0MjEyPC9oRW1pPjxjRFY+MjwvY0RWPjx0cEFtYj4xPC90cEFtYj48Q05QSj4xNDc4NzQ3OTAwMDE2MjwvQ05QSj48c2lnbkFDPkhWbXFmOEc2YWt3ZFVwRURzaGFtdHNTaVZkTVNUN3VmRVZEZnhlb0MwK2tiMUJSbGE3QUZnamlDa1VnbVl5dU0rMGp3OTRFaG9PWXdnZGpKM01McGlRdDFMdGdNUU5PREtaUDRjcTd4K2M2UEpEZ3RXQWowNUhVYXkra3UzTW9kWkJjUTNzbTJWSXhaK3hSVTdnajdiaEMzYUlkVEl6OGw1cGlWM2pNSmhlYWUrMjZlRDJTVTZLYVA4a0Z4ZWRteWptR1ZkcFNVeEhFQ0NlN25BY3Z3bjBYZDNINUNSb1dlRFloTUl0V3dtSFVURTk3OHN2a2Vha3MwTUZQK1dEdTNvYlRyQnRoODB2WGdabGlhNjZTZDh5a1JkV1BMRjJyR0JyS2JFOHFNUkpGUXNGdTg3QkVuemJnQ3VpaGYrNXdxWlVvb3ZMKzE4SGpqT2FlbHNIYzdZQT09PC9zaWduQUM+PGFzc2luYXR1cmFRUkNPREU+RllGb3FIVW5BRDJyanhycjM0N1ZlaXIrbHBqR3V5RWRXMlVIeWw3WFE1czdrWFhUblllazRYdXd2cjNhdDBTUUhVZVJCcVUxaVR5QVM2ZW5nNEV4djZnWlg1VlQ2Z0Y1cnEveVJFV1ArSW1PN2d3SzlvdjVPYU5VZWRIQkhzQjA3UjdSdGtMTUd1ZDlSTWphOERBTGQ5TjkrZmN0VEZUdlpqTUxYMEZocStBdGtGc05mTTk5cXVNTWZ5QWVNYmNEdVFPUEV4bjdWYkdTRENheDRFSDRHQjZKcGUrQ1lFazc5VWpPZ092Q3VVbHEyWGduN2dSV1FvTXRDNndxNFFmUmpUQWFySENtMXNTWmVWMngvOFZDK3A5ZHd0MFF4Um03TG5oMENLWWxqOTRDd2ptTkxhQXFXb2NXNndNeEVpeGJHSWVuOHltbnA0ZXhrQUkwTWQ3eG5BPT08L2Fzc2luYXR1cmFRUkNPREU+PG51bWVyb0NhaXhhPjAwMTwvbnVtZXJvQ2FpeGE+PC9pZGU+PGVtaXQ+PENOUEo+NjE0Mjk3OTEwMDAxNjQ8L0NOUEo+PHhOb21lPkFVVE8gUEVDQVMgRSBBQ0VTU09SSU9TIFBFUkZJTCBMVERBPC94Tm9tZT48ZW5kZXJFbWl0Pjx4TGdyPkFWRU5JREEgQU5BTElDRSBTQUtBVEFVU0tBUzwveExncj48bnJvPjU4MDwvbnJvPjx4Q3BsPk5hbyBJbmZvcm1hZG88L3hDcGw+PHhCYWlycm8+ViBOIE9TQVNDTzwveEJhaXJybz48eE11bj5PU0FTQ088L3hNdW4+PENFUD4wNjA2MDAwMzwvQ0VQPjwvZW5kZXJFbWl0PjxJRT40OTIyMDA5NzQxMTI8L0lFPjxjUmVnVHJpYj4xPC9jUmVnVHJpYj48aW5kUmF0SVNTUU4+UzwvaW5kUmF0SVNTUU4+PC9lbWl0PjxkZXN0PgogICAgICA8L2Rlc3Q+PGRldCBuSXRlbT0iMSI+PHByb2Q+PGNQcm9kPjMzNjAwMTAwODItNDwvY1Byb2Q+PHhQcm9kPjEwWCA2OTA8L3hQcm9kPjxDRk9QPjU0MDU8L0NGT1A+PHVDb20+VU48L3VDb20+PHFDb20+MS4wMDAwPC9xQ29tPjx2VW5Db20+MTIuNjA8L3ZVbkNvbT48dlByb2Q+MTIuNjA8L3ZQcm9kPjxpbmRSZWdyYT5BPC9pbmRSZWdyYT48dkl0ZW0+MTIuNjA8L3ZJdGVtPjwvcHJvZD48aW1wb3N0bz48SUNNUz48SUNNU1NOMTAyPjxPcmlnPjA8L09yaWc+PENTT1NOPjUwMDwvQ1NPU04+PC9JQ01TU04xMDI+PC9JQ01TPjxQSVM+PFBJU1NOPjxDU1Q+NDk8L0NTVD48L1BJU1NOPjwvUElTPjxDT0ZJTlM+PENPRklOU1NOPjxDU1Q+NDk8L0NTVD48L0NPRklOU1NOPjwvQ09GSU5TPjwvaW1wb3N0bz48L2RldD48dG90YWw+PElDTVNUb3Q+PHZJQ01TPjAuMDA8L3ZJQ01TPjx2UHJvZD4xMi42MDwvdlByb2Q+PHZEZXNjPjAuMDA8L3ZEZXNjPjx2UElTPjAuMDA8L3ZQSVM+PHZDT0ZJTlM+MC4wMDwvdkNPRklOUz48dlBJU1NUPjAuMDA8L3ZQSVNTVD48dkNPRklOU1NUPjAuMDA8L3ZDT0ZJTlNTVD48dk91dHJvPjAuMDA8L3ZPdXRybz48L0lDTVNUb3Q+PHZDRmU+MTIuNjA8L3ZDRmU+PHZDRmVMZWkxMjc0MT4yLjgwPC92Q0ZlTGVpMTI3NDE+PC90b3RhbD48cGd0bz48TVA+PGNNUD4wMTwvY01QPjx2TVA+MTIuNjA8L3ZNUD48L01QPjx2VHJvY28+MC4wMDwvdlRyb2NvPjwvcGd0bz48aW5mQWRpYz48aW5mQ3BsPlZhbG9yIEFwcm94LiBUcmlidXRvczogIChGZWRlcmFsOiBSJCAwLDUzIEVzdGFkdWFsOiBSJCAyLDI3IE11bmljaXBhbDogUiQgMCwwMCkgLSBGT05URTogSUJQVDwvaW5mQ3BsPjxvYnNGaXNjbyB4Q2FtcG89IjA0LjA2LjA1LjA0Ij48eFRleHRvPkNvbWV0ZSBjcmltZSBxdWVtIHNvbmVnYTwveFRleHRvPjwvb2JzRmlzY28+PC9pbmZBZGljPjwvaW5mQ0ZlPjxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgo8U2lnbmVkSW5mbz4KPENhbm9uaWNhbGl6YXRpb25NZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy14bWwtYzE0bi0yMDAxMDMxNSIgLz4KPFNpZ25hdHVyZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI3JzYS1zaGEyNTYiIC8+CjxSZWZlcmVuY2UgVVJJPSIjQ0ZlMzUyMTAxNjE0Mjk3OTEwMDAxNjQ1OTAwMDk3OTM2NTAwMDAwOTQ5MDg3OTIiPgo8VHJhbnNmb3Jtcz4KPFRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIiAvPgo8VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tMjAwMTAzMTUiIC8+CjwvVHJhbnNmb3Jtcz4KPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jI3NoYTI1NiIgLz4KPERpZ2VzdFZhbHVlPnZHU0JKUjRXZkpzTktocEIyMDkrUktxSk5NRVFLNm5xc0svMHBLYWtzUGc9PC9EaWdlc3RWYWx1ZT4KPC9SZWZlcmVuY2U+CjwvU2lnbmVkSW5mbz4KPFNpZ25hdHVyZVZhbHVlPjJ6ZTdzSGlHUDFRMUVkanlsYmFrNHBtVjkxRG9lMldSU0U3dlNCTVV4bTl6MTNzdWZMMFI2QTAwbGNIb2RQVGEvNm9MaGZnM2dCLzRubmpHd1dXY0dvdDkrSGdxZ0crRjFmOXpCc2NlbnNUWjVuZHRRWHhqbzJFVDVxUDJNZXZ2anRaYnNRV2pNM3JKdkJpVHRGVGZoZnMzZFVvWWZadTJ2aGVuaStDY3NPSG96bC9ZWFhPcHl3eGlVYU5JNWRKQ3ZtVTBqR0pDNlF4QWpsSGJIRVJ2Ni9hWE5XL2p0SE00akNxcW9USGhEZiszYkp4TkdtZnkwR1BzOURsbGxpTkxHckVVWUN2c1BsTkpnUHhHc2lzZklQZmlYdDJoSVdGemZhRVdGcGtGYjdxbitoZTFqaU04MWNsS05pV3dLSkE1QUE5eld3TjFkbjM2QWhkaFY0UEJSdz09PC9TaWduYXR1cmVWYWx1ZT4KPEtleUluZm8+CjxYNTA5RGF0YT4KPFg1MDlDZXJ0aWZpY2F0ZT5NSUlHaHpDQ0JHK2dBd0lCQWdJSkFTTDIvZ2c3NHRCSk1BMEdDU3FHU0liM0RRRUJDd1VBTUZFeE5UQXpCZ05WQkFvVExGTmxZM0psZEdGeWFXRWdaR0VnUm1GNlpXNWtZU0JrYnlCRmMzUmhaRzhnWkdVZ1UyRnZJRkJoZFd4dk1SZ3dGZ1lEVlFRREV3OUJReUJUUVZRZ1UwVkdRVm9nVTFBd0hoY05NakV3TVRJMk1UQTFNalV5V2hjTk1qWXdNVEkyTVRBMU1qVXlXakNCd0RFU01CQUdBMVVFQlJNSk1EQXdPVGM1TXpZMU1Rc3dDUVlEVlFRR0V3SkNVakVTTUJBR0ExVUVDQk1KYzJGdklIQmhkV3h2TVJFd0R3WURWUVFLRXdoVFJVWkJXaTFUVURFUE1BMEdBMVVFQ3hNR1FVTXRVMEZVTVNnd0pnWURWUVFMRXg5QmRYUmxiblJwWTJGa2J5QndiM0lnUVZJZ1UwVkdRVm9nVTFBZ1UwRlVNVHN3T1FZRFZRUURFekpCVlZSUElGQkZRMEZUSUVVZ1FVTkZVMU5QVWtsUFV5QlFSVkpHU1V3Z1RGUkVRVG8yTVRReU9UYzVNVEF3TURFMk5EQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQVBQYnRoTExBTFJSU0JYUlpadlUwUVVUbllvQ2ozbEhxRVQvdnZYVTR1ejc0cm1BUDNVZVBjMjlIWGpPTFJlVnFPTlFZc3FmUGVWbzRlaStCY2FHMkVhOGljVHFEUjJ2LzFxcFpRM1BrNVc2dEtod2ZNREJkbzJCcVhQL3Z4aUJZWkRmRzMrMlhYWE02d0tGVitqT3JYTnh3N2R4aGNCMFArTDVnZEd0QzFxOVU4bzU2RlBNSnhUb3NUTnJQa2pPb3dvMUVZbG1CZEVydHowUGwrWGFHMkhhYTVkS0NDUEQvcWYxMHA2YzlYSDNKOEF5UGU2R3pJRkgzSTNaOElHQ05ONlcycE5UWWxodzdvd1V4ZDI1MGo3bSs0c2xZQ3A2WkhZTTBXd3NzSnpWVURrSTVpcWI3clAzOUhuZ2d5R2txdDROQzIvUDU1WVFPc0p3TVFHTnQra0NBd0VBQWFPQ0FmQXdnZ0hzTUE0R0ExVWREd0VCL3dRRUF3SUY0REIxQmdOVkhTQUViakJzTUdvR0NTc0dBUVFCZ2V3dEF6QmRNRnNHQ0NzR0FRVUZCd0lCRms5b2RIUndPaTh2WVdOellYUXVhVzF3Y21WdWMyRnZabWxqYVdGc0xtTnZiUzVpY2k5eVpYQnZjMmwwYjNKcGJ5OWtjR012WVdOelpXWmhlbk53TDJSd1kxOWhZM05sWm1GNmMzQXVjR1JtTUdVR0ExVWRId1JlTUZ3d1dxQllvRmFHVkdoMGRIQTZMeTloWTNOaGRDNXBiWEJ5Wlc1ellXOW1hV05wWVd3dVkyOXRMbUp5TDNKbGNHOXphWFJ2Y21sdkwyeGpjaTloWTNOaGRITmxabUY2YzNBdllXTnpZWFJ6WldaaGVuTndZM0pzTG1OeWJEQ0JsQVlJS3dZQkJRVUhBUUVFZ1ljd2dZUXdMZ1lJS3dZQkJRVUhNQUdHSW1oMGRIQTZMeTl2WTNOd0xtbHRjSEpsYm5OaGIyWnBZMmxoYkM1amIyMHVZbkl3VWdZSUt3WUJCUVVITUFLR1JtaDBkSEE2THk5aFkzTmhkQzVwYlhCeVpXNXpZVzltYVdOcFlXd3VZMjl0TG1KeUwzSmxjRzl6YVhSdmNtbHZMMk5sY25ScFptbGpZV1J2Y3k5aFkzTmhkQzV3TjJNd0V3WURWUjBsQkF3d0NnWUlLd1lCQlFVSEF3SXdDUVlEVlIwVEJBSXdBREFrQmdOVkhSRUVIVEFib0JrR0JXQk1BUU1Eb0JBRURqWXhOREk1TnpreE1EQXdNVFkwTUI4R0ExVWRJd1FZTUJhQUZMQ0ZnYk1velhZcUtTUkxYMWhLYjJqWnJMQXFNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUNBUUJHb0djaDBvc01FdlBLTkp5ZU9GWGdrWXE4eTN2ZkZFdnR3NENMRjZYUjdtdlV5REJyS0VuaG03UHZwL2FyUUVDd01VQ01NeXFSMkp5RGZ2ajJpSFJOTHVTekdIZTFzQXBhSS9oajNlK2NSclltcGhwMWt2YkNZQ1BaOHVaQTYwR0Z3WGlTVnFtZnA0d1NwY1J3U21naUZheVg4WmlOU0xkTFVoZDJOS3JRc1o4TWU1Q0FpbjdBM3FRS1JzZzdWeWlRajQrQ0hnSUxERmtJZXVNNUd5MHpXVDc2TkRIbHM4U3JDSzNSNFFDOXR6MmtYQzQ2S1hieW9nQVlUUmkvbUNmbkNZazhqbzlYWTU1L01QaGdGWmZ1R25wUFlYMTdWUDc5a0kvWTkwTFVrUHJxOW9yN0JQb0w3aVJjU3Z5Yzc0STl0aGRFQTBQYnY3UC9aK0FFclVuSjg4SldXRGJybldkeElXbVFrSWNsRHMrak01S1MvVTBsV3RPTHQ3MzRXZ00xMXpNWTZFNkF0UytxbmxaNElsd3U1OVI0TEVqSGlEbUErV2xGUkllMnVWbHdabGNLcUdiaTRZcm1IeDRXM1ExSHZNSVVNcWMvTGpnWmhYZ2pRNTBDakZxQlFTaGk5T1ROYnNCcmROd1NEb2R6ODllSE54c2RPWkNDcnl3NTFlRFZsVFBtcGJvTkJlZHBOcHJ3NW0xVVVza2Q0Q0xCcmd1OTA2d2RiM1czQytQNi9hTU05MGNKZy9NeWNyUUpnWlZDT0UvSFRGRXkvRG5ySlZzVzlHcnFMa3FvU0REVUpNMGVjNjBMTHZ3Q3Z2T0hNWkEzZXovOXdnbFhBalBnUGJhc09aeVF1amlyTGRGSDhYYzBPZENLWGxmemxvNFp2eVdrS3p1TUgwRjRqUT09PC9YNTA5Q2VydGlmaWNhdGU+CjwvWDUwOURhdGE+CjwvS2V5SW5mbz4KPC9TaWduYXR1cmU+PC9DRmU+|20210127234212|CFe35210161429791000164590009793650000094908792|12.60||FYFoqHUnAD2rjxrr347Veir+lpjGuyEdW2UHyl7XQ5s7kXXTnYek4Xuwvr3at0SQHUeRBqU1iTyAS6eng4Exv6gZX5VT6gF5rq/yREWP+ImO7gwK9ov5OaNUedHBHsB07R7RtkLMGud9RMja8DALd9N9+fctTFTvZjMLX0Fhq+AtkFsNfM99quMMfyAeMbcDuQOPExn7VbGSDCax4EH4GB6Jpe+CYEk79UjOgOvCuUlq2Xgn7gRWQoMtC6wq4QfRjTAarHCm1sSZeV2x/8VC+p9dwt0QxRm7Lnh0CKYlj94CwjmNLaAqWocW6wMxEixbGIen8ymnp4exkAI0Md7xnA==
+27/01/21 23:42:13:979 -   Gravando XML Venda recebido: F:\CFe\Autorizados\CFe35210161429791000164590009793650000094908792.xml
+27/04/23 07:55:42:714 - ACBrSAT.Inicializado
+27/04/23 07:55:42:776 - NumeroSessao: 42020 - Comando: EnviarDadosVenda( <?xml version="1.0" encoding="UTF-8"?><CFe>
+   <infCFe versaoDadosEnt="0.07">
+      <ide>
+         <CNPJ>14787479000162</CNPJ>
+         <signAC>HVmqf8G6akwdUpEDshamtsSiVdMST7ufEVDfxeoC0+kb1BRla7AFgjiCkUgmYyuM+0jw94EhoOYwgdjJ3MLpiQt1LtgMQNODKZP4cq7x+c6PJDgtWAj05HUay+ku3ModZBcQ3sm2VIxZ+xRU7gj7bhC3aIdTIz8l5piV3jMJheae+26eD2SU6KaP8kFxedmyjmGVdpSUxHECCe7nAcvwn0Xd3H5CRoWeDYhMItWwmHUTE978svkeaks0MFP+WDu3obTrBth80vXgZlia66Sd8ykRdWPLF2rGBrKbE8qMRJFQsFu87BEnzbgCuihf+5wqZUoovL+18HjjOaelsHc7YA==</signAC>
+         <numeroCaixa>001</numeroCaixa>
+      </ide>
+      <emit>
+         <CNPJ>61429791000164</CNPJ>
+         <IE>492200974112</IE>
+         <indRatISSQN>S</indRatISSQN>
+      </emit>
+      <dest>
+         <xNome>CONSUMIDOR FINAL</xNome>
+      </dest>
+      <det nItem="1">
+         <prod>
+            <cProd>3360010053-9</cProd>
+            <xProd>10X 840 GATES 7330 FIAT</xProd>
+            <CFOP>5405</CFOP>
+            <uCom>UN</uCom>
+            <qCom>1.0000</qCom>
+            <vUnCom>22.00</vUnCom>
+            <indRegra>A</indRegra>
+         </prod>
+         <imposto>
+            <ICMS>
+               <ICMSSN102>
+                  <Orig>0</Orig>
+                  <CSOSN>500</CSOSN>
+               </ICMSSN102>
+            </ICMS>
+            <PIS>
+               <PISSN>
+                  <CST>49</CST>
+               </PISSN>
+            </PIS>
+            <COFINS>
+               <COFINSSN>
+                  <CST>49</CST>
+               </COFINSSN>
+            </COFINS>
+         </imposto>
+      </det>
+      <total>
+         <vCFeLei12741>4.88</vCFeLei12741>
+      </total>
+      <pgto>
+         <MP>
+            <cMP>01</cMP>
+            <vMP>22.00</vMP>
+         </MP>
+      </pgto>
+      <infAdic>
+         <infCpl>Valor Aprox. Tributos:  (Federal: R$ 0,92 Estadual: R$ 3,96 Municipal: R$ 0,00) - FONTE: IBPT  //</infCpl>
+      </infAdic>
+   </infCFe>
+</CFe> )
+27/04/23 07:55:45:720 - NumeroSessao: 42020

@@ -1,0 +1,28 @@
+[DEBUG]	2018-10-05 16:12:55: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 16:12:55: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 16:31:54: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 16:31:54: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2018-10-05 17:08:33: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 17:08:33: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 17:09:27: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 17:09:27: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2018-10-05 17:10:53: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 17:10:53: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 17:13:19: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 17:13:19: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2018-10-05 17:14:44: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 17:14:44: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 17:17:59: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 17:17:59: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2018-10-05 17:19:30: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 17:19:30: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 17:21:51: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 17:21:51: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2018-10-05 17:23:17: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 17:23:17: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 17:25:37: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 17:25:37: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2018-10-05 17:26:58: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2018-10-05 17:26:58: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2018-10-05 17:31:07: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2018-10-05 17:31:07: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================

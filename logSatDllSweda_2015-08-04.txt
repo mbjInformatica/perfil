@@ -1,0 +1,32 @@
+[DEBUG]	2015-08-04 15:03:23: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-08-04 15:03:23: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-08-04 15:04:20: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-08-04 15:04:20: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-08-04 15:04:20: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[DEBUG]	2015-08-04 15:04:20: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 187 ms
+[DEBUG]	2015-08-04 15:04:20: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[ERROR]	2015-08-04 15:04:20: file src\EtherWin32.cpp, function client_receive, line 785: client Recv error
+
+[DEBUG]	2015-08-04 15:04:49: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-08-04 15:04:49: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2015-08-04 15:18:50: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-08-04 15:18:50: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-08-04 15:19:19: file src\EtherWin32.cpp, function client_connect, line 68: trying to open a stream socket
+[DEBUG]	2015-08-04 15:19:19: file src\EtherWin32.cpp, function client_connect, line 85: gathering addresses information
+[DEBUG]	2015-08-04 15:19:19: file src\EtherWin32.cpp, function client_connect, line 211: finish conection tries
+[DEBUG]	2015-08-04 15:19:19: file src\EtherWin32.cpp, function client_connect, line 224: Tempo em socket e connect: 32 ms
+[DEBUG]	2015-08-04 15:19:19: file src\EtherWin32.cpp, function client_connect, line 226: freeing addresses information
+[DEBUG]	2015-08-04 15:19:45: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-08-04 15:19:45: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2015-08-04 16:12:22: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-08-04 16:12:22: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-08-04 16:15:56: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-08-04 16:15:56: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2015-08-04 16:56:20: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-08-04 16:56:20: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-08-04 16:56:59: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-08-04 16:56:59: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================
+[DEBUG]	2015-08-04 17:47:47: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2015-08-04 17:47:47: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2015-08-04 17:47:57: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2015-08-04 17:47:57: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================

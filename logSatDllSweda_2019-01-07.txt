@@ -1,0 +1,6 @@
+[DEBUG]	2019-01-07 15:52:25: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2019-01-07 15:52:25: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2019-01-07 15:53:27: file src\SATDLL.cpp, function DllMain, line 323: ================ INICIANDO DLL ================
+[DEBUG]	2019-01-07 15:53:27: file src\EtherWin32.cpp, function iniciaWS, line 845: iniciaWS
+[DEBUG]	2019-01-07 15:54:20: file src\EtherWin32.cpp, function finalizaWs, line 862: Finalizando DLL
+[DEBUG]	2019-01-07 15:54:20: file src\SATDLL.cpp, function DllMain, line 341: ================ FINALIZANDO DLL ================

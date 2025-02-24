@@ -1,0 +1,441 @@
+object formVendasBalcao: TformVendasBalcao
+  Left = -4
+  Top = -4
+  Align = alClient
+  BorderStyle = bsDialog
+  Caption = 'Vendas no Balcão'
+  ClientHeight = 574
+  ClientWidth = 800
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblRequisicao: TLabel
+    Left = 8
+    Top = 16
+    Width = 111
+    Height = 13
+    Caption = 'Número da Requisição:'
+  end
+  object fldRequisicao: TDBText
+    Left = 128
+    Top = 16
+    Width = 65
+    Height = 17
+    DataField = 'NumeroRequisicao'
+    DataSource = dmBaseDados.dsRequisicoes
+  end
+  object lblDataEmissao: TLabel
+    Left = 600
+    Top = 16
+    Width = 68
+    Height = 13
+    Caption = 'Data Emissão:'
+  end
+  object fldDataEmissao: TDBText
+    Left = 685
+    Top = 16
+    Width = 81
+    Height = 17
+    DataField = 'DataEmissao'
+    DataSource = dmBaseDados.dsRequisicoes
+  end
+  object lblCodigoProduto: TLabel
+    Left = 8
+    Top = 80
+    Width = 90
+    Height = 13
+    Caption = 'Código do produto:'
+  end
+  object lblValorUnitario: TLabel
+    Left = 528
+    Top = 80
+    Width = 64
+    Height = 13
+    Caption = 'Valor unitário:'
+  end
+  object fldValorUnitario: TDBText
+    Left = 600
+    Top = 80
+    Width = 65
+    Height = 17
+    DataField = 'ValorUnitario'
+    DataSource = dmBaseDados.dsSaida
+  end
+  object lblQuantidade: TLabel
+    Left = 328
+    Top = 80
+    Width = 58
+    Height = 13
+    Caption = 'Quantidade:'
+  end
+  object lblValorTotal: TLabel
+    Left = 672
+    Top = 80
+    Width = 54
+    Height = 13
+    Caption = 'Valor Total:'
+  end
+  object fldValorTotal: TDBText
+    Left = 736
+    Top = 80
+    Width = 65
+    Height = 17
+    DataField = 'ValorTotal'
+    DataSource = dmBaseDados.dsSaida
+  end
+  object lblValorVenda: TLabel
+    Left = 448
+    Top = 536
+    Width = 170
+    Height = 24
+    Caption = 'Valor total da venda:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object btnNovo: TSpeedButton
+    Left = 56
+    Top = 528
+    Width = 46
+    Height = 41
+    Hint = '|Inclusão de um novo produto.'
+    Caption = 'Novo'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33333333FF33333333FF333993333333300033377F3333333777333993333333
+      300033F77FFF3333377739999993333333333777777F3333333F399999933333
+      33003777777333333377333993333333330033377F3333333377333993333333
+      3333333773333333333F333333333333330033333333F33333773333333C3333
+      330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+      993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+      333333333337733333FF3333333C333330003333333733333777333333333333
+      3000333333333333377733333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnNovoClick
+  end
+  object btnProdutos: TSpeedButton
+    Left = 264
+    Top = 77
+    Width = 41
+    Height = 24
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33033333333333333F7F3333333333333000333333333333F777333333333333
+      000333333333333F777333333333333000333333333333F77733333333333300
+      033333333FFF3F777333333700073B703333333F7773F77733333307777700B3
+      33333377333777733333307F8F8F7033333337F333F337F3333377F8F9F8F773
+      3333373337F3373F3333078F898F870333337F33F7FFF37F333307F99999F703
+      33337F377777337F3333078F898F8703333373F337F33373333377F8F9F8F773
+      333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
+      333333773FF77333333333370007333333333333777333333333}
+    NumGlyphs = 2
+    OnClick = btnProdutosClick
+  end
+  object btnExcluir: TSpeedButton
+    Left = 104
+    Top = 528
+    Width = 46
+    Height = 41
+    Hint = '|Exclusão do produto selecionado.'
+    Caption = 'Excluir'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      333333333333333333FF33333333333330003333333333333777333333333333
+      300033FFFFFF3333377739999993333333333777777F3333333F399999933333
+      3300377777733333337733333333333333003333333333333377333333333333
+      3333333333333333333F333333333333330033333F33333333773333C3333333
+      330033337F3333333377333CC3333333333333F77FFFFFFF3FF33CCCCCCCCCC3
+      993337777777777F77F33CCCCCCCCCC399333777777777737733333CC3333333
+      333333377F33333333FF3333C333333330003333733333333777333333333333
+      3000333333333333377733333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnExcluirClick
+  end
+  object btnCancelar: TSpeedButton
+    Left = 152
+    Top = 528
+    Width = 46
+    Height = 41
+    Hint = '|Cancela a operação de venda/requisição.'
+    Caption = 'Cancelar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+      3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+      993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+      399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+      399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+      399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+      99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+      3333333777333777333333333999993333333333377777333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnCancelarClick
+  end
+  object btnGrava: TSpeedButton
+    Left = 200
+    Top = 528
+    Width = 46
+    Height = 41
+    Hint = '|Grava Inclusão/alteração de dados.'
+    Caption = 'Gravar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+      00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+      00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+      00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+      00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+      00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+      00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+      0003737FFFFFFFFF7F7330099999999900333777777777777733}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnGravaClick
+  end
+  object btnRetornar: TSpeedButton
+    Left = 296
+    Top = 528
+    Width = 46
+    Height = 41
+    Hint = '|Retorna ao menu principal.'
+    Caption = 'Retornar'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+      03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+      0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+      0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+      0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+      0333337F777FFFFF7F3333000000000003333377777777777333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnRetornarClick
+  end
+  object btnImprime: TSpeedButton
+    Left = 248
+    Top = 528
+    Width = 46
+    Height = 41
+    Hint = '|Imprime o relatório da venda.'
+    Caption = 'Imprimir'
+    Flat = True
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      0003377777777777777308888888888888807F33333333333337088888888888
+      88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+      8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+      8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+      03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+      03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+      33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+      33333337FFFF7733333333300000033333333337777773333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnImprimeClick
+  end
+  object lblValorTotalVenda: TLabel
+    Left = 664
+    Top = 536
+    Width = 5
+    Height = 24
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object btnLocalizar: TSpeedButton
+    Left = 416
+    Top = 40
+    Width = 57
+    Height = 33
+    Hint = '|Localiza um registro na tabela de clientes.'
+    Caption = 'Localizar'
+    Flat = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -8
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      333333333333333333FF33333333333330003FF3FFFFF3333777003000003333
+      300077F777773F333777E00BFBFB033333337773333F7F33333FE0BFBF000333
+      330077F3337773F33377E0FBFBFBF033330077F3333FF7FFF377E0BFBF000000
+      333377F3337777773F3FE0FBFBFBFBFB039977F33FFFFFFF7377E0BF00000000
+      339977FF777777773377000BFB03333333337773FF733333333F333000333333
+      3300333777333333337733333333333333003333333333333377333333333333
+      333333333333333333FF33333333333330003333333333333777333333333333
+      3000333333333333377733333333333333333333333333333333}
+    Layout = blGlyphTop
+    NumGlyphs = 2
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = btnLocalizarClick
+  end
+  object Label1: TLabel
+    Left = 8
+    Top = 48
+    Width = 35
+    Height = 13
+    Caption = 'Cliente:'
+  end
+  object Label2: TLabel
+    Left = 480
+    Top = 48
+    Width = 49
+    Height = 13
+    Caption = 'Vendedor:'
+  end
+  object fldCodigoProduto: TDBEdit
+    Left = 112
+    Top = 78
+    Width = 137
+    Height = 21
+    DataField = 'CodigoProduto'
+    DataSource = dmBaseDados.dsSaida
+    TabOrder = 2
+    OnExit = fldCodigoProdutoExit
+  end
+  object fldQuantidade: TDBEdit
+    Left = 400
+    Top = 78
+    Width = 121
+    Height = 21
+    DataField = 'Quantidade'
+    DataSource = dmBaseDados.dsSaida
+    TabOrder = 3
+    OnExit = fldQuantidadeExit
+  end
+  object grdProdutos: TDBGrid
+    Left = 10
+    Top = 112
+    Width = 781
+    Height = 408
+    TabStop = False
+    DataSource = dmBaseDados.dsSaida
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CodigoProduto'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DescricaoProduto'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Quantidade'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ValorUnitario'
+        Width = 68
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ValorTotal'
+        Width = 64
+        Visible = True
+      end>
+  end
+  object dblkVendedor: TDBLookupComboBox
+    Left = 536
+    Top = 48
+    Width = 257
+    Height = 21
+    DataField = 'Vendedor'
+    DataSource = dmBaseDados.dsSaida
+    KeyField = 'NomeFuncionario'
+    ListField = 'NomeFuncionario'
+    ListSource = dmBaseDados.dsFuncionarios
+    TabOrder = 1
+  end
+  object dblkCliente: TDBLookupComboBox
+    Left = 56
+    Top = 48
+    Width = 345
+    Height = 21
+    DataField = 'ClienteFornecedor'
+    DataSource = dmBaseDados.dsSaida
+    KeyField = 'NomeCliente'
+    ListField = 'NomeCliente'
+    ListSource = dmBaseDados.dsClientes
+    TabOrder = 0
+  end
+end
