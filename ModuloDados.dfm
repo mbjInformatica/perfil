@@ -3378,6 +3378,9 @@ object dmBaseDados: TdmBaseDados
     TableName = 'CupomFiscal.db'
     Left = 784
     Top = 368
+    object tblCupomFiscalNrNF: TIntegerField
+      FieldName = 'NrNF'
+    end
     object tblCupomFiscalNPedido: TStringField
       FieldName = 'NPedido'
       Size = 8
@@ -3391,7 +3394,7 @@ object dmBaseDados: TdmBaseDados
     end
     object tblCupomFiscalCaminhoXML: TStringField
       FieldName = 'CaminhoXML'
-      Size = 80
+      Size = 100
     end
     object tblCupomFiscalCancelado: TStringField
       FieldName = 'Cancelado'
@@ -3410,38 +3413,74 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'Pagamento'
       Size = 2
     end
-    object tblCupomFiscalDH: TFloatField
+    object tblCupomFiscalCPFCnpj: TStringField
+      FieldName = 'CPFCnpj'
+      Size = 14
+    end
+    object tblCupomFiscalDH: TCurrencyField
       FieldName = 'DH'
     end
-    object tblCupomFiscalCC: TFloatField
+    object tblCupomFiscalCC: TCurrencyField
       FieldName = 'CC'
     end
-    object tblCupomFiscalCD: TFloatField
+    object tblCupomFiscalCD: TCurrencyField
       FieldName = 'CD'
     end
-    object tblCupomFiscalCH: TFloatField
+    object tblCupomFiscalCH: TCurrencyField
       FieldName = 'CH'
     end
-    object tblCupomFiscalCL: TFloatField
+    object tblCupomFiscalCL: TCurrencyField
       FieldName = 'CL'
     end
-    object tblCupomFiscalVP: TFloatField
+    object tblCupomFiscalVP: TCurrencyField
       FieldName = 'VP'
     end
-    object tblCupomFiscalOT: TFloatField
+    object tblCupomFiscalOT: TCurrencyField
       FieldName = 'OT'
     end
-    object tblCupomFiscalVA: TFloatField
+    object tblCupomFiscalVA: TCurrencyField
       FieldName = 'VA'
     end
-    object tblCupomFiscalVR: TFloatField
+    object tblCupomFiscalVR: TCurrencyField
       FieldName = 'VR'
     end
-    object tblCupomFiscalVC: TFloatField
+    object tblCupomFiscalVC: TCurrencyField
       FieldName = 'VC'
     end
-    object tblCupomFiscalPX: TFloatField
+    object tblCupomFiscalDT: TCurrencyField
+      FieldName = 'DT'
+    end
+    object tblCupomFiscalPX: TCurrencyField
       FieldName = 'PX'
+    end
+    object tblCupomFiscalCaminho2: TStringField
+      FieldName = 'Caminho2'
+      Size = 100
+    end
+    object tblCupomFiscalStatus: TIntegerField
+      FieldName = 'Status'
+    end
+    object tblCupomFiscalCodContabil: TIntegerField
+      FieldName = 'CodContabil'
+    end
+    object tblCupomFiscalProtocolo: TStringField
+      FieldName = 'Protocolo'
+      Size = 30
+    end
+    object tblCupomFiscalJustificativa: TStringField
+      FieldName = 'Justificativa'
+      Size = 60
+    end
+    object tblCupomFiscalDataCanc: TDateField
+      FieldName = 'DataCanc'
+    end
+    object tblCupomFiscalMensagem: TStringField
+      FieldName = 'Mensagem'
+      Size = 100
+    end
+    object tblCupomFiscalEspecie: TStringField
+      FieldName = 'Especie'
+      Size = 3
     end
   end
   object dsCupomFiscal: TDataSource
@@ -4134,6 +4173,10 @@ object dmBaseDados: TdmBaseDados
       'SELECT * FROM CupomFiscal')
     Left = 1068
     Top = 432
+    object qryCupomFiscalNrNF: TIntegerField
+      FieldName = 'NrNF'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".NrNF'
+    end
     object qryCupomFiscalNPedido: TStringField
       FieldName = 'NPedido'
       Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".NPedido'
@@ -4151,7 +4194,7 @@ object dmBaseDados: TdmBaseDados
     object qryCupomFiscalCaminhoXML: TStringField
       FieldName = 'CaminhoXML'
       Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".CaminhoXML'
-      Size = 80
+      Size = 100
     end
     object qryCupomFiscalCancelado: TStringField
       FieldName = 'Cancelado'
@@ -4174,6 +4217,11 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'Pagamento'
       Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Pagamento'
       Size = 2
+    end
+    object qryCupomFiscalCPFCnpj: TStringField
+      FieldName = 'CPFCnpj'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".CPFCnpj'
+      Size = 14
     end
     object qryCupomFiscalDH: TCurrencyField
       FieldName = 'DH'
@@ -4215,9 +4263,50 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'VC'
       Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".VC'
     end
-    object qryCupomFiscalPX: TFloatField
+    object qryCupomFiscalDT: TCurrencyField
+      FieldName = 'DT'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".DT'
+    end
+    object qryCupomFiscalPX: TCurrencyField
       FieldName = 'PX'
       Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".PX'
+    end
+    object qryCupomFiscalCaminho2: TStringField
+      FieldName = 'Caminho2'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Caminho2'
+      Size = 100
+    end
+    object qryCupomFiscalStatus: TIntegerField
+      FieldName = 'Status'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Status'
+    end
+    object qryCupomFiscalCodContabil: TIntegerField
+      FieldName = 'CodContabil'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".CodContabil'
+    end
+    object qryCupomFiscalProtocolo: TStringField
+      FieldName = 'Protocolo'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Protocolo'
+      Size = 30
+    end
+    object qryCupomFiscalJustificativa: TStringField
+      FieldName = 'Justificativa'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Justificativa'
+      Size = 60
+    end
+    object qryCupomFiscalDataCanc: TDateField
+      FieldName = 'DataCanc'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".DataCanc'
+    end
+    object qryCupomFiscalMensagem: TStringField
+      FieldName = 'Mensagem'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Mensagem'
+      Size = 100
+    end
+    object qryCupomFiscalEspecie: TStringField
+      FieldName = 'Especie'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Especie'
+      Size = 3
     end
   end
   object dsqCupomFiscal: TDataSource

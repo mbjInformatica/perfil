@@ -175,16 +175,11 @@ type
     procedure fldQuantidadeKeyPress(Sender: TObject; var Key: Char);
     procedure btnReimpressaoClick(Sender: TObject);
     procedure btnFiscalClick(Sender: TObject);
-    procedure btnCancelaCupomClick(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
   private
   { Private declarations }
   public
   { Public declarations }
-   procedure CapturaStatus;
-   function MensagemError(CodError:string):String;
-   function MandaComando:Boolean;
-   function ObtemResposta:Boolean;
   end;
 
 var formVendasBalcao: TformVendasBalcao;
@@ -214,213 +209,11 @@ implementation
 uses MenuPrincipal, RotinasGerais, ListaProduto, RelVendas,
      AlteraValor, SeekClientes, DigitacaoPedido, ModuloDados,
      SeekClientes2, RelECF, MaskUtils, Desconto, aviso, Unit1,
-     TextoOnline, CheckCGC, FormaPagamento, TesteSat, TipoVenda, RotinasSAT;
+     TextoOnline, CheckCGC, FormaPagamento, TesteSat, TipoVenda, RotinasNFCe{RotinasSAT};
 
 
 {$R *.DFM}
 
-
-function TformVendasBalcao.MandaComando:Boolean;
-begin
-{
-retorno := -3;
-while (retorno = -3) do
- begin
-  retorno := ECFWriteSerial(Comando,Strlen(Comando),'serial');
-  if (retorno = -3) then ShowMessage('Aguarde ...');
- end;
-if (retorno <> 0) then
- begin
-  ShowMessage('Erro no envio do comando');
-  Result := False;
- end
-else Result := ObtemResposta();
-}
-end;
-
-function TformVendasBalcao.ObtemResposta:Boolean;
-var capturatexto : Boolean;
-begin
-{
-Resposta:=#0; capturatexto:=false;
-CopyMemory(@Conteudo,@Resposta,94);
-CopyMemory(@Header,@Resposta,4);
-CopyMemory(@Status,@Resposta,515);
-while true do
-  Begin
-   Resposta:=#0;
-   CopyMemory(@LeituraOnLine,@Resposta,512);
-   if not (copy(comando,2,2)='34') then FormAviso.Show;
-   FormAviso.Refresh;
-   retorno := ECFReadSerial(Resposta,1200,'serial');
-   if retorno = -1 then ShowMessage('Falha na comunicação')
-   else if retorno = -2 then ShowMessage('Excedido o tamanho da resposta')
-   else if retorno = -3 then break //Protocolo ocupado
-   else if retorno > 0 then
-    begin
-     CopyMemory(@Header,@Resposta,4);
-     if ( Header.Tarefa='00' ) and ( Header.Tipo='!' ) then // resposta de alteração de status
-      begin
-       CopyMemory(@Conteudo,@Resposta,retorno);
-       if Conteudo.Mensagem <> '0000' then showMessage(MensagemError(Conteudo.Mensagem))
-       else FormAviso.Close;
-       FormAviso.Refresh;
-      end
-     else if (( Header.Tarefa='44' ) OR (Header.Tarefa = '45') ) and ( Header.Tipo='!' ) then // resposta de alteração de status
-      begin
-       CopyMemory(@Conteudo,@Resposta,retorno);
-       if (Conteudo.mensagem = '0228') then // inicio da transmissão do texto
-        capturatexto:=true;
-       if (Conteudo.mensagem = '0217') then // percentual de processmento
-        begin
-         ProgressBar1.visible:=true;
-         ProgressBar1.position:=StrToInt(Copy(Conteudo.adicional,1,3));
-         ProgressBar1.Refresh;
-        end
-      end
-     else if (( Header.Tarefa='44' ) OR (Header.Tarefa = '45') ) and ( Header.Tipo='>' ) then // resposta de alteração de status
-      begin
-       if capturatexto then
-        begin
-         CopyMemory(@LeituraOnLine,@Resposta,retorno);
-         FormTextoOnLine.Show;
-         FormTextoOnLine.TextoOnLine.Text:= FormTextoOnLine.TextoOnLine.Text+LeituraOnLine.informacao;
-         FormTextoOnLine.TextoOnLine.Refresh;
-        end
-      end
-     else if ( Header.Tarefa='34') and ( Header.Tipo='+') then // Retorno de Status
-      begin
-       CopyMemory(@Conteudo,@Resposta,retorno);
-       Barra.Panels[3].Text:=MensagemError(Conteudo.mensagem);
-      end
-     else if Header.Tarefa='34' then // Retorno de Status
-      begin
-       CopyMemory(@Status,@Resposta,retorno);
-       if ( status.tipo='B')  and ( status.secao = '0004') then // legendas dos meios de pagamento
-        CopyMemory(@Pagamento,@Status.Informacao,420)
-       else if ( status.tipo='D')  and ( status.secao = '0004') then // aliquotas de ICMS
-        CopyMemory(@Aliquota_ICMS,@Status.Informacao,60)
-       else if ( status.tipo='E')  and ( status.secao = '0004') then // aliquotas de ISS
-        CopyMemory(@Aliquota_ISS,@Status.Informacao,60)
-       else if ( status.tipo='L')  and ( status.secao = '0001') then // totais do Cupom em Emissão
-        CopyMemory(@StatusDocumento,@Status.Informacao,77)
-       else if ( status.tipo='I')  and ( status.secao = '0001') then // totais do Cupom em Emissão
-        CopyMemory(@StatusModelo,@Status.Informacao,77)
-       else if ( status.tipo='S')  and ( status.secao = '0001') then // totais do Cupom em Emissão
-        CopyMemory(@StatusMFD,@Status.Informacao,190);
-      end
-     else
-      begin
-       CopyMemory(@Conteudo,@Resposta,retorno);
-       Barra.Panels[3].Text:=MensagemError(conteudo.mensagem);
-      end;
-    end;
-   if (Header.Tarefa= Copy(comando,2,2)) and ((Header.Tipo='+') or (Header.Tipo='-') ) then
-    Break
-  End;
-FormAviso.Close;
-FormAviso.Refresh;
-ProgressBar1.visible:=false;
-if Header.Tipo='+' then Result := True
-else
- begin
-  ShowMessage('Erro: '+ Conteudo.Mensagem);
-  ObtemResposta := False;
- end;
- }
-end;
-
-function TformVendasBalcao.MensagemError(CodError:string):String;
-var cod : Integer;
-begin
-{
-cod := StrToInt(CodError);
-case Cod of
-  00  : MensagemError:=CodError+'-'+'Comando efetuado com sucesso!';
-  02  : MensagemError:=CodError+'-'+'Não há documento para cancelar.';
-  04  : MensagemError:=CodError+'-'+'Pagamento não finalizado.';
-  06  : MensagemError:=CodError+'-'+'Indicado Item inválido.';
-  07  : MensagemError:=CodError+'-'+'Item já cancelado.';
-  08  : MensagemError:=CodError+'-'+'Apurado total igual a zero.';
-  15  : MensagemError:=CodError+'-'+'Cancelamento de acréscimo no subtotal';
-  21  : MensagemError:=CodError+'-'+'Alíquota não programada.';
-  23  : MensagemError:=CodError+'-'+'Erro de Sintaxe!';
-  31  : MensagemError:=CodError+'-'+'Faixa inválida!';
-  42  : MensagemError:=CodError+'-'+'Excede o valor do item.';
-  51  : MensagemError:=CodError+'-'+'Não foi possivel acumulação em um dos totalizadores';
-  53  : MensagemError:=CodError+'-'+'Impossibilita o cancelamento.';
-  56  : MensagemError:=CodError+'-'+'Iniciando Intervenção Técnica.';
-  57  : MensagemError:=CodError+'-'+'Encerrando Intervenção Técnica.';
-  58  : MensagemError:=CodError+'-'+'Comando ou operação inválida!';
-  59  : MensagemError:=CodError+'-'+'Dia encerrado!';
-  60  : MensagemError:=CodError+'-'+'É necessário emitir Redução Z!';
-  61  : MensagemError:=CodError+'-'+'O ECF está em Modo Intervenção Técnica!';
-  124 : MensagemError:=CodError+'-'+'Tampa Aberta!';
-  125 : MensagemError:=CodError+'-'+'Sem papel!';
-  126 : MensagemError:=CodError+'-'+'Avançando papel!';
-  127 : MensagemError:=CodError+'-'+'Substituir bobina!';
-  134 : MensagemError:=CodError+'-'+'Transmissão via porta serial abortada.';
-  216 : MensagemError:=CodError+'-'+'Programar o relógio.';
- end;
- }
-end;
-
-procedure TformVendasBalcao.CapturaStatus;
-var i:integer; // variaveis para loop
-begin
-{
-Barra.Panels[2].Text:='Capturando informações do modelo';
-StrPCopy(Comando,'*34|I1');
-if not MandaComando then exit;
-{memo1.Lines.Add('Marca: '+StatusModelo.marca);
-memo1.Lines.Add('Modelo: '+StatusModelo.modelo);
-memo1.Lines.Add('Tipo: '+StatusModelo.tipo);
-memo1.Lines.Add('No. de Série: '+StatusModelo.Serie);
-memo1.Lines.Add('Firmware: '+StatusModelo.firmware);
-memo1.Lines.Add('Protocolo: '+StatusModelo.protocolo);
-memo1.Lines.Add(' ');        }      {
-Barra.Panels[2].Text:='Capturando informações da MFD';
-StrPCopy(Comando,'*34|S1');
-if not MandaComando then exit;
-{capacidadeb:=StrtoFloat(StatusMFD.Capacidade) * 1024 * 1024;
-consumob:=StrToFloat(StatusMFD.PonteiroA)  + StrToFloat(StatusMFD.PonteiroB);
-consumop:=(Consumob / Capacidadeb)*100;
-
-memo1.Lines.Add('MFD: '+StatusMFD.serie);
-memo1.Lines.Add('CNPJ: '+StatusMFD.CNPJ);
-memo1.Lines.Add('I.E.: '+StatusMFD.IE);
-memo1.Lines.Add('I.M.: '+StatusMFD.IM);
-memo1.Lines.Add(' ');
-memo1.Lines.Add('Capacidade: '+StatusMFD.capacidade+' MB');
-memo1.Lines.Add('Consumo: '+floattostr(consumob)+' bytes ('+Formatfloat ('0.00',consumop)+' %)');  }
-{
-Barra.Panels[2].Text:='Capturando os meios de pagamento';
-StrPCopy(Comando,'*34|B4');
-if not MandaComando then exit;
-for i:=1 to 20 do formFormaPagamento.EdPagamento.Items.Add(FormatFloat('00',i)+'-'+Pagamento[i-1]); // captura os meios de pagamento
-// Obtem as alíquotas programadas para ICMS
-Barra.Panels[2].Text:='Capturando as alíquotas de ICMS';
-StrPCopy(Comando,'*34|D4');
-if not MandaComando then exit;
- try
-  for i:=1 to 15 do
-   begin
-    //EdTaxa2.Items.Add('T'+FormatFloat('00.00',StrtoFloat(aliquota_ICMS[i-1])/100)+'%'); // captura os meios de pagamento
-   end
-  except
- end;
-// Obtem as alíquotas programadas para ISS
-StrPCopy(Comando,'*34|E4');
-if not MandaComando then exit;
- try
-  for i:=1 to 15 do
-   begin
-    //EdTaxa2.Items.Add('S'+FormatFloat('00.00',StrtoFloat(aliquota_ISS[i-1])/100)+'%'); // captura os meios de pagamento
-   end
-  except
- end;
- }
-end;
 
 procedure TformVendasBalcao.FormShow(Sender: TObject);
 var strAno, strRequisicao, strNomeO : String;
@@ -1466,29 +1259,33 @@ end;
 procedure TformVendasBalcao.btnFiscalClick(Sender: TObject);
 var strPgtSat: String;
 begin
-{
-formSAT.Showmodal;
-formSwedaSAT.ShowModal;
-}
-
+fltRecebido := 0;
+strTotTrib  := 0;
+strTribFed  := 0;
+strTribEst  := 0;
+strTribMun  := 0;
+dmBaseDados.tblPedidos.Open;
+dmBaseDados.tblPedidos.First;
+dmBaseDados.tblPedidos.Locate('NPedido',strReqSaida,[loCaseInsensitive]);
+while( (dmBaseDados.tblPedidosNPedido.AsString = strReqSaida)and(not dmBaseDados.tblPedidos.Eof) )do
+  begin
+   strTotTrib  := strTotTrib  + dmBaseDados.tblPedidosVTributos.AsFloat;
+   strTribFed  := strTribFed  + dmBaseDados.tblPedidosTribFed.AsFloat;
+   strTribEst  := strTribEst  + dmBaseDados.tblPedidosTribEst.AsFloat;
+   strTribMun  := strTribMun  + dmBaseDados.tblPedidosTribMun.AsFloat;
+   fltRecebido := fltRecebido + dmBaseDados.tblPedidosTotal.AsFloat;
+   dmBaseDados.tblPedidos.Next;
+  end;
+//--
 formFormaPagamento.cmbPgtoSAT.Visible  := True;
 formFormaPagamento.Edpagamento.Visible := False;
 formFormaPagamento.cmbPgtoSAT.ItemIndex := -1;
 formFormaPagamento.ShowModal;
 
 strPgtSat := Copy(cmbTPagamento.Text,1,2);
-
 formCNPJCPF.ShowModal;
 
 EmitirCupom(strDesconto, fltRecebido, strPgtSat, strCPF, '', '', '', '', '', '', '');
-
-end;
-
-procedure TformVendasBalcao.btnCancelaCupomClick(Sender: TObject);
-begin
-Barra.Panels[2].Text:='Cancela Documento';
-StrPCopy(Comando,'*08');
-MandaComando;
 end;
 
 procedure TformVendasBalcao.btnProdutosClick(Sender: TObject);

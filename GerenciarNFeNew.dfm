@@ -1,6 +1,6 @@
 object formGerenciarNFeNew: TformGerenciarNFeNew
-  Left = 181
-  Top = 20
+  Left = 203
+  Top = 29
   Width = 1056
   Height = 675
   BorderIcons = [biSystemMenu]
@@ -21,7 +21,7 @@ object formGerenciarNFeNew: TformGerenciarNFeNew
     Left = 0
     Top = 0
     Width = 1040
-    Height = 636
+    Height = 637
     Align = alClient
     Style = grPyramid
     StartColor = 16311505
@@ -3066,8 +3066,6 @@ object formGerenciarNFeNew: TformGerenciarNFeNew
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
-    CasasDecimais.Aliquota = 2
-    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     ExibeCampoFatura = False
     Left = 707

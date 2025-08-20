@@ -1,6 +1,6 @@
 object formGerenciarNFe: TformGerenciarNFe
-  Left = 181
-  Top = 20
+  Left = 228
+  Top = 38
   Width = 1056
   Height = 675
   BorderIcons = [biSystemMenu]

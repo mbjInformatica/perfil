@@ -1,5 +1,5 @@
 object formNFeDevolucaoNew: TformNFeDevolucaoNew
-  Left = 221
+  Left = 243
   Top = 39
   Width = 1121
   Height = 720
@@ -20,7 +20,7 @@ object formNFeDevolucaoNew: TformNFeDevolucaoNew
     Left = 0
     Top = 0
     Width = 1105
-    Height = 681
+    Height = 682
     Align = alClient
     ShowHint = False
     ParentShowHint = False
@@ -1757,8 +1757,6 @@ object formNFeDevolucaoNew: TformNFeDevolucaoNew
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
-    CasasDecimais.Aliquota = 2
-    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     ExibeCampoFatura = False
     Left = 1023

@@ -2077,7 +2077,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
              end;
             DescriProd := Copy(DescriProd,1,42);
             //vPOutro    := '';
-            vPFrete    := '';
+            //vPFrete    := '';
             DespAC     := '';
             indTot     := '1';
             xPed       := edtNPedCompra.Text;

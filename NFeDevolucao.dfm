@@ -1,6 +1,6 @@
 object formNFeDevolucao: TformNFeDevolucao
-  Left = 301
-  Top = 37
+  Left = 283
+  Top = 47
   Width = 1123
   Height = 747
   Caption = 'NF-e Devolu'#231#227'o'

@@ -1,8 +1,8 @@
 object FrmEmissaoNFNew: TFrmEmissaoNFNew
   Left = 455
-  Top = -2
+  Top = 9
   Width = 436
-  Height = 692
+  Height = 681
   Caption = 'Emiss'#227'o de Nota Fiscal'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,7 +20,7 @@ object FrmEmissaoNFNew: TFrmEmissaoNFNew
     Left = 0
     Top = 0
     Width = 420
-    Height = 653
+    Height = 649
     Align = alClient
     ShowHint = False
     ParentShowHint = False
@@ -1185,8 +1185,6 @@ object FrmEmissaoNFNew: TFrmEmissaoNFNew
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
-    CasasDecimais.Aliquota = 2
-    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     ExibeCampoFatura = False
     Left = 351

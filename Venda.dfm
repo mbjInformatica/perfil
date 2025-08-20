@@ -1626,7 +1626,6 @@ object formVendasBalcao: TformVendasBalcao
     Spacing = 1
     ResHandle = 0
     MouseContinuouslyDownInterval = 100
-    OnClick = btnCancelaCupomClick
   end
   object btnProdutos: TTISButton
     Left = 643

@@ -61,24 +61,24 @@ strData1 := DateToStr(Data1.Date);
 strData2 := DateToStr(Data2.Date);
 strPasta := strData1 +'a'+ strData2;
 SHORTDATEFORMAT := 'dd/mm/yyyy';
-if (not DirectoryExists('F:\CFe\Contabilidade\' + strPasta)) then
+if (not DirectoryExists('F:\NFCe\Contabilidade\' + strPasta)) then
  begin
-  ForceDirectories('F:\CFe\Contabilidade\' + strPasta);
+  ForceDirectories('F:\NFCe\Contabilidade\' + strPasta);
  end;
 dmBaseDados.tblCupomFiscal.First;
 while (not dmBaseDados.tblCupomFiscal.Eof) do
   Begin
    Origem     := dmBaseDados.tblCupomFiscalCaminhoXML.AsString;
    strNomeArq := Copy(Origem,20,56);
-   Destino    := 'F:\CFe\Contabilidade\' + strPasta +'\' + strNomeArq;
+   Destino    := 'F:\NFCe\Contabilidade\' + strPasta +'\' + strNomeArq;
    CopyFile(PChar(Origem), PChar(Destino), False);
    dmBaseDados.tblCupomFiscal.Next;                  
   End;
 ShowMessage('Arquivos copiados com sucesso para pasta: F:\NFe\Contabilidade\' + strPasta );
 if (Application.MessageBox('Deseja compactar a pasta gerada?','ATENÇÃO!',MB_YESNO) = IDYES) then
  begin
-  Temp           := ChangeFileExt('F:\CFe\Contabilidade\' + strPasta,'.rar');
-  LinhadeComando := 'C:\Arquivos de programas\WinRAR\WINRAR.EXE a "'  +Temp  +'" "'  +'F:\CFe\Contabilidade\'  + strPasta  +'"';
+  Temp           := ChangeFileExt('F:\NFCe\Contabilidade\' + strPasta,'.rar');
+  LinhadeComando := 'C:\Arquivos de programas\WinRAR\WINRAR.EXE a "'  +Temp  +'" "'  +'F:\NFCe\Contabilidade\'  + strPasta  +'"';
   Try
    WinExec(Pchar(LinhadeComando),1);
   Except

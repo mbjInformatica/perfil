@@ -172,7 +172,10 @@ uses
   NFeDevolucaoNew in 'NFeDevolucaoNew.pas' {formNFeDevolucaoNew},
   FitroProdDesc in 'FitroProdDesc.pas' {formFiltroProdDesc},
   RelFiltroProduto in 'RelFiltroProduto.pas' {formRelFiltroProduto},
-  MostraConsultaPedidoComp in 'MostraConsultaPedidoComp.pas' {formMostraConsultaPedidoComp};
+  MostraConsultaPedidoComp in 'MostraConsultaPedidoComp.pas' {formMostraConsultaPedidoComp},
+  NFCe in 'NFCe.pas' {FormNfceAcbr},
+  GerenciarNFCe in 'GerenciarNFCe.pas' {formGerenciarNFCe},
+  RotinasNFCe in 'RotinasNFCe.pas';
 
 {$R *.RES}
 
@@ -347,5 +350,7 @@ begin
   Application.CreateForm(TformFiltroProdDesc, formFiltroProdDesc);
   Application.CreateForm(TformRelFiltroProduto, formRelFiltroProduto);
   Application.CreateForm(TformMostraConsultaPedidoComp, formMostraConsultaPedidoComp);
+  Application.CreateForm(TFormNfceAcbr, FormNfceAcbr);
+  Application.CreateForm(TformGerenciarNFCe, formGerenciarNFCe);
   Application.Run;
 end.

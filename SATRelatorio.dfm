@@ -4,7 +4,7 @@ object formSATRelatorio: TformSATRelatorio
   Width = 280
   Height = 265
   AutoSize = True
-  Caption = 'Relat'#243'rio SAT'
+  Caption = 'Relat'#243'rio NFC-e'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object formSATRelatorio: TformSATRelatorio
   object TIGradient1: TTIGradient
     Left = 0
     Top = 28
-    Width = 272
-    Height = 203
+    Width = 264
+    Height = 199
     Cursor = crAppStart
     Align = alClient
     ShowHint = False
@@ -91,7 +91,7 @@ object formSATRelatorio: TformSATRelatorio
   object TIGradientCaption1: TTIGradientCaption
     Left = 0
     Top = 0
-    Width = 272
+    Width = 264
     Height = 28
     GradientStartColor = 14187790
     GradientEndColor = clSkyBlue

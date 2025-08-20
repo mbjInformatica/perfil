@@ -3,7 +3,7 @@ object formRelSAT: TformRelSAT
   Top = 89
   Width = 853
   Height = 585
-  Caption = 'Relat'#243'rio SAT'
+  Caption = 'Relat'#243'rio NFC-e'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -74,7 +74,7 @@ object formRelSAT: TformRelSAT
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333340000
+        66.145833333333330000
         1899.708333333333000000)
       BandType = rbColumnHeader
       object QRLabel1: TQRLabel
@@ -89,7 +89,7 @@ object formRelSAT: TformRelSAT
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          799.041666666666800000
+          799.041666666666700000
           7.937500000000000000
           227.541666666666700000)
         Alignment = taLeftJustify
@@ -122,7 +122,7 @@ object formRelSAT: TformRelSAT
           44.979166666666670000
           1082.145833333333000000
           7.937500000000000000
-          256.645833333333400000)
+          256.645833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -213,7 +213,7 @@ object formRelSAT: TformRelSAT
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          296.333333333333400000
+          296.333333333333300000
           7.937500000000000000
           203.729166666666700000)
         Alignment = taLeftJustify
@@ -490,9 +490,9 @@ object formRelSAT: TformRelSAT
         1899.708333333333000000)
       BandType = rbPageHeader
       object QRLabel6: TQRLabel
-        Left = 295
+        Left = 286
         Top = 42
-        Width = 128
+        Width = 145
         Height = 23
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -500,15 +500,15 @@ object formRelSAT: TformRelSAT
         Frame.DrawLeft = False
         Frame.DrawRight = False
         Size.Values = (
-          60.854166666666680000
-          780.520833333333400000
+          60.854166666666670000
+          756.708333333333300000
           111.125000000000000000
-          338.666666666666700000)
+          383.645833333333300000)
         Alignment = taCenter
         AlignToBand = True
         AutoSize = True
         AutoStretch = False
-        Caption = 'Relat'#243'rio SAT'
+        Caption = 'Relat'#243'rio NFC-e'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -531,7 +531,7 @@ object formRelSAT: TformRelSAT
         Frame.DrawLeft = False
         Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           10.583333333333330000
           21.166666666666670000
           169.333333333333300000)
@@ -592,7 +592,7 @@ object formRelSAT: TformRelSAT
         Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
-          870.479166666666800000
+          870.479166666666700000
           185.208333333333300000
           158.750000000000000000)
         Alignment = taCenter
@@ -625,7 +625,7 @@ object formRelSAT: TformRelSAT
           87.312500000000000000
           571.500000000000000000
           15.875000000000000000
-          756.708333333333400000)
+          756.708333333333300000)
         Alignment = taCenter
         AlignToBand = True
         AutoSize = True
@@ -659,7 +659,7 @@ object formRelSAT: TformRelSAT
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        828.145833333333200000
+        828.145833333333300000
         1899.708333333333000000)
       BandType = rbSummary
       object exprValorTotal: TQRExpr
@@ -707,7 +707,7 @@ object formRelSAT: TformRelSAT
         Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
-          574.145833333333400000
+          574.145833333333300000
           52.916666666666670000
           187.854166666666700000)
         Alignment = taCenter
@@ -1150,9 +1150,9 @@ object formRelSAT: TformRelSAT
         Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
-          679.979166666666800000
-          701.145833333333400000
-          412.750000000000100000)
+          679.979166666666700000
+          701.145833333333300000
+          412.750000000000000000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True

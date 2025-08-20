@@ -4,7 +4,7 @@ object formXMLSat: TformXMLSat
   Width = 421
   Height = 269
   AutoSize = True
-  Caption = 'XML SAT Fiscal'
+  Caption = 'XML NFC-e Fiscal'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object formXMLSat: TformXMLSat
   object TIGradient1: TTIGradient
     Left = 0
     Top = 29
-    Width = 413
-    Height = 206
+    Width = 405
+    Height = 202
     Align = alClient
     Style = grPyramid
     StartColor = 16311505
@@ -257,7 +257,7 @@ object formXMLSat: TformXMLSat
   object TIGradientCaption1: TTIGradientCaption
     Left = 0
     Top = 0
-    Width = 413
+    Width = 405
     Height = 29
     Cursor = crAppStart
     GradientStartColor = clBackground

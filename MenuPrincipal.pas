@@ -134,6 +134,7 @@ type
     CancelarSAT1: TMenuItem;
     btnConfAcbr: TButton;
     FiltroporPalavra1: TMenuItem;
+    GerenciadorCupomNFCe1: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure opcFamiliaCategoriaClick(Sender: TObject);
     procedure mnuSairClick(Sender: TObject);
@@ -225,6 +226,7 @@ type
     procedure FiltroporPalavra1Click(Sender: TObject);
     procedure GerenciadorNfeNOVA1Click(Sender: TObject);
     procedure EmissoNotaFiscalNOVA1Click(Sender: TObject);
+    procedure GerenciadorCupomNFCe1Click(Sender: TObject);
 
 
   private
@@ -260,7 +262,7 @@ uses FamiliaCategoria, RotinasGerais, MarcasProdutos, Produtos,
      PrecoConsulta, ECF, Senha, Unit1, TesteSat, SATRelatorio, XMLSat,
      CadEntregas, RelCliTel, PerguntaNFe, NFeDevolucao, GerenciarNFe,
      RotinasSAT, ConfigAcbr, FitroProdDesc, GerenciarNFeNew, NotaFiscalNew,
-  NFeDevolucaoNew;
+  NFeDevolucaoNew, GerenciarNFCe;
 
 
 {$R *.DFM}
@@ -789,7 +791,7 @@ end;
 
 procedure TformMenuPrincipal.ECF1Click(Sender: TObject);
 begin
-formSAT.ShowModal;
+//formSAT.ShowModal;
 end;
 
 procedure TformMenuPrincipal.PedidosVendas1Click(Sender: TObject);
@@ -919,6 +921,11 @@ else
  begin
   frmEmissaoNFNew.ShowModal;
  end;
+end;
+
+procedure TformMenuPrincipal.GerenciadorCupomNFCe1Click(Sender: TObject);
+begin
+formGerenciarNFCe.ShowModal;
 end;
 
 end.
