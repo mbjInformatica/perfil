@@ -365,7 +365,7 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
    fltCH := 0;
    fltCL := 0;
    fltCC := 0;
-   fltCD := 0;
+   fltCD := 0;                
    fltVP := 0;
    fltOT := 0;
    fltVA := 0;
