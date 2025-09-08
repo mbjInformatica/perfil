@@ -428,9 +428,9 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
       vCredICMS    := FormatFloat('0.00',dmBaseDados.tblSaidaValorTotal.AsFloat*(strPerc/100));
       vPFrete      := FormatFloat('0.00',strPFrete);
       vPOutro      := FormatFloat('0.00',strPDespAC);
+      PercDesc     := 0;
       if (Desconto > 0) then
        begin
-        PercDesc := 0;
         PercDesc := (Desconto/Recebido)*100;
         PercDesc := PercDesc;
        end;
