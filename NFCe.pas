@@ -10,6 +10,7 @@ Forms,
      ACBrSATExtratoESCPOS, ACBrPosPrinter, blcksock,
      ACBrSATExtratoReportClass, ACBrDFeReport, ACBrNFeDANFeESCPOS,
      ACBrDFeDANFeReport, ACBrNFeDANFEClass, ACBrDANFCeFortesFr, ACBrDFe,
+     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
      ACBrNFe, Mask, pcnConversaoNFe, TIGradient, ACBrNFeDANFeRLClass;
 
 type
@@ -75,7 +76,7 @@ var FormNfceAcbr: TFormNfceAcbr;
 implementation
 
 uses ModuloDados, ConfigAcbr, CheckCGC, SelSATCanc, pcnCFe, Venda,
-     FormaPagamento, RotinasGerais, pcnCFeCanc, MenuPrincipal, pcnNFe, pcnProcNFe;
+     FormaPagamento, RotinasGerais, pcnCFeCanc, MenuPrincipal, pcnProcNFe;
 
 
 {$R *.dfm}
@@ -87,6 +88,9 @@ begin
 ArqINI := ChangeFileExt( Application.ExeName,'.ini' ) ;
 INI := TIniFile.Create(ArqINI);
 tpAmbiente := INI.ReadString('Certificado','AMBIENTE','');
+
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 
 if (tpAmbiente = '1') then
  begin
@@ -528,14 +532,14 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
             if (pCredSN <> '0.00') then
              begin
               Imposto.ICMS.CSOSN       := csosn101;
-              Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+              Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
               Imposto.ICMS.pCredSN     := StrToFloat(pCredSN);
               Imposto.ICMS.vCredICMSSN := StrToFloat(vCredICMS);
              end
             else
              begin
               Imposto.ICMS.CSOSN       := csosn102;
-              Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+              Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
              end;
            End;
          // 010
@@ -546,7 +550,7 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
             pMVAST       := '';
             AliqST       := '0.00';
             Imposto.ICMS.CSOSN       := csosn201;
-            Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+            Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
             Imposto.ICMS.modBCST     := StrTomodBCST(ok,ModalidadeBC);
             Imposto.ICMS.pMVAST      := 0;
             Imposto.ICMS.pRedBCST    := 0;
@@ -561,14 +565,14 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
          if (Copy(CSTProd,2,2) = '40')or(Copy(CSTProd,2,2) = '41')or(Copy(CSTProd,2,2) = '50')or(Copy(CSTProd,2,2) = '51') then
            begin
             Imposto.ICMS.CSOSN       := csosn102;
-            Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+            Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
            end;
          // 060 / 070
          if( (Copy(CSTProd,2,2) = '60')or(Copy(CSTProd,2,2) = '70') )then
            begin
             ModalidadeBC := '';
             Imposto.ICMS.CSOSN   := csosn500;
-            Imposto.ICMS.orig    := StrToOrig(ok,OrigemProd);
+            Imposto.ICMS.orig    := oeNacional; //StrToOrig(ok,OrigemProd);
             Imposto.ICMS.modBCST := StrTomodBCST(ok,ModalidadeBC);
             Imposto.ICMS.vBCST   := StrToFloat(BaseST);
             Imposto.ICMS.vICMSST := StrToFloat(IcmsST);

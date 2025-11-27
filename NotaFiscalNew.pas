@@ -10,13 +10,14 @@ interface
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls,
      Forms, Dialogs, StdCtrls, Buttons, Mask, Grids, DBGrids,
      DB, TISButton, TIGradient, DBCtrls, ExtCtrls, OleCtrls, 
-     SHDocVw, pcnNFeW, IniFiles, ShellAPI, MidasLib, Math, TILabel, TISLABELS,
+     SHDocVw, IniFiles, ShellAPI, MidasLib, Math, TILabel, TISLABELS,
 
      ACBrNFe, pcnConversao, ACBrUtil, ACBrNFeDANFEClass, ACBrNFeDANFeESCPOS,
      ACBrBase, ACBrDFe, XMLIntf, XMLDoc, zlib, ACBrMail, ACBrNFeDANFeRLClass,
-     strutils, TypInfo, DateUtils, {ufrmStatus} synacode, pcnNFe,
+     strutils, TypInfo, DateUtils, {ufrmStatus} synacode, 
      pcnConversaoNFe, ACBrDFeConfiguracoes, pcnAuxiliar, ACBrDFeSSL, pcnNFeRTXT,
      RLConsts, Variants, TISImagePanel, TISGroupBox, TISRadioGroup, blcksock,
+     ACBrNFe.Classes, ACBrDFe.Conversao,
   ACBrDFeReport, ACBrDFeDANFeReport;
 
 
@@ -230,6 +231,8 @@ edtnomerg.Visible       := False;
 rdgMesmo.Checked        := True;
 rdgFrete.ItemIndex      := 0;
 NrNf := StrToInt(mskNrNotaFiscal.Text);
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 if (stsNotaE = '1') then
  begin
   mskNPedido.SetFocus;
@@ -2235,7 +2238,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
                 Writeln(ArquivoNFe, 'N10c|'  +OrigemProd+'|'  +'101'+'|'  +pCredSN+'|'  +vCredICMS+'|');
                  // 4.00
                 Imposto.ICMS.CSOSN       := csosn101;
-                Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                 Imposto.ICMS.pCredSN     := StrToFloat(pCredSN);
                 Imposto.ICMS.vCredICMSSN := StrToFloat(vCredICMS);
                End
@@ -2244,7 +2247,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
                 Writeln(ArquivoNFe, 'N10d|'  +OrigemProd+'|'  +'102'+'|');
                 // 4.00
                 Imposto.ICMS.CSOSN       := csosn102;
-                Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                End;}
               BaseICMS    := VTotalProd;
               strCalcIcms := ( (StrToFloat(BaseICMS))*(StrToFloat(AliqICMS)/100) );
@@ -2252,7 +2255,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
               fTotIcms    := fTotIcms  + strCalcIcms;
               fBaseIcms   := fBaseIcms + StrToFloat(VTotalProd);
               Imposto.ICMS.CST   := cst00;
-              Imposto.ICMS.orig  := StrToOrig(ok,OrigemProd);
+              Imposto.ICMS.orig  := oeNacional; //StrToOrig(ok,OrigemProd);
               Imposto.ICMS.modBC := StrTomodBC(ok,ModalidadeBC);
               Imposto.ICMS.vBC   := StrToFloat(BaseICMS);
               Imposto.ICMS.pICMS := StrToFloat(AliqICMS);
@@ -2269,7 +2272,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
 
                {// 4.00
                Imposto.ICMS.CSOSN       := csosn201;
-               Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+               Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                Imposto.ICMS.modBCST     := StrTomodBCST(ok,ModalidadeBC);
                Imposto.ICMS.pMVAST      := 0;
                Imposto.ICMS.pRedBCST    := 0;
@@ -2282,7 +2285,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
                }
 
                Imposto.ICMS.CST       := cst10;
-               Imposto.ICMS.orig      := StrToOrig(ok,OrigemProd);
+               Imposto.ICMS.orig      := oeNacional; //StrToOrig(ok,OrigemProd);
                Imposto.ICMS.modBC     := StrTomodBC(ok,ModalidadeBC);
                Imposto.ICMS.vBC       := StrToFloat(BaseICMS);
                Imposto.ICMS.pICMS     := StrToFloat(AliqICMS);
@@ -2302,10 +2305,10 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
 
                {// 4.00
                Imposto.ICMS.CSOSN       := csosn102;
-               Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);}
+               Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);}
 
                Imposto.ICMS.CST  := cst40;
-               Imposto.ICMS.orig := StrToOrig(ok,OrigemProd);
+               Imposto.ICMS.orig := oeNacional; //StrToOrig(ok,OrigemProd);
 
               end;
             // 060 / 070
@@ -2316,14 +2319,14 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
 
                {// 4.00
                Imposto.ICMS.CSOSN   := csosn500;
-               Imposto.ICMS.orig    := StrToOrig(ok,OrigemProd);
+               Imposto.ICMS.orig    := oeNacional; //StrToOrig(ok,OrigemProd);
                Imposto.ICMS.modBCST := StrTomodBCST(ok,ModalidadeBC);
                Imposto.ICMS.vBCST   := StrToFloat(BaseST);
                Imposto.ICMS.vICMSST := StrToFloat(IcmsST);}
 
 
                Imposto.ICMS.CST     := cst60;
-               Imposto.ICMS.orig    := StrToOrig(ok,OrigemProd);
+               Imposto.ICMS.orig    := oeNacional; //StrToOrig(ok,OrigemProd);
                Imposto.ICMS.vBCST   := StrToFloat(BaseST);
                Imposto.ICMS.vICMSST := StrToFloat(IcmsST);
                

@@ -21,7 +21,7 @@ object formLocalizaCliente: TformLocalizaCliente
     Left = 0
     Top = 25
     Width = 347
-    Height = 155
+    Height = 154
     Align = alClient
     ShowHint = False
     ParentShowHint = False
@@ -260,11 +260,12 @@ object formLocalizaCliente: TformLocalizaCliente
   end
   object ACBrCEP1: TACBrCEP
     ProxyPort = '8080'
-    ParseText = True
+    ContentsEncodingCompress = []
+    NivelLog = 0
     WebService = wsViaCep
     ChaveAcesso = '1STa9eKhhfKvc7Ljh6W6CO5Kr/bFOl.'
     PesquisarIBGE = True
-    Left = 256
+    Left = 264
     Top = 136
   end
 end

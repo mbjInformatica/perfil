@@ -21,7 +21,7 @@ object FormNfceAcbr: TFormNfceAcbr
     Left = 0
     Top = 0
     Width = 497
-    Height = 302
+    Height = 301
     Align = alClient
     Style = grPyramid
     StartColor = 12910023
@@ -462,7 +462,7 @@ object FormNfceAcbr: TFormNfceAcbr
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 302
+    Top = 301
     Width = 497
     Height = 246
     ActivePage = tsLog
@@ -754,6 +754,8 @@ object FormNfceAcbr: TFormNfceAcbr
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     TipoDANFE = tiNFCe
     ImprimeNomeFantasia = True
     ImprimeDescAcrescItem = False
@@ -784,6 +786,8 @@ object FormNfceAcbr: TFormNfceAcbr
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     TipoDANFE = tiNFCe
     ImprimeDescAcrescItem = False
     PosPrinter = ACBrPosPrinter1
@@ -791,10 +795,10 @@ object FormNfceAcbr: TFormNfceAcbr
     Top = 8
   end
   object ACBrNFe1: TACBrNFe
-    Configuracoes.Geral.SSLLib = libCustom
-    Configuracoes.Geral.SSLCryptLib = cryWinCrypt
-    Configuracoes.Geral.SSLHttpLib = httpWinHttp
-    Configuracoes.Geral.SSLXmlSignLib = xsMsXml
+    Configuracoes.Geral.SSLLib = libNone
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpNone
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
     Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
     Configuracoes.Geral.ValidarDigest = False
     Configuracoes.Geral.ModeloDF = moNFCe
@@ -837,6 +841,8 @@ object FormNfceAcbr: TFormNfceAcbr
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     TipoDANFE = tiNFCe
     ImprimeDescAcrescItem = idaiNunca

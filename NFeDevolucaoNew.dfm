@@ -20,7 +20,7 @@ object formNFeDevolucaoNew: TformNFeDevolucaoNew
     Left = 0
     Top = 0
     Width = 1105
-    Height = 682
+    Height = 681
     Align = alClient
     ShowHint = False
     ParentShowHint = False
@@ -1757,6 +1757,8 @@ object formNFeDevolucaoNew: TformNFeDevolucaoNew
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     ExibeCampoFatura = False
     Left = 1023
@@ -1764,10 +1766,10 @@ object formNFeDevolucaoNew: TformNFeDevolucaoNew
   end
   object ACBrNFe1: TACBrNFe
     MAIL = ACBrMail1
-    Configuracoes.Geral.SSLLib = libCustom
-    Configuracoes.Geral.SSLCryptLib = cryWinCrypt
-    Configuracoes.Geral.SSLHttpLib = httpWinHttp
-    Configuracoes.Geral.SSLXmlSignLib = xsMsXml
+    Configuracoes.Geral.SSLLib = libNone
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpNone
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
     Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
     Configuracoes.Geral.ValidarDigest = False
     Configuracoes.Geral.AtualizarXMLCancelado = True

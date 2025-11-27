@@ -7,9 +7,10 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics,
      TISButton, Grids, DBGrids, ComCtrls, ACBrNFeDANFEClass,
      ACBrBase, ACBrDFe, ACBrNFe, ExtCtrls, TISImagePanel,
      TISDBCtrls, TILabel, TISLABELS, RLConsts, TISURLLabel,
-     pcnNFeRTXT, pcnAuxiliar, pcnNFeW, pcnEventoNFe, db,
+     pcnNFeRTXT, pcnAuxiliar,  db,
      pcnConversao, pcnConversaoNFe, ACBrNFeDANFeRLClass, ACBrMail, blcksock,
      ACBrDFeReport, ACBrDFeDANFeReport, Buttons, jpeg,
+     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
   ACBrPosPrinter, ACBrNFeDANFeESCPOS, ACBrDANFCeFortesFr, IniFiles;
 
 type

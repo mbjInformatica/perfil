@@ -6,8 +6,9 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,
      Forms, Dialogs, TIGradient, StdCtrls, TISEdit, TISButton, Grids,
      DBGrids, ComCtrls, ACBrNFeDANFEClass, ACBrBase, ACBrDFe, ACBrNFe,
      ExtCtrls, TISImagePanel, TISDBCtrls, TILabel, TISLABELS, MidasLib,
-     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, pcnNFeW, pcnEventoNFe, RLConsts,
+     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts,
      pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption, jpeg,
+     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
   ACBrDFeReport, ACBrDFeDANFeReport;
 
 type
@@ -112,6 +113,9 @@ stsInutilizar := '';
 Data1.Date    := Date;
 Data2.Date    := Date;
 memoRespostas.Lines.Clear;
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+
 end;
 
 procedure TformGerenciarNFeNew.btnPesquisarClick(Sender: TObject);

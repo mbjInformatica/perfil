@@ -4,14 +4,15 @@ interface
       
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
      StdCtrls, Buttons, Mask, Grids, DBGrids, DBCtrls, TISButton, TIGradient,
-     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil, pcnNFeW,
+     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil,
      pcnNFeRTXT, pcnAuxiliar, IniFiles, ShellAPI, Math, TILabel, TISLABELS,
      ACBrNFeDANFeRLClass, ACBrMail, ACBrBase, ACBrDFe,
      ACBrNFeDANFEClass, TISImagePanel, TISGroupBox, TISRadioGroup,
 
      ACBrNFeDANFeESCPOS, XMLIntf, XMLDoc, zlib, strutils, TypInfo,
-     DateUtils, {ufrmStatus} synacode, pcnNFe, pcnConversaoNFe,
+     DateUtils, {ufrmStatus} synacode,  pcnConversaoNFe,
      ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
+     ACBrNFe.Classes, ACBrDFe.Conversao,
   ACBrDFeReport, ACBrDFeDANFeReport;
 
 type
@@ -215,6 +216,8 @@ dmBaseDados.tblANotaFiscalNew.Last;
 mskNrNotaFiscal.Text := IntToStr(dmBaseDados.tblANotaFiscalNewNrNF.AsInteger + 1);
 NrNf := StrToInt(mskNrNotaFiscal.Text);
 //--
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 end;
 
 procedure TformNFeDevolucaoNew.btnAdicionarServicoClick(Sender: TObject);
@@ -1090,7 +1093,7 @@ dmBaseDados.tblANotaFiscalNew.Post;
                  begin
                   //4.00
                   Imposto.ICMS.CST         := cst90;
-                  Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                   Imposto.ICMS.modBC       := StrTomodBC(ok,ModalidadeBC);
                   Imposto.ICMS.vBC         := StrToFloat(BaseICMS);
                   Imposto.ICMS.pRedBC      := 0;
@@ -1112,7 +1115,7 @@ dmBaseDados.tblANotaFiscalNew.Post;
                   strCalcIcms := ( (StrToFloat(BaseICMS))*(StrToFloat(AliqICMS)/100) );
                   ValorICMS   := FormatFloat('0.00',strCalcIcms);
                   Imposto.ICMS.CST   := cst00;
-                  Imposto.ICMS.orig  := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig  := oeNacional; //StrToOrig(ok,OrigemProd);
                   Imposto.ICMS.modBC := StrTomodBC(ok,ModalidadeBC);
                   Imposto.ICMS.vBC   := StrToFloat(BaseICMS);
                   Imposto.ICMS.pICMS := StrToFloat(AliqICMS);
@@ -1127,7 +1130,7 @@ dmBaseDados.tblANotaFiscalNew.Post;
                   AliqST       := '0.00';
                   //4.00
                   Imposto.ICMS.CST       := cst10;
-                  Imposto.ICMS.orig      := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig      := oeNacional; //StrToOrig(ok,OrigemProd);
                   Imposto.ICMS.modBC     := StrTomodBC(ok,ModalidadeBC);
                   Imposto.ICMS.vBC       := StrToFloat(BaseICMS);
                    Imposto.ICMS.pICMS     := StrToFloat(AliqICMS);
@@ -1141,7 +1144,7 @@ dmBaseDados.tblANotaFiscalNew.Post;
 
                   {// 4.00
                   Imposto.ICMS.CSOSN       := csosn201;
-                  Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                   Imposto.ICMS.modBCST     := StrTomodBCST(ok,ModalidadeBC);
                   Imposto.ICMS.pMVAST      := 0;
                   Imposto.ICMS.pRedBCST    := 0;
@@ -1157,22 +1160,22 @@ dmBaseDados.tblANotaFiscalNew.Post;
                if (Copy(CSTProd,2,2) = '40')or(Copy(CSTProd,2,2) = '41')or(Copy(CSTProd,2,2) = '50')or(Copy(CSTProd,2,2) = '51') then
                  begin
                   Imposto.ICMS.CST  := cst40;
-                  Imposto.ICMS.orig := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig := oeNacional; //StrToOrig(ok,OrigemProd);
                   {// 4.00
                   Imposto.ICMS.CSOSN := csosn102;
-                  Imposto.ICMS.orig  := StrToOrig(ok,OrigemProd);}
+                  Imposto.ICMS.orig  := oeNacional; //StrToOrig(ok,OrigemProd);}
                  end;
                // 060 / 070
                if( (Copy(CSTProd,2,2) = '60')or(Copy(CSTProd,2,2) = '70') )then
                  begin
                   ModalidadeBC := '';
                   Imposto.ICMS.CST     := cst60;
-                  Imposto.ICMS.orig    := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig    := oeNacional; //StrToOrig(ok,OrigemProd);
                   Imposto.ICMS.vBCST   := StrToFloat(BaseST);
                   Imposto.ICMS.vICMSST := StrToFloat(IcmsST);
                   {// 4.00
                   Imposto.ICMS.CSOSN   := csosn500;
-                  Imposto.ICMS.orig    := StrToOrig(ok,OrigemProd);
+                  Imposto.ICMS.orig    := oeNacional; //StrToOrig(ok,OrigemProd);
                   Imposto.ICMS.modBCST := StrTomodBCST(ok,ModalidadeBC);
                   Imposto.ICMS.vBCST   := StrToFloat(BaseST);
                   Imposto.ICMS.vICMSST := StrToFloat(IcmsST);}

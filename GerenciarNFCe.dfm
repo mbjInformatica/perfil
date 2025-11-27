@@ -21,7 +21,7 @@ object formGerenciarNFCe: TformGerenciarNFCe
     Left = 0
     Top = 0
     Width = 1031
-    Height = 617
+    Height = 616
     Align = alClient
     Style = grFilled
     StartColor = 12910023
@@ -2158,10 +2158,10 @@ object formGerenciarNFCe: TformGerenciarNFCe
   end
   object ACBrNFe1: TACBrNFe
     MAIL = ACBrMail1
-    Configuracoes.Geral.SSLLib = libCustom
-    Configuracoes.Geral.SSLCryptLib = cryWinCrypt
-    Configuracoes.Geral.SSLHttpLib = httpWinHttp
-    Configuracoes.Geral.SSLXmlSignLib = xsMsXml
+    Configuracoes.Geral.SSLLib = libNone
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpNone
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
     Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
     Configuracoes.Geral.ValidarDigest = False
     Configuracoes.Geral.ModeloDF = moNFCe
@@ -2213,6 +2213,8 @@ object formGerenciarNFCe: TformGerenciarNFCe
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     TipoDANFE = tiNFCe
     ImprimeNomeFantasia = True
     ImprimeDescAcrescItem = False
@@ -2243,6 +2245,8 @@ object formGerenciarNFCe: TformGerenciarNFCe
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     TipoDANFE = tiNFCe
     ImprimeDescAcrescItem = False
     PosPrinter = ACBrPosPrinter1
@@ -2280,6 +2284,8 @@ object formGerenciarNFCe: TformGerenciarNFCe
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     TipoDANFE = tiNFCe
     ExibeCampoFatura = False
