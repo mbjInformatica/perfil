@@ -6,10 +6,17 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,
      Forms, Dialogs, TIGradient, StdCtrls, TISEdit, TISButton, Grids,
      DBGrids, ComCtrls, ACBrNFeDANFEClass, ACBrBase, ACBrDFe, ACBrNFe,
      ExtCtrls, TISImagePanel, TISDBCtrls, TILabel, TISLABELS, MidasLib,
+<<<<<<< HEAD
      TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts, IniFiles,  ACBrDFeSSL,
      ACBrDFeReport, ACBrDFeDANFeReport, ACBrNFeDANFeRLClass, ACBrMail, blcksock,
      TIGradientCaption, jpeg, pcnConversao, ACBrDFe.Conversao, ACBrNFe.Classes,
      pcnConversaoNFe, db;
+=======
+     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts,
+     pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption, jpeg,
+     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
+  ACBrDFeReport, ACBrDFeDANFeReport;
+>>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
 
 type
   TformGerenciarNFe = class(TForm)
@@ -129,6 +136,10 @@ stsInutilizar := '';
 Data1.Date    := Date;
 Data2.Date    := Date;
 memoRespostas.Lines.Clear;
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+
+
 end;
 
 procedure TformGerenciarNFe.btnPesquisarClick(Sender: TObject);

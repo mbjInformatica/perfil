@@ -21,7 +21,7 @@ object formGerenciarNFeNew: TformGerenciarNFeNew
     Left = 0
     Top = 0
     Width = 1040
-    Height = 637
+    Height = 636
     Align = alClient
     Style = grPyramid
     StartColor = 16311505

@@ -4,15 +4,26 @@ interface
       
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
      StdCtrls, Buttons, Mask, Grids, DBGrids, DBCtrls, TISButton, TIGradient,
+<<<<<<< HEAD
      ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil,
+=======
+     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil, 
+>>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
      pcnNFeRTXT, pcnAuxiliar, IniFiles, ShellAPI, Math, TILabel, TISLABELS,
      ACBrNFeDANFeRLClass, ACBrMail, ACBrBase, ACBrDFe,
      ACBrNFeDANFEClass, TISImagePanel, TISGroupBox, TISRadioGroup,
 
      ACBrNFeDANFeESCPOS, XMLIntf, XMLDoc, zlib, strutils, TypInfo,
+<<<<<<< HEAD
      DateUtils, {ufrmStatus} synacode, pcnConversaoNFe,
      ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
      ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
+=======
+     DateUtils, {ufrmStatus} synacode,  pcnConversaoNFe,
+     ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
+     ACBrNFe.Classes,  ACBrDFe.Conversao,
+  ACBrDFeReport, ACBrDFeDANFeReport;
+>>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
 
 type
   TformNFeDevolucao = class(TForm)
@@ -231,6 +242,8 @@ dmBaseDados.tblANotaFiscal.Last;
 mskNrNotaFiscal.Text := IntToStr(dmBaseDados.tblANotaFiscalNrNF.AsInteger + 1);
 NrNf := StrToInt(mskNrNotaFiscal.Text);
 //--
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 end;
 
 procedure TformNFeDevolucao.btnAdicionarServicoClick(Sender: TObject);
@@ -1163,7 +1176,7 @@ dmBaseDados.tblANotaFiscal.Post;
                           //       |     modBCST |    pMVAST  |    pRedBCST  |    vBCST  |    pICMSST  |    vICMSST  |    pCredSN  |    vCredICMSSN  |
                  //4.00
                  Imposto.ICMS.CSOSN       := csosn900;
-                 Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                 Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                  Imposto.ICMS.modBC       := StrTomodBC(ok,ModalidadeBC);
                  Imposto.ICMS.vBC         := StrToFloat(BaseICMS);
                  Imposto.ICMS.pRedBC      := 0;
@@ -1186,7 +1199,7 @@ dmBaseDados.tblANotaFiscal.Post;
 
                    //4.00
                    Imposto.ICMS.CSOSN       := csosn101;
-                   Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                   Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                    Imposto.ICMS.pCredSN     := StrToFloat(pCredSN);
                    Imposto.ICMS.vCredICMSSN := StrToFloat(vCredICMS);
 
@@ -1201,7 +1214,7 @@ dmBaseDados.tblANotaFiscal.Post;
 
                  //4.00
                  Imposto.ICMS.CSOSN       := csosn201;
-                 Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                 Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
                  Imposto.ICMS.modBCST     := StrTomodBCST(ok,ModalidadeBC);
                  Imposto.ICMS.pMVAST      := 0;
                  Imposto.ICMS.pRedBCST    := 0;
@@ -1221,7 +1234,7 @@ dmBaseDados.tblANotaFiscal.Post;
 
                   //4.00
                  Imposto.ICMS.CSOSN       := csosn102;
-                 Imposto.ICMS.orig        := StrToOrig(ok,OrigemProd);
+                 Imposto.ICMS.orig        := oeNacional; //StrToOrig(ok,OrigemProd);
 
               end;
 
@@ -1233,7 +1246,7 @@ dmBaseDados.tblANotaFiscal.Post;
 
                  //4.00
                  Imposto.ICMS.CSOSN   := csosn500;
-                 Imposto.ICMS.orig    := StrToOrig(ok,OrigemProd);
+                 Imposto.ICMS.orig    := oeNacional; //StrToOrig(ok,OrigemProd);
                  Imposto.ICMS.modBCST := StrTomodBCST(ok,ModalidadeBC);
                  Imposto.ICMS.vBCST   := StrToFloat(BaseST);
                  Imposto.ICMS.vICMSST := StrToFloat(IcmsST);
