@@ -18,8 +18,8 @@ object frmDigitacaoPedido: TfrmDigitacaoPedido
   object TIGradient1: TTIGradient
     Left = 0
     Top = 26
-    Width = 169
-    Height = 155
+    Width = 161
+    Height = 151
     Align = alClient
     ShowHint = False
     ParentShowHint = False
@@ -84,7 +84,7 @@ object frmDigitacaoPedido: TfrmDigitacaoPedido
   object TIGradientCaption1: TTIGradientCaption
     Left = 0
     Top = 0
-    Width = 169
+    Width = 161
     Height = 26
     GradientStartColor = clBackground
     GradientEndColor = clSkyBlue

@@ -1,6 +1,6 @@
 object formLocalizaCliente: TformLocalizaCliente
-  Left = 293
-  Top = 183
+  Left = 493
+  Top = 278
   Width = 363
   Height = 218
   Caption = 'Localiza se cliente j'#225' esta cadastrado'
@@ -260,7 +260,8 @@ object formLocalizaCliente: TformLocalizaCliente
   end
   object ACBrCEP1: TACBrCEP
     ProxyPort = '8080'
-    ParseText = True
+    ContentsEncodingCompress = []
+    NivelLog = 0
     WebService = wsViaCep
     ChaveAcesso = '1STa9eKhhfKvc7Ljh6W6CO5Kr/bFOl.'
     PesquisarIBGE = True

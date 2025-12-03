@@ -10,14 +10,14 @@ interface
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls,
      Forms, Dialogs, StdCtrls, Buttons, Mask, Grids, DBGrids,
      DB, TISButton, TIGradient, DBCtrls, ExtCtrls, OleCtrls,
-     SHDocVw, pcnNFeW, IniFiles, ShellAPI, MidasLib, Math, TILabel, TISLABELS,
+     SHDocVw, IniFiles, ShellAPI, MidasLib, Math, TILabel, TISLABELS,
 
      ACBrNFe, pcnConversao, ACBrUtil, ACBrNFeDANFEClass, ACBrNFeDANFeESCPOS,
      ACBrBase, ACBrDFe, XMLIntf, XMLDoc, zlib, ACBrMail, ACBrNFeDANFeRLClass,
-     strutils, TypInfo, DateUtils, {ufrmStatus} synacode, pcnNFe,
+     strutils, TypInfo, DateUtils, {ufrmStatus} synacode, 
      pcnConversaoNFe, ACBrDFeConfiguracoes, pcnAuxiliar, ACBrDFeSSL, pcnNFeRTXT,
      RLConsts, Variants, TISImagePanel, TISGroupBox, TISRadioGroup, blcksock,
-     ACBrDFeReport, ACBrDFeDANFeReport;
+     ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
 
 
 type
@@ -134,6 +134,8 @@ var FrmEmissaoNF : TFrmEmissaoNF;
     Item000, Item030, PercIcms, strSTIVA, strVolume,
     strFrete, strDespAC, strDescon, fltVParcela, PercDesc : Double;
     NFeRTXT : TNFeRTXT;
+    ArqINI : String;
+    INI : TIniFile;
 
 
 implementation
@@ -147,6 +149,20 @@ uses ModuloDados, RelNotaFiscal, RotinasGerais,
 
 procedure TFrmEmissaoNF.FormShow(Sender: TObject);
 begin
+//--
+ArqINI := ChangeFileExt( Application.ExeName,'.ini' ) ;
+INI    := TIniFile.Create(ArqINI);
+//-- Abrindo ACBrNFe
+ACBrNFe1.NotasFiscais.Clear;
+ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
+ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
+ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+//--
 formaPgto   := '01';
 ChaveAcesso := '';
 strCliFinal := '';
@@ -803,6 +819,7 @@ strComp2 := mskNPedido.Text;
         dmBaseDados.tblProdutos.Locate('Codigo',dmBaseDados.tblPedidosProduto.AsString,[loCaseInsensitive]);
         strPercReducao := dmBaseDados.tblProdutosReducaoIcms.AsFloat;
 
+       {
         // Se o item for 060 e for nota de devolução ou Garantia...:
         if( (dmBaseDados.tblPedidosCST.AsString = '060')and(rdgTipoOperacao.ItemIndex = 1) )then
          begin
@@ -901,7 +918,7 @@ strComp2 := mskNPedido.Text;
             dmBaseDados.tblPedidos.Post;
             strCfopMudou := '1';
            end;
-
+        }
         // Calculo da Subst. Trib., CST = 010...
         if( (dmBaseDados.tblPedidosCST.AsString = '010')or(dmBaseDados.tblPedidosCST.AsString = '210') )then
           begin
@@ -1863,7 +1880,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
        Emit.xNome             := 'AUTO PECAS E ACESSORIOS PERFIL LTDA - ME';
        Emit.xFant             := '';
 
-       Emit.EnderEmit.fone    := '';
+       Emit.EnderEmit.fone    := '';                       
        Emit.EnderEmit.CEP     := 06060003;
        Emit.EnderEmit.xLgr    := 'AVENIDA ANALICE SAKATAUSKAS';
        Emit.EnderEmit.nro     := '580';

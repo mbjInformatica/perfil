@@ -3,7 +3,8 @@ unit Produtos;
 interface
 
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-     DBCtrls, StdCtrls, Mask, ComCtrls, Buttons, DB, Grids, DBGrids, TISButton;
+     DBCtrls, StdCtrls, Mask, ComCtrls, Buttons, DB, Grids, DBGrids, TISButton,
+  ExtCtrls;
 
 type
   TFormProdutos = class(TForm)
@@ -153,6 +154,18 @@ type
     Label12: TLabel;
     lblCST: TLabel;
     dbeCST: TDBComboBox;
+    Panel3: TPanel;
+    Label49: TLabel;
+    Label50: TLabel;
+    Label51: TLabel;
+    Label52: TLabel;
+    Label53: TLabel;
+    Label54: TLabel;
+    fldCSTIBSCBS: TDBEdit;
+    fldClassTrib: TDBEdit;
+    fldAliqIBSUF: TDBEdit;
+    fldIBSMun: TDBEdit;
+    fldAliqCBS: TDBEdit;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnLocalizarClick(Sender: TObject);

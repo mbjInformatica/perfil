@@ -6,9 +6,9 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,
      Forms, Dialogs, TIGradient, StdCtrls, TISEdit, TISButton, Grids,
      DBGrids, ComCtrls, ACBrNFeDANFEClass, ACBrBase, ACBrDFe, ACBrNFe,
      ExtCtrls, TISImagePanel, TISDBCtrls, TILabel, TISLABELS, MidasLib,
-     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, pcnNFeW, pcnEventoNFe, RLConsts,
-     pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption, jpeg,
-  ACBrDFeReport, ACBrDFeDANFeReport;
+     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts, IniFiles, ACBrDFeSSL,
+     pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption,
+     jpeg, ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
 
 type
   TformGerenciarNFeNew = class(TForm)
@@ -89,6 +89,8 @@ type
 
 var formGerenciarNFeNew : TformGerenciarNFeNew;
     NFeRTXT : TNFeRTXT;
+    ArqINI : String;
+    INI : TIniFile;
 
 implementation
 
@@ -101,6 +103,20 @@ uses ModuloDados, CancelarNFe, Inutilizar, RotinasGerais,
 
 procedure TformGerenciarNFeNew.FormShow(Sender: TObject);
 begin
+//--
+ArqINI := ChangeFileExt( Application.ExeName,'.ini' ) ;
+INI    := TIniFile.Create(ArqINI);
+//-- Abrindo ACBrNFe
+ACBrNFe1.NotasFiscais.Clear;
+ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+//ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
+ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
+ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+//--
 dmBaseDados.tblANotaFiscalNew.Open;
 dmBaseDados.tblANotaFiscalNew.Filter   := '';
 dmBaseDados.tblANotaFiscalNew.Filtered := False;

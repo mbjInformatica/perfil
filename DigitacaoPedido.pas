@@ -75,7 +75,7 @@ else
       SttsOrc := '1';
       if dmBaseDados.tblPedidosStatus.AsString = '1' then
        begin
-        Stts := '1';
+        Stts := '1';          
        end;
       strCodOper := dmBaseDados.tblPedidosCodigoVendedor.AsString;
       strCliente := dmBaseDados.tblPedidosCodigoCliente.AsString;
@@ -94,7 +94,7 @@ else
       dmBaseDados.tblSaidaValorUnitario.AsFloat     := dmBaseDados.tblPedidosUnitario.AsFloat;
       dmBaseDados.tblSaidaValorTotal.AsFloat        := dmBaseDados.tblPedidosTotal.AsFloat;
       dmBaseDados.tblSaidaCondPg.AsString           := dmBaseDados.tblPedidosPagamento.AsString;
-      dmBaseDados.tblSaidaPeso.AsFloat              := dmBaseDados.tblPedidosPeso.AsFloat;
+      dmBaseDados.tblSaidaPeso.AsFloat              := dmBaseDados.tblPedidosVTributos.AsFloat;
       dmBaseDados.tblSaidaDataVencimento.AsString   := dmBaseDados.tblPedidosVencimento.AsString;
       dmBaseDados.tblSaidaDesconto.AsFloat          := dmBaseDados.tblPedidosDesconto.AsFloat;
       dmBaseDados.tblSaidaComissao.AsFloat          := dmBaseDados.tblPedidosComissao.AsFloat;

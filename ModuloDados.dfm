@@ -369,6 +369,23 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'SituacaoTributaria'
       Size = 3
     end
+    object tblProdutosCstIBSCBS: TStringField
+      FieldName = 'CstIBSCBS'
+      Size = 3
+    end
+    object tblProdutosClassifTrib: TStringField
+      FieldName = 'ClassifTrib'
+      Size = 6
+    end
+    object tblProdutosAliqIBSUF: TFloatField
+      FieldName = 'AliqIBSUF'
+    end
+    object tblProdutosAliqIBSMun: TFloatField
+      FieldName = 'AliqIBSMun'
+    end
+    object tblProdutosAliqCBS: TFloatField
+      FieldName = 'AliqCBS'
+    end
   end
   object tblEntrada: TTable
     BeforeDelete = tblFamiliasBeforeDelete
@@ -2924,6 +2941,18 @@ object dmBaseDados: TdmBaseDados
     object tblANotaFiscalTribMun: TFloatField
       FieldName = 'TribMun'
     end
+    object tblANotaFiscalIBSUF: TFloatField
+      FieldName = 'IBSUF'
+    end
+    object tblANotaFiscalIBSMun: TFloatField
+      FieldName = 'IBSMun'
+    end
+    object tblANotaFiscalIBSTot: TFloatField
+      FieldName = 'IBSTot'
+    end
+    object tblANotaFiscalCBSTot: TFloatField
+      FieldName = 'CBSTot'
+    end
   end
   object qryVendedor: TQuery
     DatabaseName = 'SistemaGestaoEstoque'
@@ -3517,8 +3546,8 @@ object dmBaseDados: TdmBaseDados
   end
   object dsIBPT: TDataSource
     DataSet = tblIbpt
-    Left = 693
-    Top = 369
+    Left = 709
+    Top = 353
   end
   object tblEntregas: TTable
     DatabaseName = 'SistemaGestaoEstoque'
@@ -3752,6 +3781,23 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'CEST'
       Size = 7
     end
+    object qryProdutosCstIBSCBS: TStringField
+      FieldName = 'CstIBSCBS'
+      Size = 3
+    end
+    object qryProdutosClassifTrib: TStringField
+      FieldName = 'ClassifTrib'
+      Size = 6
+    end
+    object qryProdutosAliqIBSUF: TFloatField
+      FieldName = 'AliqIBSUF'
+    end
+    object qryProdutosAliqIBSMun: TFloatField
+      FieldName = 'AliqIBSMun'
+    end
+    object qryProdutosAliqCBS: TFloatField
+      FieldName = 'AliqCBS'
+    end
   end
   object tblInutilizadas: TTable
     DatabaseName = 'SistemaGestaoEstoque'
@@ -3779,14 +3825,14 @@ object dmBaseDados: TdmBaseDados
   end
   object dsCEST: TDataSource
     DataSet = tblCest
-    Left = 587
-    Top = 374
+    Left = 851
+    Top = 318
   end
   object tblCest: TTable
     DatabaseName = 'SistemaGestaoEstoque'
     TableName = 'CEST.DB'
-    Left = 539
-    Top = 374
+    Left = 811
+    Top = 310
     object tblCestNCM: TIntegerField
       FieldName = 'NCM'
     end
@@ -4317,8 +4363,8 @@ object dmBaseDados: TdmBaseDados
   object tblANotaFiscalNew: TTable
     DatabaseName = 'SistemaGestaoEstoque'
     TableName = 'ANotaFiscalNew.DB'
-    Left = 568
-    Top = 440
+    Left = 624
+    Top = 424
     object tblANotaFiscalNewNrNF: TIntegerField
       FieldName = 'NrNF'
     end
@@ -4601,10 +4647,39 @@ object dmBaseDados: TdmBaseDados
     object tblANotaFiscalNewTribMun: TFloatField
       FieldName = 'TribMun'
     end
+    object tblANotaFiscalNewIBSUF: TFloatField
+      FieldName = 'IBSUF'
+    end
+    object tblANotaFiscalNewIBSMun: TFloatField
+      FieldName = 'IBSMun'
+    end
+    object tblANotaFiscalNewIBSTot: TFloatField
+      FieldName = 'IBSTot'
+    end
+    object tblANotaFiscalNewCBSTot: TFloatField
+      FieldName = 'CBSTot'
+    end
   end
   object dsANotaFiscalNew: TDataSource
     DataSet = tblANotaFiscalNew
-    Left = 648
-    Top = 436
+    Left = 712
+    Top = 428
+  end
+  object tblGeraNrNFCe: TTable
+    DatabaseName = 'SistemaGestaoEstoque'
+    TableName = 'GeraNrNFCe.db'
+    Left = 488
+    Top = 368
+    object tblGeraNrNFCeNrNF: TIntegerField
+      FieldName = 'NrNF'
+    end
+    object tblGeraNrNFCeDataEm: TDateField
+      FieldName = 'DataEm'
+    end
+  end
+  object dsGeraNrNFCe: TDataSource
+    DataSet = tblGeraNrNFCe
+    Left = 488
+    Top = 424
   end
 end

@@ -578,7 +578,20 @@ if( (dmBaseDados.tblSaida.State = dsInsert)or(dmBaseDados.tblSaida.State = dsEdi
        begin
         dmBaseDados.tblPedidosMotorista.AsString := 'E';
        end;
-      dmBaseDados.tblPedidosNomeCli.AsString := strDigiteCliente; 
+      dmBaseDados.tblPedidosNomeCli.AsString := strDigiteCliente;
+      dmBaseDados.tblPedidosICMS.AsFloat                   := 7;
+      if( (dmBaseDados.tblClientesEstado.AsString = 'SP') )then
+       begin
+        dmBaseDados.tblPedidosICMS.AsFloat  := dmBaseDados.tblProdutosIcms.AsFloat;
+       end;
+      if( (dmBaseDados.tblClientesEstado.AsString = 'MG')
+       or (dmBaseDados.tblClientesEstado.AsString = 'PR')
+       or (dmBaseDados.tblClientesEstado.AsString = 'RS')
+       or (dmBaseDados.tblClientesEstado.AsString = 'RJ')
+       or (dmBaseDados.tblClientesEstado.AsString = 'SC') )then
+        begin
+         dmBaseDados.tblPedidosICMS.AsFloat := 12;
+        end;      
       dmBaseDados.tblPedidos.Post;
       dmBaseDados.tblPedidos.FlushBuffers;
       if (ckbOrc.Checked = False) then

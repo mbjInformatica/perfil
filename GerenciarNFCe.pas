@@ -7,10 +7,11 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics,
      TISButton, Grids, DBGrids, ComCtrls, ACBrNFeDANFEClass,
      ACBrBase, ACBrDFe, ACBrNFe, ExtCtrls, TISImagePanel,
      TISDBCtrls, TILabel, TISLABELS, RLConsts, TISURLLabel,
-     pcnNFeRTXT, pcnAuxiliar, pcnNFeW, pcnEventoNFe, db,
-     pcnConversao, pcnConversaoNFe, ACBrNFeDANFeRLClass, ACBrMail, blcksock,
+     pcnNFeRTXT, pcnAuxiliar, db, pcnConversao, pcnConversaoNFe,
+     ACBrNFeDANFeRLClass, ACBrMail, blcksock, ACBrDFeSSL,
      ACBrDFeReport, ACBrDFeDANFeReport, Buttons, jpeg,
-  ACBrPosPrinter, ACBrNFeDANFeESCPOS, ACBrDANFCeFortesFr, IniFiles;
+     ACBrPosPrinter, ACBrNFeDANFeESCPOS, ACBrDANFCeFortesFr,
+     ACBrDFe.Conversao, ACBrNFe.Classes, IniFiles;
 
 type
   TformGerenciarNFCe = class(TForm)
@@ -57,6 +58,8 @@ type
     ACBrPosPrinter1: TACBrPosPrinter;
     Button1: TButton;
     ACBrNFeDANFeRL1: TACBrNFeDANFeRL;
+    memoXML: TMemo;
+    procedure AtualizarHoraXML;
     procedure btnPesquisarClick(Sender: TObject);
     procedure btnNovaPesqClick(Sender: TObject);
     procedure btnImprimirClick(Sender: TObject);
@@ -110,9 +113,11 @@ ArqINI := ChangeFileExt( Application.ExeName,'.ini' ) ;
 INI    := TIniFile.Create(ArqINI);
 
 ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
-ACBrNFe1.Configuracoes.Geral.VersaoQrCode := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC        := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC          := INI.ReadString('Certificado','CSC','');          //'fbb7cda0-e629-4b63-90d1-a5cba0a63bc9';  // Filial Barueri homologação
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
+ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
+ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');          //'fbb7cda0-e629-4b63-90d1-a5cba0a63bc9';  // Filial Barueri homologação
 ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');  //
 ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
 
@@ -477,8 +482,8 @@ var strPedidoNFe, strCliente, strCaminho, strLinha2,
     AcbrNFe, strSmtpHost, strSmtpPort, strSmtpUser,
     strSmtpPass, Para, NomeArq, strAssunto, emailDest,
     chCodUF, chData, chAnoMes, chCNPJ, chModelo,
-    chSerie, strMotivo, chNrNFe, chFormaEmissao,
-    chCodNumerico, ChaveAcesso, strCh : String;
+    chSerie, strMotivo, chNrNFe, chFormaEmissao, strMsg,
+    chCodNumerico, ChaveAcesso, strCh, vChave, statusNFe : String;
     ArquivoNFe, txtMonitor : TextFile;
     CC, strMensagem : Tstrings;
     strConexSegura : Boolean;
@@ -498,11 +503,28 @@ if (strCliente <> '') then
 // Salvando e gerando o XML
 ACBrNFe1.NotasFiscais.Clear;
 ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
-ACBrNFe1.Configuracoes.Geral.VersaoQrCode := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC        := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC          := INI.ReadString('Certificado','CSC','');          //'fbb7cda0-e629-4b63-90d1-a5cba0a63bc9';  // Filial Barueri homologação
-ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');  //
-ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+// Atualizar hora xml e data:
+if (dmBaseDados.qryCupomFiscalStatus.AsString <> '100')and(dmBaseDados.qryCupomFiscalStatus.AsString <> '101') then
+  Begin
+   vChave := dmBaseDados.qryCupomFiscalChave.AsString;
+   ACBrNFe1.WebServices.Consulta.NFeChave := vChave;
+   ACBrNFe1.WebServices.Consulta.Executar;
+   statusNFe := IntToStr(ACBrNFe1.WebServices.Consulta.cStat);
+   strMsg    := statusNFe + ' - ' + ACBrNFe1.WebServices.Consulta.XMotivo;      //Application.MessageBox(pChar(strMsg),'Retorno NF-e',MB_ICONASTERISK);
+   dmBaseDados.qryCupomFiscal.Edit;
+   dmBaseDados.qryCupomFiscalStatus.AsString   := statusNFe;
+   dmBaseDados.qryCupomFiscalMensagem.AsString := strMsg;
+   dmBaseDados.qryCupomFiscal.Post;
+   if (dmBaseDados.qryCupomFiscalStatus.AsString <> '100') then
+    begin
+     AtualizarHoraXML;
+    end;
+  End
+else
+  Begin
+   Abort;
+  End;
+//--
 
 if (dmBaseDados.qryCupomFiscalCaminhoXML.AsString <> '') then
  begin
@@ -1158,6 +1180,45 @@ end;
 procedure TformGerenciarNFCe.Button1Click(Sender: TObject);
 begin
 formConfigAcbr.ShowModal;
+end;
+
+procedure TformGerenciarNFCe.AtualizarHoraXML;
+var Line, strDataHoraAnt, strDataHoraAtual,
+    sCaminhoXml, strHoraAt : String;
+    Arquivo : TextFile;
+    i : Integer;
+begin
+MemoXML.Clear;
+//AssignFile(Arquivo,dmBaseDados.qryCupomFiscalCaminhoXML.AsString);
+if (dmBaseDados.qryCupomFiscalCaminhoXML.AsString <> '')and((dmBaseDados.qryCupomFiscalCaminhoXML.AsString <> null)) then
+ begin
+  sCaminhoXml := dmBaseDados.qryCupomFiscalCaminhoXML.AsString;
+ end
+else
+ begin
+  sCaminhoXml := dmBaseDados.qryCupomFiscalCaminho2.AsString;
+ end;
+AssignFile(Arquivo,sCaminhoXml);
+Reset(Arquivo);
+//--
+while not EOF(Arquivo) do
+  Begin
+   ReadLn(Arquivo, Line);
+   if Pos('<dhEmi>',Line)>0 then
+    begin
+     //<dhEmi>2025-04-04T17:47:04-03:00</dhEmi>
+    strDataHoraAnt := Copy(Line,Pos('<dhEmi>',Line),32);
+    strDataHoraAnt := Copy(strDataHoraAnt,8,25);
+    strHoraAt := TimeToStr(Time);
+    SHORTDATEFORMAT  := 'yyyy-mm-dd';
+    strDataHoraAtual := DateToStr(Date) + 'T' + strHoraAt + '-03:00';
+    SHORTDATEFORMAT  := 'dd/mm/yyyy';
+    Line := StringReplace(Line, strDataHoraAnt, strDataHoraAtual,[]);
+    end;
+   MemoXML.Lines.add( Line );
+  End;
+CloseFile(Arquivo);
+MemoXML.Lines.SaveToFile(dmBaseDados.qryCupomFiscalCaminhoXML.AsString);
 end;
 
 end.

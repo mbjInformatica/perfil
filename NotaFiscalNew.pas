@@ -10,14 +10,14 @@ interface
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls,
      Forms, Dialogs, StdCtrls, Buttons, Mask, Grids, DBGrids,
      DB, TISButton, TIGradient, DBCtrls, ExtCtrls, OleCtrls, 
-     SHDocVw, pcnNFeW, IniFiles, ShellAPI, MidasLib, Math, TILabel, TISLABELS,
+     SHDocVw, IniFiles, ShellAPI, MidasLib, Math, TILabel, TISLABELS,
 
      ACBrNFe, pcnConversao, ACBrUtil, ACBrNFeDANFEClass, ACBrNFeDANFeESCPOS,
      ACBrBase, ACBrDFe, XMLIntf, XMLDoc, zlib, ACBrMail, ACBrNFeDANFeRLClass,
-     strutils, TypInfo, DateUtils, {ufrmStatus} synacode, pcnNFe,
+     strutils, TypInfo, DateUtils, synacode, 
      pcnConversaoNFe, ACBrDFeConfiguracoes, pcnAuxiliar, ACBrDFeSSL, pcnNFeRTXT,
      RLConsts, Variants, TISImagePanel, TISGroupBox, TISRadioGroup, blcksock,
-  ACBrDFeReport, ACBrDFeDANFeReport;
+     ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
 
 
 type
@@ -133,7 +133,8 @@ var FrmEmissaoNFNew : TFrmEmissaoNFNew;
     Item000, Item030, PercIcms, strSTIVA, strVolume,
     strFrete, strDespAC, strDescon, fltVParcela, PercDesc : Double;
     NFeRTXT : TNFeRTXT;
-
+    ArqIni : String;
+    INI : TIniFile;
 
 implementation
 
@@ -146,6 +147,18 @@ uses ModuloDados, RelNotaFiscal, RotinasGerais,
 
 procedure TFrmEmissaoNFNew.FormShow(Sender: TObject);
 begin
+//--
+ArqINI := ChangeFileExt( Application.ExeName,'.ini' ) ;
+INI    := TIniFile.Create(ArqINI);
+//-- Abrindo ACBrNFe
+ACBrNFe1.NotasFiscais.Clear;
+ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('CertificadoNova','CHAVE','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('CertificadoNova','SENHA','');
+//--
 formaPgto   := '01';
 ChaveAcesso := '';
 strCliFinal := '';
@@ -1424,6 +1437,8 @@ var strStatus, strPgto, strCodigoProduto, strCodProRef, strDescricao,
     sindPag, sCNPJCPF, sFrete : String;
     sDataNT : TDateTime;
     ok : boolean;
+    // REFORMA TRIBUTÁRIA:
+    fltTotIBS, fltTotCBS, fltBaseCBSIBS, fltTotBaseCBS, sTotIBSUF, sTotIBSMun : Double;
 begin
 dmBaseDados.tblLogMensal.EmptyTable;
 dmBaseDados.tblLogMensal.Open;
@@ -1446,6 +1461,12 @@ else
  end;
 TipoCli   := dmBaseDados.tblClientesTipoCliente.AsString;
 IsentoCli := dmBaseDados.tblClientesNumeroRG.AsString;
+fltTotIBS     := 0; // Reforma
+fltTotCBS     := 0; // Reforma
+fltBaseCBSIBS := 0; // Reforma
+fltTotBaseCBS := 0; // Reforma
+sTotIBSUF     := 0; // Reforma
+sTotIBSMun    := 0; // Reforma
 strPesoB    := 0;
 strPesoL    := 0;
 Contador    := 0;
@@ -1456,7 +1477,7 @@ strDifCent  := 0;
 fTotIcms    := 0;
 fBaseIcms   := 0;
 if (edtVolume.Text <> '') then
- begin                                                  
+ begin
   strVolume := StrToFloat(edtVolume.Text);
  end;
 if (edtPesoBruto.Text <> '') then
@@ -1862,6 +1883,7 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
        Ide.verProc  := '1.0.0.0';                                // Versão do seu sistema
        Ide.cUF      := 35;                                       // UFtoCUF(Ini.ReadString('Emitente','UF',''));
        Ide.cMunFG   := 3534401;                                  // Ini.ReadInteger('Emitente','CodCidade',0);
+       Ide.cMunFGIBS := 3534401; // REFORMA
        Ide.finNFe   := StrToFinNFe(ok,finNFe);                   // TpcnFinalidadeNFe(dmNFe.qNFeFinNFe.AsInteger); //cbFinalidadeEmissao.ItemIndex);
        Ide.indPres  := StrToPresencaComprador(ok,indPres);       // TpcnPresencaComprador(dmNFe.qNFeIndPres.AsInteger); //cbTipoAtendimento.ItemIndex);
        Ide.indFinal := StrToConsumidorFinal(ok,indFinal);        // TpcnConsumidorFinal(dmNFe.qNFeIndFinal.AsInteger); //cbConsumidorFinal.ItemIndex);
@@ -2374,6 +2396,41 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
             Imposto.COFINS.CST  := cof07;
 
 
+             //------------- INÍCIO REFORMA TRIBUTÁRIA 2026 --------------------
+
+            // IBS - Imposto Sobre Bens Serviços * O IBS é um imposto cuja responsabilidade recai sobre os Estados e municípios e irá substituir o ICMS e o ISS (Imposto Sobre Serviços)
+            Imposto.IBSCBS.CST          := StrToCSTIBSCBS(dmBaseDados.tblProdutosCstIBSCBS.AsString);                        // CST IBS / CBS
+            Imposto.IBSCBS.cClassTrib   := dmBaseDados.tblProdutosClassifTrib.AsString;                                      // Classificação Tributária. Ex:'000001';
+            if (dmBaseDados.tblProdutosCstIBSCBS.AsString = '') then
+             begin
+              Imposto.IBSCBS.CST        := cst000;
+              Imposto.IBSCBS.cClassTrib := '000001';
+             end;
+            // Base Cálculo IBS/CBS
+            fltBaseCBSIBS := StrToFloat(VTotalProd); // - StrToFloat(ValorPIS) - StrToFloat(ValorCOF);
+            Imposto.IBSCBS.gIBSCBS.vBC  := fltBaseCBSIBS;
+            // IBS UF
+            Imposto.IBSCBS.gIBSCBS.gIBSUF.pIBSUF := dmBaseDados.tblProdutosAliqIBSUF.AsFloat;                               // 0.1% Alíquota do IBS de competência das UF em 2026
+            Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF := fltBaseCBSIBS * (dmBaseDados.tblProdutosAliqIBSUF.AsFloat/100);         // Valor do IBS UF
+            sTotIBSUF := sTotIBSUF + Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF;
+            // IBS Municipio
+            Imposto.IBSCBS.gIBSCBS.gIBSMun.pIBSMun := 0; //dmBaseDados.tblProdutosAliqIBSMun.AsFloat;                       // % Alíquota do IBS de competência do Municipio
+            Imposto.IBSCBS.gIBSCBS.gIBSMun.vIBSMun := 0; //fltBaseCBSIBS * (dmBaseDados.tblProdutosAliqIBSMun.AsFloat/100); // Valor do IBS Municipal
+            sTotIBSMun := sTotIBSMun + Imposto.IBSCBS.gIBSCBS.gIBSMun.vIBSMun;
+            // IBS Total (UF+Mun)
+            Imposto.IBSCBS.gIBSCBS.vIBS := (Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF) + (Imposto.IBSCBS.gIBSCBS.gIBSMun.vIBSMun);  // Imposto.IBSCBS.gIBSCBS.vIBS := fltBaseCBSIBS * (dmBaseDados.tblProdutosAliqIBSUF.AsFloat/100);
+            fltTotIBS := fltTotIBS + Imposto.IBSCBS.gIBSCBS.vIBS;                                                          // Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF;
+
+            // CBS - Contribuição Sobre Bens Serviços  * O CBS é uma contribuição sob responsabilidade federal e substituirá os impostos PIS e Cofins em 2033
+            Imposto.IBSCBS.gIBSCBS.gCBS.pCBS := dmBaseDados.tblProdutosAliqCBS.AsFloat;                                     // 0.9% Alíquota da CBS
+            Imposto.IBSCBS.gIBSCBS.gCBS.vCBS := fltBaseCBSIBS * (dmBaseDados.tblProdutosAliqCBS.AsFloat/100);               // Valor da CBS
+            fltTotCBS := fltTotCBS + Imposto.IBSCBS.gIBSCBS.gCBS.vCBS;
+
+            fltTotBaseCBS := fltTotBaseCBS + fltBaseCBSIBS;
+            //------------------------------------------------------------------
+
+
+
             // PARTILHA ICMS LEI 2016 CEST
             if( (EstadoDest <> 'SP')and((TipoCli = 'CPF')or(IsentoCli = 'ISENTO')) )then
               Begin
@@ -2384,7 +2441,6 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
                 begin
                  fltAliquotaFCP := dmBaseDados.tblFCPAliquotaFCP.AsFloat;
                 end;
-
                fltPrtVProd   := dmBaseDados.tblLogMensalValorLancamento.AsFloat;
                fltPrtAliqInt := dmBaseDados.tblAliquotasAliqInterE.AsFloat/100;  // Alíquota InterEstadual
                fltPrtAliqDst := dmBaseDados.tblAliquotasInterna.AsFloat/100;     // Alíquota Interna do Destino
@@ -2394,15 +2450,12 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
                fltPartilhaOR := fltPrtDIFAL * 0.60;
                fltPartilhaDS := fltPrtDIFAL * 0.40;
                fltFCP        := fltPrtVProd * (fltAliquotaFCP/100);
-
                fltPrtIcmsOR  := Arredondar(fltPrtIcmsOR,2);
                fltPrtIcmsDS  := Arredondar(fltPrtIcmsDS,2);
                fltPrtDIFAL   := Arredondar(fltPrtDIFAL,2);
                fltPartilhaOR := Arredondar(fltPartilhaOR,2);
                fltPartilhaDS := Arredondar(fltPartilhaDS,2);
                fltFCP        := Arredondar(fltFCP,2);
-
-
                vBCUFDest      := FormatFloat('0.00',fltPrtVProd);
                pFCPUFDest     := FormatFloat('0.00',fltAliquotaFCP); //*/****
                pICMSUFDest    := FormatFloat('0.00',dmBaseDados.tblAliquotasInterna.AsFloat);
@@ -2411,13 +2464,9 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
                vFCPUFDest     := FormatFloat('0.00',fltFCP);;
                vICMSUFDest    := FormatFloat('0.00',fltPartilhaDS);
                vICMSUFRemet   := FormatFloat('0.00',fltPartilhaOR);
-
                fltSomaFCP     := fltSomaFCP  + fltFCP;
                fltSomaPrDS    := fltSomaPrDS + fltPartilhaDS;
                fltSomaPrOR    := fltSomaPrOR + fltPartilhaOR;
-
-               Writeln(ArquivoNFe, 'NA|'  +vBCUFDest+'|'  +pFCPUFDest+'|'  +pICMSUFDest+'|'  +pICMSInter+'|'  +pICMSInterPart+'|'  +vFCPUFDest+'|'  +vICMSUFDest+'|'  +vICMSUFRemet+'|');
-
                // 4.00 partilha do ICMS e fundo de probreza
                Imposto.ICMSUFDest.vBCUFDest      := StrToFloat(vBCUFDest);
                Imposto.ICMSUFDest.pFCPUFDest     := StrToFloat(pFCPUFDest);
@@ -2435,6 +2484,14 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
            end;  // end do if
          dmBaseDados.tblLogMensal.Next;
         End; //end do WHILE
+      //--
+      dmBaseDados.tblANotaFiscal.Edit;
+      dmBaseDados.tblANotaFiscalIBSUF.AsFloat  := sTotIBSUF;     // Reforma
+      dmBaseDados.tblANotaFiscalIBSMun.AsFloat := sTotIBSMun;    // Reforma
+      dmBaseDados.tblANotaFiscalIBSTot.AsFloat := fltTotIBS;     // Reforma
+      dmBaseDados.tblANotaFiscalCBSTot.AsFloat := fltTotCBS;     // Reforma
+      dmBaseDados.tblANotaFiscal.Post;
+      //--
       VAliq   := FormatFloat('0.00',PercIcms);
       vBC     := FormatFloat('0.00',dmBaseDados.tblANotaFiscalNewBaseCalculo.AsFloat);
       vICMS   := FormatFloat('0.00',dmBaseDados.tblANotaFiscalNewValorICMS.AsFloat);
@@ -2504,15 +2561,13 @@ if( (strStatus <> '0')or(strPgto = 'DV')or(strPgto = 'BO') )then
        Total.ICMSTot.vOutro  := StrToFloat(vOutro);
        Total.ICMSTot.vNF     := StrToFloat(vNF);
 
-       // NovaTag 4.00
-       {
-       Total.ICMSTot.vIPIDevol := 0; //Soma com o Total da NFe
-       // Fundo combate a pobreza APENAS PARA ESTADOS QUE RECOLHEM FCP INTERNAMENTE ****
-       Total.ICMSTot.vFCP      := 0;
-       Total.ICMSTot.vFCPST    := 0;
-       Total.ICMSTot.vFCPSTRet := 0;
-       }
-
+       // REFORMA TRIBUTÁRIA
+       Total.IBSCBSTot.vBCIBSCBS               := fltTotBaseCBS;                //StrToFloat(vNF);
+       Total.IBSCBSTot.gIBS.vIBS               := fltTotIBS;
+       Total.IBSCBSTot.gIBS.gIBSUFTot.vIBSUF   := sTotIBSUF;
+       Total.IBSCBSTot.gIBS.gIBSMunTot.vIBSMun := sTotIBSMun;
+       Total.IBSCBSTot.gCBS.vCBS               := fltTotCBS;
+       //-
                          
        // Lei da transparencia de impostos
        Total.ICMSTot.vTotTrib := StrToFloat(vTTotTrib);

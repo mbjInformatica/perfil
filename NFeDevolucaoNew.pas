@@ -4,15 +4,15 @@ interface
       
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
      StdCtrls, Buttons, Mask, Grids, DBGrids, DBCtrls, TISButton, TIGradient,
-     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil, pcnNFeW,
+     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil,
      pcnNFeRTXT, pcnAuxiliar, IniFiles, ShellAPI, Math, TILabel, TISLABELS,
      ACBrNFeDANFeRLClass, ACBrMail, ACBrBase, ACBrDFe,
      ACBrNFeDANFEClass, TISImagePanel, TISGroupBox, TISRadioGroup,
 
      ACBrNFeDANFeESCPOS, XMLIntf, XMLDoc, zlib, strutils, TypInfo,
-     DateUtils, {ufrmStatus} synacode, pcnNFe, pcnConversaoNFe,
+     DateUtils, synacode, pcnConversaoNFe,
      ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
-  ACBrDFeReport, ACBrDFeDANFeReport;
+     ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
 
 type
   TformNFeDevolucaoNew = class(TForm)
@@ -152,6 +152,8 @@ var formNFeDevolucaoNew : TformNFeDevolucaoNew;
     strCont000, strCont070, NrNf,
     stsBoleto, intContador : Integer;
     NFeRTXT : TNFeRTXT;
+    ArqINI : String;
+    INI : TIniFile;
 
 implementation
 
@@ -164,6 +166,20 @@ uses ModuloDados, RotinasGerais, SeekClientes, db,
 
 procedure TformNFeDevolucaoNew.FormShow(Sender: TObject);
 begin
+//--
+ArqINI := ChangeFileExt( Application.ExeName,'.ini' ) ;
+INI    := TIniFile.Create(ArqINI);
+//-- Abrindo ACBrNFe
+ACBrNFe1.NotasFiscais.Clear;
+ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
+ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
+ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+//--
 DecimalSeparator := ',';
 edtChaveFornec.Clear;
 edtChaveFornec2.Clear;

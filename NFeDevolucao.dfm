@@ -1757,6 +1757,8 @@ object formNFeDevolucao: TformNFeDevolucao
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     ExibeCampoFatura = False
     Left = 999
@@ -1764,10 +1766,10 @@ object formNFeDevolucao: TformNFeDevolucao
   end
   object ACBrNFe1: TACBrNFe
     MAIL = ACBrMail1
-    Configuracoes.Geral.SSLLib = libCustom
-    Configuracoes.Geral.SSLCryptLib = cryWinCrypt
-    Configuracoes.Geral.SSLHttpLib = httpWinHttp
-    Configuracoes.Geral.SSLXmlSignLib = xsMsXml
+    Configuracoes.Geral.SSLLib = libNone
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpNone
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
     Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
     Configuracoes.Geral.ValidarDigest = False
     Configuracoes.Geral.AtualizarXMLCancelado = True
@@ -1783,7 +1785,6 @@ object formNFeDevolucao: TformNFeDevolucao
     Configuracoes.WebServices.Ambiente = taProducao
     Configuracoes.WebServices.AguardarConsultaRet = 0
     Configuracoes.WebServices.QuebradeLinha = '|'
-    Configuracoes.WebServices.SSLType = LT_TLSv1_2
     Configuracoes.Certificados.NumeroSerie = '5422231219456ED2'
     Configuracoes.Certificados.Senha = 'CARLOS1964'
     Configuracoes.RespTec.IdCSRT = 0

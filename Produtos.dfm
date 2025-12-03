@@ -4,7 +4,7 @@ object FormProdutos: TFormProdutos
   Align = alCustom
   BorderStyle = bsDialog
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 570
+  ClientHeight = 595
   ClientWidth = 801
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -22,7 +22,7 @@ object FormProdutos: TFormProdutos
     Left = 9
     Top = 9
     Width = 783
-    Height = 551
+    Height = 575
     ActivePage = tabIdentificacao
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -83,7 +83,7 @@ object FormProdutos: TFormProdutos
       end
       object lblReferencia: TLabel
         Left = 68
-        Top = 361
+        Top = 337
         Width = 145
         Height = 15
         Caption = 'Refer'#234'ncia do Fabricante:'
@@ -136,7 +136,7 @@ object FormProdutos: TFormProdutos
       object lblBeneficio: TLabel
         Left = 766
         Top = 322
-        Width = 80
+        Width = 79
         Height = 15
         Caption = 'Redu'#231#227'o/RPA:'
         Font.Charset = DEFAULT_CHARSET
@@ -149,7 +149,7 @@ object FormProdutos: TFormProdutos
       end
       object Label2: TLabel
         Left = 443
-        Top = 425
+        Top = 385
         Width = 104
         Height = 15
         Caption = 'C'#243'digo de Barras: '
@@ -163,7 +163,7 @@ object FormProdutos: TFormProdutos
       end
       object Label7: TLabel
         Left = 68
-        Top = 393
+        Top = 361
         Width = 137
         Height = 15
         Caption = 'C'#243'digo do Fornecedor 1:'
@@ -176,7 +176,7 @@ object FormProdutos: TFormProdutos
       end
       object Label8: TLabel
         Left = 68
-        Top = 425
+        Top = 385
         Width = 137
         Height = 15
         Caption = 'C'#243'digo do Fornecedor 2:'
@@ -189,7 +189,7 @@ object FormProdutos: TFormProdutos
       end
       object Label9: TLabel
         Left = 410
-        Top = 361
+        Top = 337
         Width = 137
         Height = 15
         Caption = 'C'#243'digo do Fornecedor 3:'
@@ -202,7 +202,7 @@ object FormProdutos: TFormProdutos
       end
       object Label10: TLabel
         Left = 458
-        Top = 393
+        Top = 361
         Width = 85
         Height = 15
         Caption = 'C'#243'digo Interno:'
@@ -241,7 +241,7 @@ object FormProdutos: TFormProdutos
       end
       object lblValorAtual: TLabel
         Left = 12
-        Top = 282
+        Top = 266
         Width = 90
         Height = 15
         Caption = 'Pre'#231'o de Custo:'
@@ -254,7 +254,7 @@ object FormProdutos: TFormProdutos
       end
       object lblMargemLucro: TLabel
         Left = 478
-        Top = 282
+        Top = 266
         Width = 165
         Height = 15
         Caption = 'Margem de Comercializa'#231#227'o:'
@@ -267,8 +267,8 @@ object FormProdutos: TFormProdutos
       end
       object lblVlVenda: TLabel
         Left = 256
-        Top = 282
-        Width = 89
+        Top = 266
+        Width = 87
         Height = 15
         Caption = 'Valor de Venda:'
         Font.Charset = DEFAULT_CHARSET
@@ -280,7 +280,7 @@ object FormProdutos: TFormProdutos
       end
       object Label14: TLabel
         Left = 542
-        Top = 314
+        Top = 298
         Width = 93
         Height = 15
         Caption = 'Estoque M'#237'nimo:'
@@ -293,7 +293,7 @@ object FormProdutos: TFormProdutos
       end
       object Label15: TLabel
         Left = 267
-        Top = 314
+        Top = 298
         Width = 97
         Height = 15
         Caption = 'Estoque M'#225'ximo:'
@@ -306,7 +306,7 @@ object FormProdutos: TFormProdutos
       end
       object Label16: TLabel
         Left = 20
-        Top = 314
+        Top = 298
         Width = 81
         Height = 15
         Caption = 'Estoque Atual:'
@@ -361,7 +361,7 @@ object FormProdutos: TFormProdutos
       end
       object lblNCM: TLabel
         Left = 302
-        Top = 236
+        Top = 228
         Width = 70
         Height = 14
         Caption = 'C'#243'digo NCM:'
@@ -374,7 +374,7 @@ object FormProdutos: TFormProdutos
       end
       object Label11: TLabel
         Left = 494
-        Top = 236
+        Top = 228
         Width = 32
         Height = 14
         Caption = 'CFOP:'
@@ -387,7 +387,7 @@ object FormProdutos: TFormProdutos
       end
       object Label12: TLabel
         Left = 43
-        Top = 237
+        Top = 229
         Width = 32
         Height = 15
         Caption = 'ICMS:'
@@ -400,8 +400,8 @@ object FormProdutos: TFormProdutos
       end
       object lblCST: TLabel
         Left = 174
-        Top = 237
-        Width = 26
+        Top = 229
+        Width = 25
         Height = 15
         Caption = 'CST:'
         Font.Charset = ANSI_CHARSET
@@ -449,7 +449,7 @@ object FormProdutos: TFormProdutos
       end
       object fldReferencia: TDBEdit
         Left = 220
-        Top = 360
+        Top = 336
         Width = 169
         Height = 21
         CharCase = ecUpperCase
@@ -493,7 +493,7 @@ object FormProdutos: TFormProdutos
       end
       object fldCodigoBarra: TDBEdit
         Left = 552
-        Top = 424
+        Top = 384
         Width = 82
         Height = 21
         DataField = 'CodigoBarra'
@@ -502,7 +502,7 @@ object FormProdutos: TFormProdutos
       end
       object FLDREFERENCIA2: TDBEdit
         Left = 219
-        Top = 391
+        Top = 359
         Width = 170
         Height = 21
         DataField = 'ReferenciaFabricante2'
@@ -511,7 +511,7 @@ object FormProdutos: TFormProdutos
       end
       object FLDREFERENCIA3: TDBEdit
         Left = 219
-        Top = 424
+        Top = 384
         Width = 170
         Height = 21
         DataField = 'ReferenciaFabricante3'
@@ -520,7 +520,7 @@ object FormProdutos: TFormProdutos
       end
       object FLDREFERENCIA4: TDBEdit
         Left = 552
-        Top = 359
+        Top = 335
         Width = 170
         Height = 21
         DataField = 'ReferenciaFabricante4'
@@ -529,7 +529,7 @@ object FormProdutos: TFormProdutos
       end
       object fldCodigoInterno: TDBEdit
         Left = 552
-        Top = 391
+        Top = 359
         Width = 168
         Height = 21
         DataField = 'CodigoInterno'
@@ -583,7 +583,7 @@ object FormProdutos: TFormProdutos
       end
       object fldVlAtual: TDBEdit
         Left = 112
-        Top = 282
+        Top = 266
         Width = 81
         Height = 21
         DataField = 'ValorUnitarioAtual'
@@ -592,7 +592,7 @@ object FormProdutos: TFormProdutos
       end
       object fldMargemLucro: TDBEdit
         Left = 650
-        Top = 282
+        Top = 266
         Width = 57
         Height = 21
         DataField = 'MargemLucro'
@@ -602,7 +602,7 @@ object FormProdutos: TFormProdutos
       end
       object fldVlVenda: TDBEdit
         Left = 354
-        Top = 282
+        Top = 266
         Width = 73
         Height = 21
         DataField = 'ValorVenda'
@@ -612,7 +612,7 @@ object FormProdutos: TFormProdutos
       end
       object fldEstoqueMin: TDBEdit
         Left = 662
-        Top = 314
+        Top = 298
         Width = 57
         Height = 21
         DataField = 'EstoqueMinimo'
@@ -621,7 +621,7 @@ object FormProdutos: TFormProdutos
       end
       object fldEstoqueMax: TDBEdit
         Left = 378
-        Top = 314
+        Top = 298
         Width = 73
         Height = 21
         DataField = 'EstoqueMaximo'
@@ -630,7 +630,7 @@ object FormProdutos: TFormProdutos
       end
       object fldEstoqueAt: TDBEdit
         Left = 112
-        Top = 314
+        Top = 298
         Width = 97
         Height = 21
         DataField = 'EstoqueAtual'
@@ -639,7 +639,7 @@ object FormProdutos: TFormProdutos
       end
       object btnPrimeiro: TTISButton
         Left = 18
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -656,7 +656,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Primeiro'
         AutoSize = False
         ParentFont = False
-        TabOrder = 27
+        TabOrder = 28
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -704,7 +704,7 @@ object FormProdutos: TFormProdutos
       end
       object btnAnterior: TTISButton
         Left = 101
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -721,7 +721,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Anterior'
         AutoSize = False
         ParentFont = False
-        TabOrder = 28
+        TabOrder = 29
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -789,7 +789,7 @@ object FormProdutos: TFormProdutos
       end
       object btnProximo: TTISButton
         Left = 184
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -806,7 +806,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Pr'#243'ximo'
         AutoSize = False
         ParentFont = False
-        TabOrder = 29
+        TabOrder = 30
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -874,7 +874,7 @@ object FormProdutos: TFormProdutos
       end
       object btnUltimo: TTISButton
         Left = 267
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -891,7 +891,7 @@ object FormProdutos: TFormProdutos
         Caption = #218'ltimo'
         AutoSize = False
         ParentFont = False
-        TabOrder = 30
+        TabOrder = 31
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -950,7 +950,7 @@ object FormProdutos: TFormProdutos
       end
       object btnGravar: TTISButton
         Left = 350
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -967,7 +967,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Gravar'
         AutoSize = False
         ParentFont = False
-        TabOrder = 31
+        TabOrder = 32
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -1020,7 +1020,7 @@ object FormProdutos: TFormProdutos
       end
       object btnLocalizar: TTISButton
         Left = 433
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -1037,7 +1037,7 @@ object FormProdutos: TFormProdutos
         Caption = '   &Localizar'
         AutoSize = False
         ParentFont = False
-        TabOrder = 32
+        TabOrder = 33
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -1105,7 +1105,7 @@ object FormProdutos: TFormProdutos
       end
       object btnExcluir: TTISButton
         Left = 516
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -1122,7 +1122,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Excluir'
         AutoSize = False
         ParentFont = False
-        TabOrder = 33
+        TabOrder = 34
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -1190,7 +1190,7 @@ object FormProdutos: TFormProdutos
       end
       object btnAdicionar: TTISButton
         Left = 599
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -1207,7 +1207,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Adicionar'
         AutoSize = False
         ParentFont = False
-        TabOrder = 34
+        TabOrder = 35
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -1252,7 +1252,7 @@ object FormProdutos: TFormProdutos
       end
       object btnRetornar: TTISButton
         Left = 683
-        Top = 464
+        Top = 495
         Width = 71
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -1269,7 +1269,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Retornar'
         AutoSize = False
         ParentFont = False
-        TabOrder = 35
+        TabOrder = 36
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -1354,7 +1354,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Alterar Fam'#237'lia/Categoria'
         AutoSize = False
         ParentFont = False
-        TabOrder = 36
+        TabOrder = 37
         Transparent = False
         ModalResult = 0
         Layout = blGlyphLeft
@@ -1365,7 +1365,7 @@ object FormProdutos: TFormProdutos
       end
       object btnAlterar: TTISButton
         Left = 640
-        Top = 208
+        Top = 200
         Width = 118
         Height = 49
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -1382,7 +1382,7 @@ object FormProdutos: TFormProdutos
         Caption = 'Editar Dados'
         AutoSize = False
         ParentFont = False
-        TabOrder = 37
+        TabOrder = 38
         Transparent = False
         ModalResult = 0
         Glyph.Data = {
@@ -1445,8 +1445,8 @@ object FormProdutos: TFormProdutos
         OnClick = btnAlterarClick
       end
       object btnBloqueia: TTISButton
-        Left = 690
-        Top = 420
+        Left = 714
+        Top = 380
         Width = 47
         Height = 25
         HotFont.Font.Charset = DEFAULT_CHARSET
@@ -1464,7 +1464,7 @@ object FormProdutos: TFormProdutos
         AutoSize = False
         Visible = False
         ParentFont = False
-        TabOrder = 38
+        TabOrder = 39
         Transparent = False
         ModalResult = 0
         Layout = blGlyphTop
@@ -1475,7 +1475,7 @@ object FormProdutos: TFormProdutos
       end
       object dbeNCM: TDBEdit
         Left = 378
-        Top = 236
+        Top = 228
         Width = 87
         Height = 21
         DataField = 'NCM'
@@ -1484,7 +1484,7 @@ object FormProdutos: TFormProdutos
       end
       object fldCFOP: TDBEdit
         Left = 530
-        Top = 236
+        Top = 228
         Width = 87
         Height = 21
         DataField = 'CFOP'
@@ -1493,7 +1493,7 @@ object FormProdutos: TFormProdutos
       end
       object dbeIcms: TDBComboBox
         Left = 81
-        Top = 237
+        Top = 229
         Width = 69
         Height = 21
         Style = csOwnerDrawFixed
@@ -1516,7 +1516,7 @@ object FormProdutos: TFormProdutos
       end
       object dbeCST: TDBComboBox
         Left = 205
-        Top = 237
+        Top = 229
         Width = 66
         Height = 21
         Style = csOwnerDrawFixed
@@ -1542,6 +1542,171 @@ object FormProdutos: TFormProdutos
           '090')
         ParentFont = False
         TabOrder = 8
+      end
+      object Panel3: TPanel
+        Left = 16
+        Top = 415
+        Width = 745
+        Height = 66
+        BevelWidth = 4
+        BorderWidth = 1
+        BorderStyle = bsSingle
+        TabOrder = 27
+        object Label49: TLabel
+          Left = 192
+          Top = 8
+          Width = 70
+          Height = 14
+          Caption = 'CST IBS/CBS:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label50: TLabel
+          Left = 365
+          Top = 8
+          Width = 102
+          Height = 14
+          Caption = 'Classifica'#231#227'o Trib.:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label51: TLabel
+          Left = 176
+          Top = 36
+          Width = 84
+          Height = 14
+          Caption = 'Al'#237'quota IBS UF:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label52: TLabel
+          Left = 346
+          Top = 36
+          Width = 124
+          Height = 14
+          Caption = 'Al'#237'quota IBS Munic'#237'pio:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label53: TLabel
+          Left = 560
+          Top = 36
+          Width = 73
+          Height = 14
+          Caption = 'Al'#237'quota CBS:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label54: TLabel
+          Left = 2
+          Top = 22
+          Width = 168
+          Height = 13
+          Caption = 'Dados Reforma Tribut'#225'ria'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Verdana'
+          Font.Style = [fsBold, fsUnderline]
+          ParentFont = False
+        end
+        object fldCSTIBSCBS: TDBEdit
+          Left = 265
+          Top = 5
+          Width = 69
+          Height = 23
+          DataField = 'CstIBSCBS'
+          DataSource = dmBaseDados.dsProdutos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          MaxLength = 3
+          ParentFont = False
+          TabOrder = 0
+        end
+        object fldClassTrib: TDBEdit
+          Left = 472
+          Top = 5
+          Width = 69
+          Height = 23
+          DataField = 'ClassifTrib'
+          DataSource = dmBaseDados.dsProdutos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          MaxLength = 6
+          ParentFont = False
+          TabOrder = 1
+        end
+        object fldAliqIBSUF: TDBEdit
+          Left = 264
+          Top = 33
+          Width = 69
+          Height = 23
+          DataField = 'AliqIBSUF'
+          DataSource = dmBaseDados.dsProdutos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 2
+        end
+        object fldIBSMun: TDBEdit
+          Left = 473
+          Top = 33
+          Width = 69
+          Height = 23
+          DataField = 'AliqIBSMun'
+          DataSource = dmBaseDados.dsProdutos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 3
+        end
+        object fldAliqCBS: TDBEdit
+          Left = 636
+          Top = 33
+          Width = 69
+          Height = 23
+          DataField = 'AliqCBS'
+          DataSource = dmBaseDados.dsProdutos
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 4
+        end
       end
     end
     object tabDescricao: TTabSheet

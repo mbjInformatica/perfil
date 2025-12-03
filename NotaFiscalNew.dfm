@@ -1,8 +1,8 @@
 object FrmEmissaoNFNew: TFrmEmissaoNFNew
   Left = 455
   Top = 9
-  Width = 436
-  Height = 681
+  Width = 441
+  Height = 696
   Caption = 'Emiss'#227'o de Nota Fiscal'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,8 +19,8 @@ object FrmEmissaoNFNew: TFrmEmissaoNFNew
   object TIGradient1: TTIGradient
     Left = 0
     Top = 0
-    Width = 420
-    Height = 649
+    Width = 425
+    Height = 658
     Align = alClient
     ShowHint = False
     ParentShowHint = False
@@ -1185,6 +1185,8 @@ object FrmEmissaoNFNew: TFrmEmissaoNFNew
     CasasDecimais.vUnCom = 2
     CasasDecimais.MaskqCom = ',0.00'
     CasasDecimais.MaskvUnCom = ',0.00'
+    CasasDecimais.Aliquota = 2
+    CasasDecimais.MaskAliquota = ',0.00'
     ACBrNFe = ACBrNFe1
     ExibeCampoFatura = False
     Left = 351
@@ -1192,10 +1194,10 @@ object FrmEmissaoNFNew: TFrmEmissaoNFNew
   end
   object ACBrNFe1: TACBrNFe
     MAIL = ACBrMail1
-    Configuracoes.Geral.SSLLib = libCustom
-    Configuracoes.Geral.SSLCryptLib = cryWinCrypt
-    Configuracoes.Geral.SSLHttpLib = httpWinHttp
-    Configuracoes.Geral.SSLXmlSignLib = xsMsXml
+    Configuracoes.Geral.SSLLib = libNone
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpNone
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
     Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
     Configuracoes.Geral.ValidarDigest = False
     Configuracoes.Geral.AtualizarXMLCancelado = True

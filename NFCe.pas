@@ -10,7 +10,8 @@ Forms,
      ACBrSATExtratoESCPOS, ACBrPosPrinter, blcksock,
      ACBrSATExtratoReportClass, ACBrDFeReport, ACBrNFeDANFeESCPOS,
      ACBrDFeDANFeReport, ACBrNFeDANFEClass, ACBrDANFCeFortesFr, ACBrDFe,
-     ACBrNFe, Mask, pcnConversaoNFe, TIGradient, ACBrNFeDANFeRLClass;
+     ACBrNFe, Mask, pcnConversaoNFe, TIGradient, ACBrNFeDANFeRLClass,
+     ACBrDFe.Conversao, ACBrNFe.Classes, ACBrDFeSSL;
 
 type
   TFormNfceAcbr = class(TForm)
@@ -75,7 +76,7 @@ var FormNfceAcbr: TFormNfceAcbr;
 implementation
 
 uses ModuloDados, ConfigAcbr, CheckCGC, SelSATCanc, pcnCFe, Venda,
-     FormaPagamento, RotinasGerais, pcnCFeCanc, MenuPrincipal, pcnNFe, pcnProcNFe;
+     FormaPagamento, RotinasGerais, pcnCFeCanc, MenuPrincipal, pcnProcNFe;
 
 
 {$R *.dfm}
@@ -217,7 +218,7 @@ var TotalItem, strVTotal, vlTotalDescCalc : Double;
     CC, strMensagem : TStrings;
     strConexSegura : Boolean;
     txtMonitor : TextFile;
-    stsRetorno : Integer;
+    stsRetorno, sNrNF : Integer;
     ArquivoNFe : TextFile;
     // Variáveis Versão 3.10 NFe
     IM, NVE, nFCI, EXTIPI, vICMSDeson, cDV,
@@ -249,9 +250,11 @@ DecimalSeparator := '.';
 //-- Abrindo ACBrNFe
 ACBrNFe1.NotasFiscais.Clear;
 ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
-ACBrNFe1.Configuracoes.Geral.VersaoQrCode := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC        := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC          := INI.ReadString('Certificado','CSC','');          //'fbb7cda0-e629-4b63-90d1-a5cba0a63bc9';  // Filial Barueri homologação
+ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
+ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
+ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
+ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
+ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');          //'fbb7cda0-e629-4b63-90d1-a5cba0a63bc9';  // Filial Barueri homologação
 ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');  //
 ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
 
@@ -287,22 +290,26 @@ while (not dmBaseDados.qryCupomFiscal.Eof) do
         dmBaseDados.tblCupomFiscal.Edit;
         Break;
        end;
-{      else
-       begin
-        mskNrNotaFiscal.Text := IntToStr(dmBaseDados.tblCupomFiscalNrNF.AsInteger+ 1);
-        dmBaseDados.tblCupomFiscal.Append;
-       end;
-}
      end;
    end;
   dmBaseDados.qryCupomFiscal.Next;
  end;
 
 
+sNrNF := 0;
 if (strNenhumCupomPulou = '') then
  begin
-  mskNrNotaFiscal.Text := IntToStr(dmBaseDados.tblCupomFiscalNrNF.AsInteger+ 1);
+  dmBaseDados.tblGeraNrNFCe.Open;
+  dmBaseDados.tblGeraNrNFCe.Last;
+  sNrNF := dmBaseDados.tblGeraNrNFCeNrNF.AsInteger + 1;
+  dmBaseDados.tblGeraNrNFCe.Append;
+  dmBaseDados.tblGeraNrNFCeNrNF.AsInteger    := sNrNF;
+  dmBaseDados.tblGeraNrNFCeDataEm.AsDateTime := Date;
+  dmBaseDados.tblGeraNrNFCe.Post;
+  dmBaseDados.tblGeraNrNFCe.Close;
+  mskNrNotaFiscal.Text := IntToStr(sNrNF);
   dmBaseDados.tblCupomFiscal.Append;
+  dmBaseDados.tblCupomFiscalNrNF.AsInteger := StrToInt(mskNrNotaFiscal.Text);
  end;
 
 dmBaseDados.tblCupomFiscalNrNF.AsInteger   := StrToInt(mskNrNotaFiscal.Text);
@@ -418,12 +425,12 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
       BaseST       := '0.00'; //FormatFloat('0.00',dmBaseDados.tblSaidaSubPeso.AsFloat);
       IcmsST       := '0.00'; //FormatFloat('0.00',dmBaseDados.tblSaidaTroco.AsFloat);
       AliqICMS     := FormatFloat('0.00',dmBaseDados.tblSaidaQtdeCx.AsFloat);
-      vTotTrib     := FormatFloat('0.00',dmBaseDados.tblSaidaComissao.AsFloat);
+      vTotTrib     := FormatFloat('0.00',dmBaseDados.tblSaidaPeso.AsFloat);
       CSTProd      := dmBaseDados.qryProdutosSituacaoTributaria.AsString;
       CEST         := dmBaseDados.qryProdutosCEST.AsString;
       OrigemProd   := '0';
       ModalidadeBC := '3';
-      strPerc      := 0; //PercIcms;
+      strPerc      := 0; //PercIcms;                      
       pCredSN      := FormatFloat('0.00',strPerc);
       vCredICMS    := FormatFloat('0.00',dmBaseDados.tblSaidaValorTotal.AsFloat*(strPerc/100));
       vPFrete      := FormatFloat('0.00',strPFrete);
@@ -822,10 +829,11 @@ dmBaseDados.qryCupomFiscal.Open;
 //--
 ACBrNFe1.NotasFiscais.Items[0].GravarXML();
 dmBaseDados.qryCupomFiscal.Edit;
-dmBaseDados.qryCupomFiscalChave.AsString     := Copy(ACBrNFe1.NotasFiscais.Items[0].NFe.infNFe.ID,4,44);
-dmBaseDados.qryCupomFiscalCaminho2.AsString  := ACBrNFe1.NotasFiscais.Items[0].NomeArq;
-dmBaseDados.qryCupomFiscalNPedido.AsString   := strReqSaida;
-dmBaseDados.qryCupomFiscalCliente.AsString   := dmBaseDados.tblClientesCodigoCliente.AsString;
+dmBaseDados.qryCupomFiscalChave.AsString      := Copy(ACBrNFe1.NotasFiscais.Items[0].NFe.infNFe.ID,4,44);
+dmBaseDados.qryCupomFiscalCaminho2.AsString   := ACBrNFe1.NotasFiscais.Items[0].NomeArq;
+dmBaseDados.qryCupomFiscalCaminhoXML.AsString := ACBrNFe1.NotasFiscais.Items[0].NomeArq;
+dmBaseDados.qryCupomFiscalNPedido.AsString    := strReqSaida;
+dmBaseDados.qryCupomFiscalCliente.AsString    := dmBaseDados.tblClientesCodigoCliente.AsString;
 if (dmBaseDados.qryCupomFiscalCliente.AsString = '') then
  begin
   dmBaseDados.qryCupomFiscalCliente.AsString := '52';
