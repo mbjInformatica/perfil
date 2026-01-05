@@ -8,18 +8,11 @@ uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
      pcnNFeRTXT, pcnAuxiliar, IniFiles, ShellAPI, Math, TILabel, TISLABELS,
      ACBrNFeDANFeRLClass, ACBrMail, ACBrBase, ACBrDFe,
      ACBrNFeDANFEClass, TISImagePanel, TISGroupBox, TISRadioGroup,
-
      ACBrNFeDANFeESCPOS, XMLIntf, XMLDoc, zlib, strutils, TypInfo,
-<<<<<<< HEAD
      DateUtils, synacode, pcnConversaoNFe,
      ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
      ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
-=======
-     DateUtils, {ufrmStatus} synacode,  pcnConversaoNFe,
-     ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
-     ACBrNFe.Classes, ACBrDFe.Conversao,
-  ACBrDFeReport, ACBrDFeDANFeReport;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
+
 
 type
   TformNFeDevolucaoNew = class(TForm)
@@ -182,10 +175,8 @@ ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
 ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
-ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
-ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('CertificadoNova','CHAVE','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('CertificadoNova','SENHA','');
 //--
 DecimalSeparator := ',';
 edtChaveFornec.Clear;

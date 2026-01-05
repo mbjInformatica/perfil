@@ -20,7 +20,7 @@ object FrmEmissaoNF: TFrmEmissaoNF
     Left = 0
     Top = 0
     Width = 420
-    Height = 653
+    Height = 654
     Align = alClient
     ShowHint = False
     ParentShowHint = False

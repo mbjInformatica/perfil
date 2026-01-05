@@ -21,7 +21,7 @@ object formGerenciarNFCe: TformGerenciarNFCe
     Left = 0
     Top = 0
     Width = 1031
-    Height = 616
+    Height = 617
     Align = alClient
     Style = grFilled
     StartColor = 12910023

@@ -7,19 +7,11 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics,
      TISButton, Grids, DBGrids, ComCtrls, ACBrNFeDANFEClass,
      ACBrBase, ACBrDFe, ACBrNFe, ExtCtrls, TISImagePanel,
      TISDBCtrls, TILabel, TISLABELS, RLConsts, TISURLLabel,
-<<<<<<< HEAD
      pcnNFeRTXT, pcnAuxiliar, db, pcnConversao, pcnConversaoNFe,
      ACBrNFeDANFeRLClass, ACBrMail, blcksock, ACBrDFeSSL,
      ACBrDFeReport, ACBrDFeDANFeReport, Buttons, jpeg,
      ACBrPosPrinter, ACBrNFeDANFeESCPOS, ACBrDANFCeFortesFr,
      ACBrDFe.Conversao, ACBrNFe.Classes, IniFiles;
-=======
-     pcnNFeRTXT, pcnAuxiliar,  db,
-     pcnConversao, pcnConversaoNFe, ACBrNFeDANFeRLClass, ACBrMail, blcksock,
-     ACBrDFeReport, ACBrDFeDANFeReport, Buttons, jpeg,
-     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
-  ACBrPosPrinter, ACBrNFeDANFeESCPOS, ACBrDANFCeFortesFr, IniFiles;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
 
 type
   TformGerenciarNFCe = class(TForm)
@@ -136,7 +128,7 @@ dmBaseDados.qryCupomFiscal.Open;
 dmBaseDados.qryCupomFiscal.Last;
 
 dmBaseDados.tblClientes.Open;
-dmBaseDados.tblEmail.Open;
+dmBaseDados.tblEmail.Open;                   
 stsCancelar   := '';
 stsInutilizar := '';
 Data1.Date    := Date;

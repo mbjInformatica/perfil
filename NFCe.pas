@@ -10,20 +10,15 @@ Forms,
      ACBrSATExtratoESCPOS, ACBrPosPrinter, blcksock,
      ACBrSATExtratoReportClass, ACBrDFeReport, ACBrNFeDANFeESCPOS,
      ACBrDFeDANFeReport, ACBrNFeDANFEClass, ACBrDANFCeFortesFr, ACBrDFe,
-<<<<<<< HEAD
      ACBrNFe, Mask, pcnConversaoNFe, TIGradient, ACBrNFeDANFeRLClass,
      ACBrDFe.Conversao, ACBrNFe.Classes, ACBrDFeSSL;
-=======
-     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
-     ACBrNFe, Mask, pcnConversaoNFe, TIGradient, ACBrNFeDANFeRLClass;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
 
 type
   TFormNfceAcbr = class(TForm)
     btnEnviarVenda: TTISButton;                 
     btnCancelar: TTISButton;
     btnReimprimir: TTISButton;                  
-    PageControl1: TPageControl;
+    PageControl1: TPageControl;   
     tsLog: TTabSheet;
     mLog: TMemo;
     tsGerado: TTabSheet;
@@ -347,24 +342,24 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
    //--
    // * Dados Emitente *
 
-   Emit.CNPJCPF           := INI.ReadString('Emit','CNPJ','');                  //'14203290000266';
-   Emit.IE                := INI.ReadString('Emit','IE','');                    //'206345720118';
-   Emit.xNome             := INI.ReadString('Emit','RAZAO','');                 //'LUBRIFLEX PECAS LUBRIFICANTES E SERVICOS AUTOMOTIVOS LTDA';
+   Emit.CNPJCPF           := INI.ReadString('Emit','CNPJ','');
+   Emit.IE                := INI.ReadString('Emit','IE','');
+   Emit.xNome             := INI.ReadString('Emit','RAZAO','');
    Emit.xFant             := '';
    Emit.EnderEmit.fone    := INI.ReadString('Emit','FONE','');
-   Emit.EnderEmit.CEP     := INI.ReadInteger('Emit','CEP',Emit.EnderEmit.CEP);  //06444000;
-   Emit.EnderEmit.xLgr    := INI.ReadString('Emit','ENDERECO','');              //'ESTRADA VELHA DE ITAPEVI';
-   Emit.EnderEmit.nro     := INI.ReadString('Emit','NUMERO','');                //'4026';
+   Emit.EnderEmit.CEP     := INI.ReadInteger('Emit','CEP',Emit.EnderEmit.CEP);
+   Emit.EnderEmit.xLgr    := INI.ReadString('Emit','ENDERECO','');
+   Emit.EnderEmit.nro     := INI.ReadString('Emit','NUMERO','');
    Emit.EnderEmit.xCpl    := INI.ReadString('Emit','COMPLEMENTO','');
-   Emit.EnderEmit.xBairro := INI.ReadString('Emit','BAIRRO','');                //'VILA MILITAR';
-   Emit.EnderEmit.cMun    := INI.ReadInteger('Emit','CODIBGE',Emit.EnderEmit.cMun);              //3505708;
-   Emit.EnderEmit.xMun    := INI.ReadString('Emit','CIDADE','');                //'BARUERI';
-   Emit.EnderEmit.UF      := INI.ReadString('Emit','UF','');                    //'SP';
+   Emit.EnderEmit.xBairro := INI.ReadString('Emit','BAIRRO','');
+   Emit.EnderEmit.cMun    := INI.ReadInteger('Emit','CODIBGE',Emit.EnderEmit.cMun);
+   Emit.EnderEmit.xMun    := INI.ReadString('Emit','CIDADE','');
+   Emit.EnderEmit.UF      := INI.ReadString('Emit','UF','');
    Emit.enderEmit.cPais   := 1058;      
    Emit.enderEmit.xPais   := 'BRASIL';
    Emit.IEST              := '';
-   Emit.IM                := '';                                                // Preencher no caso de existir serviços na nota
-   Emit.CNAE              := '';                                                // Verifique na cidade do emissor da NFe se é permitido a inclusão de serviços na NFe
+   Emit.IM                := '';
+   Emit.CNAE              := '';
    Emit.CRT               := StrToCRT(ok,INI.ReadString('Emit','RegTributario','')); //crtSimplesNacional;  // (1-crtSimplesNacional, 2-crtSimplesExcessoReceita, 3-crtRegimeNormal)
    //--
    if (CpfCnpj <> '') then
@@ -421,7 +416,7 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
       UnidadeProd  := BuscarETroca(UnidadeProd,'§','');
       UnidadeTrib  := dmBaseDados.tblSaidaUnidade.AsString;
       UnidadeTrib  := BuscarETroca(UnidadeTrib,'€','C');
-      UnidadeTrib  := BuscarETroca(UnidadeTrib,'§','');
+      UnidadeTrib  := BuscarETroca(UnidadeTrib,'§','');               
       QtdeProd     := FormatFloat('0.0000',dmBaseDados.tblSaidaQuantidade.AsFloat);
       QtdeTrib     := FormatFloat('0.0000',dmBaseDados.tblSaidaQuantidade.AsFloat);
       VUnProd      := FormatFloat('0.0000',dmBaseDados.tblSaidaValorUnitario.AsFloat);
@@ -463,7 +458,10 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
 
       //xPed         := dmBaseDados.tblSaidaPedCompra.AsString;
       //nItemPed     := dmBaseDados.tblSaidaItemCompra.AsString;
-
+      if (NCMProd = '') then
+       begin
+        NCMProd := '00000000';
+       end;
       // 4.00 Dados Item
       with Det.Add do
         Begin
@@ -535,6 +533,11 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
          if (CFOPProd = '5405') then
           begin
            CSTProd := '060';
+          end;
+         if (CFOPProd = '')or(CSTProd = '') then
+          begin
+           CSTProd  := '060';
+           CFOPProd := '5405';
           end;
          // Gravando Impostos CSOSNs
          // 000 / 020

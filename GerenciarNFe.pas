@@ -6,17 +6,11 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,
      Forms, Dialogs, TIGradient, StdCtrls, TISEdit, TISButton, Grids,
      DBGrids, ComCtrls, ACBrNFeDANFEClass, ACBrBase, ACBrDFe, ACBrNFe,
      ExtCtrls, TISImagePanel, TISDBCtrls, TILabel, TISLABELS, MidasLib,
-<<<<<<< HEAD
-     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts, IniFiles,  ACBrDFeSSL,
-     ACBrDFeReport, ACBrDFeDANFeReport, ACBrNFeDANFeRLClass, ACBrMail, blcksock,
-     TIGradientCaption, jpeg, pcnConversao, ACBrDFe.Conversao, ACBrNFe.Classes,
-     pcnConversaoNFe, db;
-=======
-     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts,
-     pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption, jpeg,
-     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
-  ACBrDFeReport, ACBrDFeDANFeReport;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
+     ACBrDFeReport, ACBrDFeDANFeReport, ACBrNFeDANFeRLClass, ACBrMail,
+     TIGradientCaption, jpeg, TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts,
+     IniFiles,  ACBrDFeSSL, blcksock, pcnConversao, ACBrDFe.Conversao,
+     ACBrNFe.Classes, pcnConversaoNFe, db;
+
 
 type
   TformGerenciarNFe = class(TForm)
@@ -120,8 +114,6 @@ ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
 ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
 ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
 ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
 //--

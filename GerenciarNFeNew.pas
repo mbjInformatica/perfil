@@ -6,16 +6,9 @@ uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,
      Forms, Dialogs, TIGradient, StdCtrls, TISEdit, TISButton, Grids,
      DBGrids, ComCtrls, ACBrNFeDANFEClass, ACBrBase, ACBrDFe, ACBrNFe,
      ExtCtrls, TISImagePanel, TISDBCtrls, TILabel, TISLABELS, MidasLib,
-<<<<<<< HEAD
      TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts, IniFiles, ACBrDFeSSL,
      pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption,
      jpeg, ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
-=======
-     TISURLLabel, pcnNFeRTXT, pcnAuxiliar, RLConsts,
-     pcnConversao, ACBrNFeDANFeRLClass, ACBrMail, db, blcksock, TIGradientCaption, jpeg,
-     ACBrNFe.Classes, ACBrDFeSSL, ACBrDFe.Conversao,
-  ACBrDFeReport, ACBrDFeDANFeReport;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
 
 type
   TformGerenciarNFeNew = class(TForm)
@@ -118,11 +111,8 @@ ACBrNFe1.NotasFiscais.Clear;
 ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
 ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
-//ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
-ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
-ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('CertificadoNova','CHAVE','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('CertificadoNova','SENHA','');
 //--
 dmBaseDados.tblANotaFiscalNew.Open;
 dmBaseDados.tblANotaFiscalNew.Filter   := '';

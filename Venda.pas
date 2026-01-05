@@ -587,7 +587,7 @@ if( (dmBaseDados.tblSaida.State = dsInsert)or(dmBaseDados.tblSaida.State = dsEdi
       if( (dmBaseDados.tblClientesEstado.AsString = 'MG')
        or (dmBaseDados.tblClientesEstado.AsString = 'PR')
        or (dmBaseDados.tblClientesEstado.AsString = 'RS')
-       or (dmBaseDados.tblClientesEstado.AsString = 'RJ')
+       or (dmBaseDados.tblClientesEstado.AsString = 'RJ')               
        or (dmBaseDados.tblClientesEstado.AsString = 'SC') )then
         begin
          dmBaseDados.tblPedidosICMS.AsFloat := 12;

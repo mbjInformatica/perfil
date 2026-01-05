@@ -4,26 +4,15 @@ interface
       
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
      StdCtrls, Buttons, Mask, Grids, DBGrids, DBCtrls, TISButton, TIGradient,
-<<<<<<< HEAD
-     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil,
-=======
-     ExtCtrls, ACBrNFe, OleCtrls, SHDocVw, pcnConversao, ACBrUtil, 
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
+     ACBrDFe, ACBrNFe, ACBrDFeReport, ACBrDFeDANFeReport, ACBrNFeDANFEClass,
+     ACBrNFeDANFeRLClass, ACBrBase, ACBrMail, TISImagePanel, TISGroupBox,
+     TISRadioGroup, ExtCtrls, OleCtrls, SHDocVw, pcnConversao, ACBrUtil,
      pcnNFeRTXT, pcnAuxiliar, IniFiles, ShellAPI, Math, TILabel, TISLABELS,
-     ACBrNFeDANFeRLClass, ACBrMail, ACBrBase, ACBrDFe,
-     ACBrNFeDANFEClass, TISImagePanel, TISGroupBox, TISRadioGroup,
-
      ACBrNFeDANFeESCPOS, XMLIntf, XMLDoc, zlib, strutils, TypInfo,
-<<<<<<< HEAD
      DateUtils, {ufrmStatus} synacode, pcnConversaoNFe,
      ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
-     ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
-=======
-     DateUtils, {ufrmStatus} synacode,  pcnConversaoNFe,
-     ACBrDFeConfiguracoes, ACBrDFeSSL, RLConsts, Variants, blcksock,
-     ACBrNFe.Classes,  ACBrDFe.Conversao,
-  ACBrDFeReport, ACBrDFeDANFeReport;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
+     ACBrDFe.Conversao, ACBrNFe.Classes;
+
 
 type
   TformNFeDevolucao = class(TForm)

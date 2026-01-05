@@ -17,12 +17,7 @@ uses Windows, Messages, SysUtils, Classes, Graphics, Controls,
      strutils, TypInfo, DateUtils, {ufrmStatus} synacode, 
      pcnConversaoNFe, ACBrDFeConfiguracoes, pcnAuxiliar, ACBrDFeSSL, pcnNFeRTXT,
      RLConsts, Variants, TISImagePanel, TISGroupBox, TISRadioGroup, blcksock,
-<<<<<<< HEAD
      ACBrDFeReport, ACBrDFeDANFeReport, ACBrDFe.Conversao, ACBrNFe.Classes;
-=======
-     ACBrNFe.Classes,  ACBrDFe.Conversao,
-     ACBrDFeReport, ACBrDFeDANFeReport;
->>>>>>> 88d158b68d6ce545f58ddab477608a8883bf6907
 
 
 type
