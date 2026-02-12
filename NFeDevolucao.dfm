@@ -20,7 +20,7 @@ object formNFeDevolucao: TformNFeDevolucao
     Left = 0
     Top = 0
     Width = 1107
-    Height = 709
+    Height = 708
     Align = alClient
     ShowHint = False
     ParentShowHint = False
