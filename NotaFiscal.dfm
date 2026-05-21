@@ -1,6 +1,6 @@
 object FrmEmissaoNF: TFrmEmissaoNF
-  Left = 476
-  Top = 26
+  Left = 483
+  Top = 8
   Width = 436
   Height = 692
   Caption = 'Emiss'#227'o de Nota Fiscal'

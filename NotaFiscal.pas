@@ -141,7 +141,7 @@ var FrmEmissaoNF : TFrmEmissaoNF;
 implementation
 
 uses ModuloDados, RelNotaFiscal, RotinasGerais,
-     AlteraValor, MenuPrincipal, SeekCliNFe, PgtoNFe;
+     AlteraValor, MenuPrincipal, SeekCliNFe, PgtoNFe, pcnProcNFe;
 
 
 {$R *.DFM}
@@ -2664,25 +2664,25 @@ dmBaseDados.tblANotaFiscalChaveAcesso.AsString  := Copy(ACBrNFe1.NotasFiscais.It
 dmBaseDados.tblANotaFiscalCaminho2.AsString     := ACBrNFe1.NotasFiscais.Items[0].NomeArq;
 dmBaseDados.tblANotaFiscalLinhaConting.AsString := strConting;
 dmBaseDados.tblANotaFiscal.Post;
-ACBrNFe1.WebServices.Envia(1);
+ACBrNFe1.WebServices.Envia(1,True,True); // ACBrNFe1.WebServices.Envia(1);
 //------------------------------------------------------------------------------
 
-if (ACBrNFe1.WebServices.Retorno.cStat = 105) then // Lote em processamento
+if (ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.cStat = 105) then // Lote em processamento
 repeat
 Application.MessageBox('Envio da NFE - Lote em processamento.' +#13 + 'Aguarde 2 minutos e Clique em OK !!!', 'MBJ', MB_OK);
 ACBrNFe1.WebServices.Retorno.Recibo := ACBrNFe1.WebServices.Enviar.Recibo;
 
 until ACBrNFe1.WebServices.Retorno.Executar;
 dmBaseDados.tblANotaFiscal.Edit;
-dmBaseDados.tblANotaFiscalStatus.AsInteger     := ACBrNFe1.WebServices.Consulta.cStat;
-dmBaseDados.tblANotaFiscalProtocolo.AsString   := ACBrNFe1.WebServices.Retorno.Protocolo;
-dmBaseDados.tblANotaFiscalChaveAcesso.AsString := ACBrNFe1.WebServices.Retorno.ChaveNFe;
+dmBaseDados.tblANotaFiscalStatus.AsInteger     := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.cStat;        //ACBrNFe1.WebServices.Consulta.cStat;
+dmBaseDados.tblANotaFiscalProtocolo.AsString   := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.nProt;        //ACBrNFe1.WebServices.Retorno.Protocolo;
+dmBaseDados.tblANotaFiscalChaveAcesso.AsString := Copy(ACBrNFe1.NotasFiscais.Items[0].NFe.infNFe.ID,4,44); //ACBrNFe1.WebServices.Retorno.ChaveNFe;
 dmBaseDados.tblANotaFiscal.Post;
 
 //------------------------------------------------------------------------------
 
-stsRetorno := ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].cStat;
-strMotivo  := ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].xMotivo;
+stsRetorno := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.cStat;    //ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].cStat;
+strMotivo  := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.xMotivo;  //ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].xMotivo;
 if (stsRetorno = 100) then
  begin
   ACBrNFe1.NotasFiscais.Items[0].Imprimir;  
@@ -2692,7 +2692,7 @@ dmBaseDados.tblANotaFiscal.Edit;
 dmBaseDados.tblANotaFiscalStatus.AsInteger     := stsRetorno;
 dmBaseDados.tblANotaFiscalMensagem.AsString    := strMotivo;
 dmBaseDados.tblANotaFiscalChaveAcesso.AsString := Copy(ACBrNFe1.NotasFiscais.Items[0].NFe.infNFe.ID,4,44);
-dmBaseDados.tblANotaFiscalProtocolo.AsString   := ACBrNFe1.WebServices.Retorno.Protocolo;
+dmBaseDados.tblANotaFiscalProtocolo.AsString   := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.nProt; //ACBrNFe1.WebServices.Retorno.Protocolo;
 if( (stsRetorno = 302)or(stsRetorno = 110) )then
  begin  dmBaseDados.tblANotaFiscalChaveAcesso.AsString := 'Nota DENEGADA';  dmBaseDados.tblANotaFiscalProtocolo.AsString   := 'Nota DENEGADA'; end;
 dmBaseDados.tblANotaFiscalCaminho2.AsString    := ACBrNFe1.NotasFiscais.Items[0].NomeArq;

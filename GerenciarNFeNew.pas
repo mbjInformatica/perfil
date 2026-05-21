@@ -95,7 +95,7 @@ var formGerenciarNFeNew : TformGerenciarNFeNew;
 implementation
 
 uses ModuloDados, CancelarNFe, Inutilizar, RotinasGerais,
-     DadosProdutosNFe, ConfigEmail, ACBrNFeConfiguracoes;
+     DadosProdutosNFe, ConfigEmail, ACBrNFeConfiguracoes, pcnProcNFe;
 
 
 {$R *.dfm}
@@ -443,50 +443,15 @@ if (dmBaseDados.tblClientes.Locate('CodigoCliente',strCliente,[loCaseInsensitive
  begin
   emailDest := dmBaseDados.tblClientesEmail.AsString;
  end;
- {
-//Gerando Chave de Acesso:
-chCodUF  := '35';
-chData   := FormatDateTime('DD/MM/YY', Date);
-chAnoMes := Copy(chData,7,2) + Copy(chData,4,2);
-chCNPJ   := '61429791000164';
-chModelo := '55';
-chSerie  := '001';
-chNrNFe  := LRPad(dmBaseDados.tblANotaFiscalNewNrNF.AsString,9,'0','L');
-chFormaEmissao := '1';
-Randomize;
-CodigoNumerico := Random(99999999);
-chCodNumerico  := IntToStr(CodigoNumerico);
-ChaveAcesso    := chCodUF + chAnoMes + chCNPJ + chModelo + chSerie + chNrNFe + chFormaEmissao + chCodNumerico;
-//Alterando a chave no txt
-strPedidoNFe := dmBaseDados.tblANotaFiscalNewPedido.AsString;
-strCaminho   := 'F:\NFeAt\' + strPedidoNFe + '.txt';
-strLinha2    := 'A|3.10|NFe'  +ChaveAcesso;
-AlteraLinhaTxt(strCaminho,1,strLinha2);
-//
-// Carregando o arquivo TXT
-ACBrNFe1.NotasFiscais.Clear;
-ACBrNFe1.NotasFiscais.Add;
-NFeRTXT := TNFeRTXT.Create(ACBrNFe1.NotasFiscais.Items[0].NFe);
-NFeRTXT.CarregarArquivo(strCaminho);
-if (NFeRTXT.LerTxt) then
- NFeRTXT.Free
-else
- begin
-  NFeRTXT.Free;
-  ShowMessage('Arquivo NFe Inválido');
-  Exit;
- end;
-// Salvando e gerando o XML
-}
-
+//--
 ACBrNFe1.NotasFiscais.Clear;
 ACBrNFe1.NotasFiscais.LoadFromFile(dmBaseDados.tblANotaFiscalNewCaminho2.AsString);
 ACBrNFe1.NotasFiscais.GerarNFe;
-ACBrNFe1.NotasFiscais.Assinar;           
+ACBrNFe1.NotasFiscais.Assinar;
 ACBrNFe1.NotasFiscais.Validar;
 ACBrNFe1.NotasFiscais.Items[0].GravarXML;
 try
- ACBrNFe1.WebServices.Envia(1);
+ ACBrNFe1.WebServices.Envia(1,True,True); //ACBrNFe1.WebServices.Envia(1);
 except                                         
  if (pos('Duplicidade de NF-e com diferença na Chave de Acesso', ACBrNFe1.NotasFiscais.Items[0].Msg) > 0) then
   begin
@@ -512,14 +477,14 @@ ACBrNFe1.NotasFiscais.Items[0].Imprimir;
 ACBrNFe1.NotasFiscais.ImprimirPDF;
 
 // Retorno do WebService:
-stsRetorno := ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].cStat;
-strMotivo  := ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].xMotivo;
+stsRetorno := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.cStat;    //ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].cStat;
+strMotivo  := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.xMotivo;  //ACBrNFe1.WebServices.Retorno.NFeRetorno.ProtDFe.Items[0].xMotivo;
 dmBaseDados.tblANotaFiscalNew.Edit;
 dmBaseDados.tblANotaFiscalNewStatus.AsInteger     := stsRetorno;
 dmBaseDados.tblANotaFiscalNewMensagem.AsString    := strMotivo;
 dmBaseDados.tblANotaFiscalNewChaveAcesso.AsString := Copy(ACBrNFe1.NotasFiscais.Items[0].NFe.infNFe.ID,4,44);
 strCh := dmBaseDados.tblANotaFiscalNewChaveAcesso.AsString + '-NFe.xml';
-dmBaseDados.tblANotaFiscalNewProtocolo.AsString   := ACBrNFe1.WebServices.Retorno.Protocolo; //ACBrNFe1.DANFE.ProtocoloNFe;
+dmBaseDados.tblANotaFiscalNewProtocolo.AsString   := ACBrNFe1.NotasFiscais.Items[0].NFe.procNFe.nProt; // ACBrNFe1.WebServices.Retorno.Protocolo;
 dmBaseDados.tblANotaFiscalNewCaminho2.AsString    := 'F:\NFeAt\PathNfe\'+ strCh; //ACBrNFe1.NotasFiscais.Items[0].NomeArq;
 NomeArq := strCh;
 
