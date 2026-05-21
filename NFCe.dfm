@@ -21,7 +21,7 @@ object FormNfceAcbr: TFormNfceAcbr
     Left = 0
     Top = 0
     Width = 497
-    Height = 302
+    Height = 301
     Align = alClient
     Style = grPyramid
     StartColor = 12910023
@@ -462,7 +462,7 @@ object FormNfceAcbr: TFormNfceAcbr
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 302
+    Top = 301
     Width = 497
     Height = 246
     ActivePage = tsLog
@@ -815,7 +815,6 @@ object FormNfceAcbr: TFormNfceAcbr
     Configuracoes.WebServices.Ambiente = taProducao
     Configuracoes.WebServices.AguardarConsultaRet = 0
     Configuracoes.WebServices.QuebradeLinha = '|'
-    Configuracoes.Certificados.NumeroSerie = '00ED308B76786B9A8979BF'
     Configuracoes.Certificados.Senha = 'lubr4026'
     Configuracoes.RespTec.IdCSRT = 0
     DANFE = ACBrNFeDANFeRL1

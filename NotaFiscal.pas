@@ -158,10 +158,8 @@ ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.SSLLib        := libWinCrypt;
 ACBrNFe1.Configuracoes.WebServices.SSLType := LT_TLSv1_2;
 ACBrNFe1.Configuracoes.Geral.VersaoQrCode  := veqr200;
-ACBrNFe1.Configuracoes.Geral.IdCSC         := INI.ReadString('Certificado','IDCSC','');
-ACBrNFe1.Configuracoes.Geral.CSC           := INI.ReadString('Certificado','CSC','');
-ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE','');
-ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA','');
+ACBrNFe1.Configuracoes.Certificados.NumeroSerie := INI.ReadString('Certificado','CHAVE_PERFIL','');
+ACBrNFe1.Configuracoes.Certificados.Senha       := INI.ReadString('Certificado','SENHA_PERFIL','');
 //--
 formaPgto   := '01';
 ChaveAcesso := '';
