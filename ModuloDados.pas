@@ -1074,6 +1074,14 @@ type
     tblGeraNrNFCeNrNF: TIntegerField;
     tblGeraNrNFCeDataEm: TDateField;
     dsGeraNrNFCe: TDataSource;
+    qryCupomFiscalIBSUF: TFloatField;
+    qryCupomFiscalIBSMun: TFloatField;
+    qryCupomFiscalIBSTot: TFloatField;
+    qryCupomFiscalCBSTot: TFloatField;
+    tblCupomFiscalIBSUF: TFloatField;
+    tblCupomFiscalIBSMun: TFloatField;
+    tblCupomFiscalIBSTot: TFloatField;
+    tblCupomFiscalCBSTot: TFloatField;
     procedure tblFamiliasBeforeDelete(DataSet: TDataSet);
     procedure tblContasReceberBeforeDelete(DataSet: TDataSet);
     procedure tblContasPagarBeforeDelete(DataSet: TDataSet);

@@ -152,6 +152,8 @@ type
     dblkVendedor: TComboBox;
     TIGradient1: TTIGradient;
     rdgTipoPedido: TTISRadioGroup;
+    DBText1: TDBText;
+    DBText2: TDBText;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnNovoAntClick(Sender: TObject);
@@ -831,14 +833,16 @@ end;
 
 procedure TformVendasBalcao.btnImprimeClick(Sender: TObject);
 var strValor, strCodFamilia, strCodCategoria,
-    strCodProduto, strDescricao, strUnidade, strDsc,
-    strFPgto, strCdDesc, strDc, strRDesc : String;
+    strCodProduto, strDescricao, strUnidade,
+    strDsc, strFPgto, strCdDesc, strDc, strRDesc,
+    strEndCli, strBairro, strFon, strNum,
+    strComp, strCidade : String;
     PortaLPT : TextFile;
-begin                                                  
+begin
 intConfImp := 1;
 dmBaseDados.tblRelVendas.EmptyTable;
 dmBaseDados.tblRelVendas.Open;
-dmBaseDados.tblContasReceber.Open;     
+dmBaseDados.tblContasReceber.Open;
 dmBaseDados.tblSaida.IndexName := 'IndOrdem';
 dmBaseDados.tblSaida.DisableControls;
 dmBaseDados.tblSaida.First;
@@ -877,6 +881,13 @@ strNPedido  := strReqSaida;
 strVendedor := IntToStr(dmBaseDados.tblFuncionariosCodigoFuncionario.AsInteger) +' '+ dmBaseDados.tblFuncionariosNomeFuncionario.AsString;
 strData     := 'Data: '+(DateToStr(Date))+'  '+'Hora: '+TimeToStr(Time);
 strFPgto    := cmbTPagamento.Text;
+//--
+strEndCli   := dmBaseDados.tblClientesEnderecoResidencia.AsString;
+strBairro   := dmBaseDados.tblClientesBairro.AsString;
+strFon      := dmBaseDados.tblClientesTelefone.AsString;
+strNum      := dmBaseDados.tblClientesNumero.AsString;
+strComp     := dmBaseDados.tblClientesComplemento.AsString;
+strCidade   := dmBaseDados.tblClientesCidade.AsString;
 //*** IMPRESSÃO DIRETA PARA PORTA LPT *** 1ª Via //42 colunas
 //--
    AssignFile(PortaLPT, 'LPT2:');
@@ -888,16 +899,26 @@ strFPgto    := cmbTPagamento.Text;
    Writeln(PortaLPT, '==========================================');
    if (ckbOrc.Checked = True) then
     begin
-     Writeln(PortaLPT, ' N. Orcamento : ' +strNPedido);
+     Writeln(PortaLPT, '          N. Orcamento: ' +strNPedido);
     end
    else
-    begin
-     Writeln(PortaLPT, ' N. Pedido : ' +strNPedido);
+    begin                                                 
+     Writeln(PortaLPT, '           N. Pedido: ' +strNPedido);
     end;
-   Writeln(PortaLPT, '  '+ strData);
-   Writeln(PortaLPT, ' Vendedor : '+strVendedor);
-   Writeln(PortaLPT, ' Cliente  : '+strDigiteCliente);
-   Writeln(PortaLPT, ' Pagamento : '+strFPgto);
+   Writeln(PortaLPT, '     '+ strData);
+   Writeln(PortaLPT, '------------------------------------------');
+   Writeln(PortaLPT, 'Vendedor: '+strVendedor);
+   Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
+   if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
+    begin
+     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+     if (strComp <> '') then              
+      begin
+       Writeln(PortaLPT, 'Complemento: '+strComp);
+      end;
+     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+    end;
+   Writeln(PortaLPT, 'Pagamento: '+strFPgto);
    Writeln(PortaLPT, '------------------------------------------');
    if (rdgTipoPedido.ItemIndex = 0) then
     begin
@@ -949,16 +970,26 @@ if( (rdbVia2.Checked = True)or(rdbVia3.Checked = True) )then
    Writeln(PortaLPT, '==========================================');
    if (ckbOrc.Checked = True) then
     begin
-     Writeln(PortaLPT, ' N. Orcamento : ' +strNPedido);
+     Writeln(PortaLPT, '          N. Orcamento: ' +strNPedido);
     end
    else
     begin
-     Writeln(PortaLPT, ' N. Pedido : ' +strNPedido);
+     Writeln(PortaLPT, '           N. Pedido: ' +strNPedido);
     end;
-   Writeln(PortaLPT, '  '+ strData);
-   Writeln(PortaLPT, ' Vendedor : '+strVendedor);
-   Writeln(PortaLPT, ' Cliente  : '+strDigiteCliente);
-   Writeln(PortaLPT, ' Pagamento : '+strFPgto);
+   Writeln(PortaLPT, '     '+ strData);
+   Writeln(PortaLPT, '------------------------------------------');
+   Writeln(PortaLPT, 'Vendedor: '+strVendedor);
+   Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
+   if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
+    begin
+     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+     if (strComp <> '') then
+      begin
+       Writeln(PortaLPT, 'Complemento: '+strComp);
+      end;
+     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+    end;
+   Writeln(PortaLPT, 'Pagamento: '+strFPgto);
    Writeln(PortaLPT, '------------------------------------------');
    if (rdgTipoPedido.ItemIndex = 0) then
     begin
@@ -1005,22 +1036,32 @@ if( (rdbVia3.Checked = True) )then
     AssignFile(PortaLPT, 'LPT2:');
     Rewrite(PortaLPT);
     Writeln(PortaLPT, '==========================================');
-    Writeln(PortaLPT, '            AUTO PECAS PERFIL      Via: 3 ');    
+    Writeln(PortaLPT, '            AUTO PECAS PERFIL      Via: 3 ');
     Writeln(PortaLPT, 'Av. Analice Sakatauskas, 580 - V.N. Osasco');
     Writeln(PortaLPT, 'PABX: 3681-4459  NEXTEL: 30*54567/30*54568');
     Writeln(PortaLPT, '==========================================');
     if (ckbOrc.Checked = True) then
      begin
-      Writeln(PortaLPT, ' N. Orcamento : ' +strNPedido);
+      Writeln(PortaLPT, '          N. Orcamento: ' +strNPedido);
      end
     else
      begin
-      Writeln(PortaLPT, ' N. Pedido : ' +strNPedido);
+      Writeln(PortaLPT, '           N. Pedido: ' +strNPedido);
      end;
-    Writeln(PortaLPT, '  '+ strData);
-    Writeln(PortaLPT, ' Vendedor : '+strVendedor);
-    Writeln(PortaLPT, ' Cliente  : '+strDigiteCliente);
-    Writeln(PortaLPT, ' Pagamento : '+strFPgto);
+    Writeln(PortaLPT, '     '+ strData);
+    Writeln(PortaLPT, '------------------------------------------');
+    Writeln(PortaLPT, 'Vendedor: '+strVendedor);
+    Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
+    if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
+     begin
+      Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+      if (strComp <> '') then
+       begin
+        Writeln(PortaLPT, 'Complemento: '+strComp);
+       end;
+      Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+     end;
+    Writeln(PortaLPT, 'Pagamento: '+strFPgto);
    Writeln(PortaLPT, '------------------------------------------');
    if (rdgTipoPedido.ItemIndex = 0) then
     begin

@@ -1,6 +1,6 @@
 object formVendasBalcao: TformVendasBalcao
-  Left = 268
-  Top = 9
+  Left = 301
+  Top = 130
   Align = alCustom
   BorderStyle = bsDialog
   Caption = 'Vendas no Balc'#227'o'
@@ -222,8 +222,8 @@ object formVendasBalcao: TformVendasBalcao
     Transparent = True
   end
   object lblTPagto: TLabel
-    Left = 20
-    Top = 80
+    Left = 780
+    Top = 104
     Width = 98
     Height = 15
     Caption = 'Tipo Pagamento :'
@@ -322,6 +322,39 @@ object formVendasBalcao: TformVendasBalcao
     Height = 15
     Caption = 'Impress'#227'o:'
     Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object DBText1: TDBText
+    Left = 57
+    Top = 58
+    Width = 47
+    Height = 15
+    AutoSize = True
+    DataField = 'EnderecoResidencia'
+    DataSource = dmBaseDados.dsClientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object DBText2: TDBText
+    Left = 362
+    Top = 58
+    Width = 47
+    Height = 15
+    Alignment = taRightJustify
+    AutoSize = True
+    DataField = 'Cidade'
+    DataSource = dmBaseDados.dsClientes
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Arial'
@@ -545,8 +578,8 @@ object formVendasBalcao: TformVendasBalcao
     OnKeyPress = dblbClienteKeyPress
   end
   object cmbTPagamento: TComboBox
-    Left = 76
-    Top = 78
+    Left = 828
+    Top = 102
     Width = 45
     Height = 21
     ItemHeight = 13

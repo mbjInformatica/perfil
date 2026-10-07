@@ -25,7 +25,7 @@ type
     lblCodigo               : TLabel;
     tabDescricao            : TTabSheet;
     lblCaracteristicas      : TLabel;
-    fldCaracteristicas      : TDBMemo;
+    fldCaracteristicas      : TDBMemo;        
     tabFoto                 : TTabSheet;
     scrlFoto                : TScrollBox;
     tabValor                : TTabSheet;

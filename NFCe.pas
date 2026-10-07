@@ -1,6 +1,6 @@
 unit NFCe;
 
-interface        
+interface         
                         
 uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,
 Forms,
@@ -230,6 +230,9 @@ var TotalItem, strVTotal, vlTotalDescCalc : Double;
     sindPag, sCNPJCPF, sFrete, sDataEmissao, sHoraEmissao : String;
     Anexos : TStrings;
     ok : boolean;
+    // REFORMA TRIBUTÁRIA:
+    fltIBSUF, fltIBSMun, fltCBS, fltTotIBS, fltTotCBS,
+    fltBaseCBSIBS, fltTotBaseCBS, sTotIBSUF, sTotIBSMun : Double;
 begin
 vlTotalDescCalc := Desconto;
 
@@ -249,7 +252,7 @@ dhCont        := '';
 xJust         := '';
 CRT           := '1';
 SHORTDATEFORMAT  := 'dd/mm/yyyy';
-DecimalSeparator := '.';
+DecimalSeparator := '.';                      
 //-- Abrindo ACBrNFe
 ACBrNFe1.NotasFiscais.Clear;
 ACBrNFe1.SSL.SSLType := LT_TLSv1_2;
@@ -318,6 +321,15 @@ if (strNenhumCupomPulou = '') then
 dmBaseDados.tblCupomFiscalNrNF.AsInteger   := StrToInt(mskNrNotaFiscal.Text);
 dmBaseDados.tblCupomFiscalNPedido.AsString := strReqSaida;
 dmBaseDados.tblCupomFiscal.Post;
+fltTotIBS     := 0; // Reforma
+fltTotCBS     := 0; // Reforma
+fltBaseCBSIBS := 0; // Reforma
+fltTotBaseCBS := 0; // Reforma
+sTotIBSUF     := 0; // Reforma                
+sTotIBSMun    := 0; // Reforma
+fltIBSUF      := 0; // Reforma
+fltIBSMun     := 0; // Reforma
+fltCBS        := 0; // Reforma
 NumeroNF := mskNrNotaFiscal.Text;
 with (ACBrNFe1.NotasFiscais.Add.NFe) do
   BEGIN
@@ -603,11 +615,65 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
          Imposto.PIS.CST    := pis49;
          // COFINS
          Imposto.COFINS.CST := cof49;
+
+         //----------- INÍCIO REFORMA TRIBUTÁRIA 2026 --------------------
+         if (Date > StrToDate('01/01/2027')) then
+           Begin
+            fltIBSUF  := 0;
+            fltIBSMun := 0;
+            fltCBS    := 0;
+            ValorPIS  := '0';
+            ValorCOF  := '0';
+            // IBS - Imposto Sobre Bens Serviços * O IBS é um imposto cuja responsabilidade recai sobre os Estados e municípios e irá substituir o ICMS e o ISS (Imposto Sobre Serviços)
+            Imposto.IBSCBS.CST          := StrToCSTIBSCBS(dmBaseDados.qryProdutosCstIBSCBS.AsString);                        // CST IBS / CBS
+            Imposto.IBSCBS.cClassTrib   := dmBaseDados.qryProdutosClassifTrib.AsString;                                      // Classificação Tributária. Ex:'000001';
+            if (dmBaseDados.qryProdutosCstIBSCBS.AsString = '') then
+             begin
+              Imposto.IBSCBS.CST        := cst000;
+              Imposto.IBSCBS.cClassTrib := '000001';
+             end;
+            // Base Cálculo IBS/CBS
+            fltBaseCBSIBS := StrToFloat(VTotalProd) - StrToFloat(ValorPIS) - StrToFloat(ValorCOF) - StrToFloat(ValorICMS);
+            Imposto.IBSCBS.gIBSCBS.vBC  := fltBaseCBSIBS;
+            // IBS UF
+            Imposto.IBSCBS.gIBSCBS.gIBSUF.pIBSUF := dmBaseDados.qryProdutosAliqIBSUF.AsFloat;                               // 0.1% Alíquota do IBS de competência das UF em 2026
+            fltIBSUF := fltBaseCBSIBS * (dmBaseDados.qryProdutosAliqIBSUF.AsFloat/100);
+            fltIBSUF := Arredondar(fltIBSUF,2);
+            Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF := fltIBSUF;
+            sTotIBSUF := sTotIBSUF + Arredondar(Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF,2);
+            // IBS Municipio
+            Imposto.IBSCBS.gIBSCBS.gIBSMun.pIBSMun := 0; //dmBaseDados.qryProdutosAliqIBSMun.AsFloat;                       // % Alíquota do IBS de competência do Municipio
+
+            fltIBSMun := fltBaseCBSIBS * (dmBaseDados.qryProdutosAliqIBSMun.AsFloat/100);
+            fltIBSMun := Arredondar(fltIBSMun,2);
+            Imposto.IBSCBS.gIBSCBS.gIBSMun.vIBSMun := 0; // fltIBSMun
+            sTotIBSMun := sTotIBSMun + Arredondar(Imposto.IBSCBS.gIBSCBS.gIBSMun.vIBSMun,2);
+            // IBS Total (UF+Mun)
+            Imposto.IBSCBS.gIBSCBS.vIBS := (Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF) + (Imposto.IBSCBS.gIBSCBS.gIBSMun.vIBSMun);  // Imposto.IBSCBS.gIBSCBS.vIBS := fltBaseCBSIBS * (dmBaseDados.qryProdutosAliqIBSUF.AsFloat/100);
+            fltTotIBS := fltTotIBS + Arredondar(Imposto.IBSCBS.gIBSCBS.vIBS,2);                                                // Imposto.IBSCBS.gIBSCBS.gIBSUF.vIBSUF;
+
+            // CBS - Contribuição Sobre Bens Serviços  * O CBS é uma contribuição sob responsabilidade federal e substituirá os impostos PIS e Cofins em 2033
+            Imposto.IBSCBS.gIBSCBS.gCBS.pCBS := dmBaseDados.qryProdutosAliqCBS.AsFloat;                                     // 0.9% Alíquota da CBS
+            fltCBS := fltBaseCBSIBS * (dmBaseDados.QRYProdutosAliqCBS.AsFloat/100);
+            fltCBS := Arredondar(fltCBS,2);
+            Imposto.IBSCBS.gIBSCBS.gCBS.vCBS := fltCBS;
+            fltTotCBS := fltTotCBS + Arredondar(Imposto.IBSCBS.gIBSCBS.gCBS.vCBS,2);
+            fltTotBaseCBS := fltTotBaseCBS + fltBaseCBSIBS;
+           End;
+         //---------------------------------------------------------------
+
+
         End; // end do with dos produtos
       //-- Total
       strVTotal := strVTotal + Arredondar(dmBaseDados.tblSaidaQuantidade.AsFloat * Arredondar(dmBaseDados.tblSaidaValorUnitario.AsFloat,2),2);
       dmBaseDados.tblSaida.Next;
      End;
+   dmBaseDados.tblCupomFiscal.Edit;
+   dmBaseDados.tblCupomFiscalIBSUF.AsFloat  := sTotIBSUF;                       // Reforma
+   dmBaseDados.tblCupomFiscalIBSMun.AsFloat := sTotIBSMun;                      // Reforma
+   dmBaseDados.tblCupomFiscalIBSTot.AsFloat := sTotIBSUF + sTotIBSMun;          // Reforma
+   dmBaseDados.tblCupomFiscalCBSTot.AsFloat := fltTotCBS;                       // Reforma
+   dmBaseDados.tblCupomFiscal.Post;
    //-- Totais:
    VAliq   := FormatFloat('0.00',PercIcms);                                     // vIPI:= FormatFloat('0.00',dmBaseDados.tblANotaFiscalIPI.AsFloat); //vFrete  := FormatFloat('0.00',strFrete);
    vBC     := '0.00';
@@ -638,6 +704,15 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
    Total.ICMSTot.vOutro  := StrToFloat(vOutro);
    Total.ICMSTot.vNF     := StrToFloat(vNF);
    Total.ICMSTot.vTotTrib := StrToFloat(vTTotTrib);
+   // REFORMA TRIBUTÁRIA
+   if (Date > StrToDate('01/01/2027')) then
+    Begin
+     Total.IBSCBSTot.vBCIBSCBS             := fltTotBaseCBS;                      //StrToFloat(vNF);
+     Total.IBSCBSTot.gIBS.vIBS             := fltTotIBS;
+     Total.IBSCBSTot.gIBS.gIBSUFTot.vIBSUF := sTotIBSUF;
+     Total.IBSCBSTot.gIBS.gIBSMunTot.vIBSMun := sTotIBSMun;
+     Total.IBSCBSTot.gCBS.vCBS             := fltTotCBS;
+    End; 
    //--
    strVTotal := strVTotal - Desconto;
    if (formFormaPagamento.ckbPgMistoSAT.Checked = False) then

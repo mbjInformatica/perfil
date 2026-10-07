@@ -3511,6 +3511,18 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'Especie'
       Size = 3
     end
+    object tblCupomFiscalIBSUF: TFloatField
+      FieldName = 'IBSUF'
+    end
+    object tblCupomFiscalIBSMun: TFloatField
+      FieldName = 'IBSMun'
+    end
+    object tblCupomFiscalIBSTot: TFloatField
+      FieldName = 'IBSTot'
+    end
+    object tblCupomFiscalCBSTot: TFloatField
+      FieldName = 'CBSTot'
+    end
   end
   object dsCupomFiscal: TDataSource
     DataSet = tblCupomFiscal
@@ -4353,6 +4365,22 @@ object dmBaseDados: TdmBaseDados
       FieldName = 'Especie'
       Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".Especie'
       Size = 3
+    end
+    object qryCupomFiscalIBSUF: TFloatField
+      FieldName = 'IBSUF'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".IBSUF'
+    end
+    object qryCupomFiscalIBSMun: TFloatField
+      FieldName = 'IBSMun'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".IBSMun'
+    end
+    object qryCupomFiscalIBSTot: TFloatField
+      FieldName = 'IBSTot'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".IBSTot'
+    end
+    object qryCupomFiscalCBSTot: TFloatField
+      FieldName = 'CBSTot'
+      Origin = 'SISTEMAGESTAOESTOQUE."CupomFiscal.DB".CBSTot'
     end
   end
   object dsqCupomFiscal: TDataSource

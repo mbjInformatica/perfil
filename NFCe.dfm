@@ -21,7 +21,7 @@ object FormNfceAcbr: TFormNfceAcbr
     Left = 0
     Top = 0
     Width = 497
-    Height = 301
+    Height = 302
     Align = alClient
     Style = grPyramid
     StartColor = 12910023
@@ -462,7 +462,7 @@ object FormNfceAcbr: TFormNfceAcbr
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 301
+    Top = 302
     Width = 497
     Height = 246
     ActivePage = tsLog
