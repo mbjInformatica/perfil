@@ -909,7 +909,7 @@ strCidade   := dmBaseDados.tblClientesCidade.AsString;
    Writeln(PortaLPT, '------------------------------------------');
    Writeln(PortaLPT, 'Vendedor: '+strVendedor);
    Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
-   if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
+   if (strDigiteCliente <> 'CONSUMIDOR FINAL') then
     begin
      Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
      if (strComp <> '') then              
@@ -1252,7 +1252,9 @@ end;
 procedure TformVendasBalcao.btnReimpressaoClick(Sender: TObject);
 var strValor, strCodFamilia, strCodCategoria,
     strCodProduto, strDescricao, strUnidade,
-    strFPgto, strDsc, strCdDesc, strDc, strRDesc: String;
+    strFPgto, strDsc, strCdDesc, strDc, strRDesc,
+    strEndCli, strBairro, strFon, strNum,
+    strComp, strCidade : String;
     PortaLPT : TextFile;
 begin
 strNPedido  := strReqSaida;
@@ -1261,6 +1263,13 @@ dmBaseDados.tblFuncionarios.Locate('NomeFuncionario',dblkVendedor.Text,[loCaseIn
 strVendedor := IntToStr(dmBaseDados.tblFuncionariosCodigoFuncionario.AsInteger) +' '+ dmBaseDados.tblFuncionariosNomeFuncionario.AsString;
 strData     := 'Data: '+(DateToStr(Date))+'  '+'Hora: '+TimeToStr(Time);
 strFPgto    := cmbTPagamento.Text;
+//--
+strEndCli   := dmBaseDados.tblClientesEnderecoResidencia.AsString;
+strBairro   := dmBaseDados.tblClientesBairro.AsString;
+strFon      := dmBaseDados.tblClientesTelefone.AsString;
+strNum      := dmBaseDados.tblClientesNumero.AsString;
+strComp     := dmBaseDados.tblClientesComplemento.AsString;
+strCidade   := dmBaseDados.tblClientesCidade.AsString;
 // *** IMPRESSÃO DIRETA PARA PORTA LPT1 ***
   AssignFile(PortaLPT, 'LPT2:');
   Rewrite(PortaLPT);
@@ -1280,6 +1289,15 @@ strFPgto    := cmbTPagamento.Text;
   Writeln(PortaLPT, '  '+ strData);
   Writeln(PortaLPT, ' Vendedor : '+strVendedor);
   Writeln(PortaLPT, ' Cliente  : '+strDigiteCliente);
+  if (strDigiteCliente <> 'CONSUMIDOR FINAL') then
+    begin
+     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+     if (strComp <> '') then              
+      begin
+       Writeln(PortaLPT, 'Complemento: '+strComp);
+      end;
+     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+    end;
   Writeln(PortaLPT, ' Pagamento : '+strFPgto);
   Writeln(PortaLPT, '==========================================');
   Writeln(PortaLPT, 'Codigo \ Descricao');

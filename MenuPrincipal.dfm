@@ -21,7 +21,7 @@ object formMenuPrincipal: TformMenuPrincipal
     Left = 0
     Top = 30
     Width = 1166
-    Height = 513
+    Height = 512
     Align = alClient
     Center = True
     ParentShowHint = False
@@ -30,7 +30,7 @@ object formMenuPrincipal: TformMenuPrincipal
   end
   object stsInforma: TStatusBar
     Left = 0
-    Top = 543
+    Top = 542
     Width = 1166
     Height = 19
     AutoHint = True
