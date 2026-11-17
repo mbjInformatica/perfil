@@ -11,7 +11,8 @@ Forms,
      ACBrSATExtratoReportClass, ACBrDFeReport, ACBrNFeDANFeESCPOS,
      ACBrDFeDANFeReport, ACBrNFeDANFEClass, ACBrDANFCeFortesFr, ACBrDFe,
      ACBrNFe, Mask, pcnConversaoNFe, TIGradient, ACBrNFeDANFeRLClass,
-     ACBrDFe.Conversao, ACBrNFe.Classes, ACBrDFeSSL;
+     ACBrDFe.Conversao, ACBrNFe.Classes, ACBrDFeSSL, ACBrSocket,
+  ACBrConsultaCNPJ;
 
 type
   TFormNfceAcbr = class(TForm)
@@ -47,6 +48,7 @@ type
     mskNPedido: TMaskEdit;
     TIGradient1: TTIGradient;
     ACBrNFeDANFeRL1: TACBrNFeDANFeRL;
+    ACBrConsultaCNPJ1: TACBrConsultaCNPJ;
     procedure GerarVenda;
     procedure btnEnviarVendaClick(Sender: TObject);
     procedure AjustaACBrSAT;
@@ -378,6 +380,44 @@ with (ACBrNFe1.NotasFiscais.Add.NFe) do
     begin
      Dest.CNPJCPF   := CpfCnpj;  //strCPF;
      Dest.indIEDest := inNaoContribuinte;
+     if (Copy(CpfCnpj,14,1) <> '') then
+       BEGIN
+        // Consulta os dados na Receita (pode usar ACBrConsultaCNPJ ou BrasilAPI/ReceitaWS)
+        if ACBrConsultaCNPJ1.Consulta(CpfCnpj) then
+         begin
+          Dest.xNome := Copy(ACBrConsultaCNPJ1.RazaoSocial, 1, 60);
+          // Preenche o EnderDest para garantir a tag <UF> exigida pela NT 2026.007
+          Dest.EnderDest.xLgr    := Copy(ACBrConsultaCNPJ1.Endereco, 1, 60);
+          //Dest.EnderDest.nro     := If Then(Trim(ACBrConsultaCNPJ1.Numero) <> '', ACBrConsultaCNPJ1.Numero, 'S/N');
+          if Trim(ACBrConsultaCNPJ1.Numero) <> '' then
+            Dest.EnderDest.nro := ACBrConsultaCNPJ1.Numero
+          else
+            Dest.EnderDest.nro := 'S/N';
+          Dest.EnderDest.xBairro := Copy(ACBrConsultaCNPJ1.Bairro, 1, 60);
+          Dest.EnderDest.cMun    := StrToIntDef(ACBrConsultaCNPJ1.IBGE_Municipio, 0);
+          Dest.EnderDest.xMun    := Copy(ACBrConsultaCNPJ1.Cidade, 1, 60);
+          Dest.EnderDest.UF      := ACBrConsultaCNPJ1.UF;
+          Dest.EnderDest.CEP     := StrToIntDef(OnlyNumber(ACBrConsultaCNPJ1.CEP), 0);
+          Dest.EnderDest.cPais   := 1058;
+          Dest.EnderDest.xPais   := 'BRASIL';
+         end
+        else
+         begin
+          // Fallback caso a consulta online falhe/caia:
+          // Preencha ao menos o endereço do próprio emitente ou peça ao operador,
+          // pois se a UF do destinatário for diferente da do emitente, a SEFAZ dará Rejeição 181.
+          Dest.xNome := 'CONSUMIDOR';
+          Dest.EnderDest.xLgr    := INI.ReadString('Emit','ENDERECO','');
+          Dest.EnderDest.nro     := INI.ReadString('Emit','NUMERO','');
+          Dest.EnderDest.xBairro := INI.ReadString('Emit','BAIRRO','');
+          Dest.EnderDest.cMun    := INI.ReadInteger('Emit','CODIBGE',Emit.EnderEmit.cMun);
+          Dest.EnderDest.xMun    := INI.ReadString('Emit','CIDADE','');
+          Dest.EnderDest.UF      := INI.ReadString('Emit','UF','');
+          Dest.EnderDest.CEP     := INI.ReadInteger('Emit','CEP',Emit.EnderEmit.CEP);
+          Dest.EnderDest.cPais   := 1058;
+          Dest.EnderDest.xPais   := 'BRASIL';
+         end;
+       END;
     end;
    //--
    // Adicionando os itens da Venda:

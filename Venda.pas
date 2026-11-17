@@ -909,15 +909,6 @@ strCidade   := dmBaseDados.tblClientesCidade.AsString;
    Writeln(PortaLPT, '------------------------------------------');
    Writeln(PortaLPT, 'Vendedor: '+strVendedor);
    Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
-   if (strDigiteCliente <> 'CONSUMIDOR FINAL') then
-    begin
-     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
-     if (strComp <> '') then              
-      begin
-       Writeln(PortaLPT, 'Complemento: '+strComp);
-      end;
-     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
-    end;
    Writeln(PortaLPT, 'Pagamento: '+strFPgto);
    Writeln(PortaLPT, '------------------------------------------');
    if (rdgTipoPedido.ItemIndex = 0) then
@@ -950,6 +941,15 @@ strCidade   := dmBaseDados.tblClientesCidade.AsString;
    Writeln(PortaLPT, '          VALOR LIQUIDO :  '+(FormatCurr('###,##0.00',strTotal)));
    Writeln(PortaLPT, '==========================================');
    Writeln(PortaLPT, ' Agradecemos a Preferencia. Volte Sempre! ');
+   if (strDigiteCliente <> 'CONSUMIDOR FINAL') then
+    begin
+     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+     if (strComp <> '') then
+      begin
+       Writeln(PortaLPT, 'Complemento: '+strComp);
+      end;
+     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+    end;
    Writeln(PortaLPT, '==========================================');
    Writeln(PortaLPT, '');
    Writeln(PortaLPT, '');
@@ -980,15 +980,6 @@ if( (rdbVia2.Checked = True)or(rdbVia3.Checked = True) )then
    Writeln(PortaLPT, '------------------------------------------');
    Writeln(PortaLPT, 'Vendedor: '+strVendedor);
    Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
-   if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
-    begin
-     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
-     if (strComp <> '') then
-      begin
-       Writeln(PortaLPT, 'Complemento: '+strComp);
-      end;
-     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
-    end;
    Writeln(PortaLPT, 'Pagamento: '+strFPgto);
    Writeln(PortaLPT, '------------------------------------------');
    if (rdgTipoPedido.ItemIndex = 0) then
@@ -1021,6 +1012,15 @@ if( (rdbVia2.Checked = True)or(rdbVia3.Checked = True) )then
    Writeln(PortaLPT, '          VALOR LIQUIDO :  '+(FormatCurr('###,##0.00',strTotal)));
    Writeln(PortaLPT, '==========================================');
    Writeln(PortaLPT, ' Agradecemos a Preferencia. Volte Sempre! ');
+   if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
+    begin
+     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+     if (strComp <> '') then
+      begin
+       Writeln(PortaLPT, 'Complemento: '+strComp);
+      end;
+     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+    end;
    Writeln(PortaLPT, '==========================================');
    Writeln(PortaLPT, '');
    Writeln(PortaLPT, '');
@@ -1052,17 +1052,8 @@ if( (rdbVia3.Checked = True) )then
     Writeln(PortaLPT, '------------------------------------------');
     Writeln(PortaLPT, 'Vendedor: '+strVendedor);
     Writeln(PortaLPT, 'Cliente : '+strDigiteCliente);
-    if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
-     begin
-      Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
-      if (strComp <> '') then
-       begin
-        Writeln(PortaLPT, 'Complemento: '+strComp);
-       end;
-      Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
-     end;
     Writeln(PortaLPT, 'Pagamento: '+strFPgto);
-   Writeln(PortaLPT, '------------------------------------------');
+    Writeln(PortaLPT, '------------------------------------------');
    if (rdgTipoPedido.ItemIndex = 0) then
     begin
      Writeln(PortaLPT, '               B A L C A O');
@@ -1093,6 +1084,15 @@ if( (rdbVia3.Checked = True) )then
     Writeln(PortaLPT, '          VALOR LIQUIDO :  '+(FormatCurr('###,##0.00',strTotal)));
     Writeln(PortaLPT, '==========================================');
     Writeln(PortaLPT, ' Agradecemos a Preferencia. Volte Sempre! ');
+    if (dmBaseDados.tblClientesNomeCliente.AsString <> 'CONSUMIDOR FINAL') then
+     begin
+      Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+      if (strComp <> '') then
+       begin
+        Writeln(PortaLPT, 'Complemento: '+strComp);
+       end;
+      Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+     end;
     Writeln(PortaLPT, '==========================================');
     Writeln(PortaLPT, '');
     Writeln(PortaLPT, '');
@@ -1289,15 +1289,6 @@ strCidade   := dmBaseDados.tblClientesCidade.AsString;
   Writeln(PortaLPT, '  '+ strData);
   Writeln(PortaLPT, ' Vendedor : '+strVendedor);
   Writeln(PortaLPT, ' Cliente  : '+strDigiteCliente);
-  if (strDigiteCliente <> 'CONSUMIDOR FINAL') then
-    begin
-     Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
-     if (strComp <> '') then              
-      begin
-       Writeln(PortaLPT, 'Complemento: '+strComp);
-      end;
-     Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
-    end;
   Writeln(PortaLPT, ' Pagamento : '+strFPgto);
   Writeln(PortaLPT, '==========================================');
   Writeln(PortaLPT, 'Codigo \ Descricao');
@@ -1321,6 +1312,15 @@ strCidade   := dmBaseDados.tblClientesCidade.AsString;
   Writeln(PortaLPT, '          VALOR LIQUIDO :  '+(FormatCurr('###,##0.00',strTotal)));
   Writeln(PortaLPT, '==========================================');
   Writeln(PortaLPT, ' Agradecemos a Preferencia. Volte Sempre! ');
+  if (strDigiteCliente <> 'CONSUMIDOR FINAL') then
+   begin
+    Writeln(PortaLPT, 'End.: '+strEndCli+ '  No: '+strNum);
+    if (strComp <> '') then
+     begin
+      Writeln(PortaLPT, 'Complemento: '+strComp);
+     end;
+    Writeln(PortaLPT, 'Bairro: '+strBairro + ' Cidade: '+strCidade);
+   end;
   Writeln(PortaLPT, '==========================================');
   Writeln(PortaLPT, '');
   Writeln(PortaLPT,#27#109+ ''); // Guilhotina
